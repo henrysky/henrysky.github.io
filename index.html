@@ -48,12 +48,13 @@ body, td, th {
     <div class="main-navigation responsive-menu">
       <ul class="navigation">
       <li><a href="#top"><i class="fa fa-globe"></i>Welcome</a></li>
-      <li><a href="#about"><i class="fa fa-pencil"></i>About Me</a></li>
+      <li><a href="#about"><i class="fa fa-pencil"></i>About Henry</a></li>
       <li><a href="#astrophotography"><i class="fa fa-camera"></i>Astrophotography</a></li>
       <li><a href="#code"><i class="fa fa-code"></i>Code</a></li>
+	  <li><a href="#research"><i class="fa fa-flask"></i>Current Reserach</a></li>
       <li><a href="#edu"><i class="fa fa-university"></i>Education / Co-curricular</a></li>
       <li><a href="#publications"><i class="fa fa-newspaper-o"></i>Publications</a></li>
-      <li><a href="#news"><i class="fa fa-paper-plane"></i>Henry in the News</a></li>
+      <li><a href="#news"><i class="fa fa-paper-plane"></i>Henry on the News</a></li>
       <li><a onclick="window.open ('https://github.com/henrysky', ''); return false" href="javascript:void(0);"><i class="fa fa-github"></i>Henry on Github</a></li>
       </ul>
     </div>
@@ -71,12 +72,13 @@ body, td, th {
   <div class="main-navigation">
     <ul class="navigation">
       <li><a href="#top"><i class="fa fa-globe"></i>Welcome</a></li>
-      <li><a href="#about"><i class="fa fa-pencil"></i>About Me</a></li>
+      <li><a href="#about"><i class="fa fa-pencil"></i>About Henry</a></li>
       <li><a href="#astrophotography"><i class="fa fa-camera"></i>Astrophotography</a></li>
       <li><a href="#code"><i class="fa fa-code"></i>Code</a></li>
+	  <li><a href="#research"><i class="fa fa-flask"></i>Current Reserach</a></li>
       <li><a href="#edu"><i class="fa fa-university"></i>Education / Co-curricular</a></li>
       <li><a href="#publications"><i class="fa fa-newspaper-o"></i>Publications</a></li>
-      <li><a href="#news"><i class="fa fa-paper-plane"></i>Henry in the News</a></li>
+      <li><a href="#news"><i class="fa fa-paper-plane"></i>Henry on the News</a></li>
       <li><a onclick="window.open ('https://github.com/henrysky', ''); return false" href="javascript:void(0);"><i class="fa fa-github"></i>Henry on Github</a></li>
     </ul>
   </div>
@@ -93,7 +95,7 @@ body, td, th {
   <div class="banner-overlay"></div>
   <div class="welcome-text">
     <h2>Hi! I am Henry</h2>
-    <h5>I am an astronomy undergrad at the University of Toronto, you can find me at henrysky.leung [at] mail.utoronto.ca</h5>
+    <h5>I am an astronomy undergrad at the University of Toronto, you can contact me at henrysky.leung [at] mail.utoronto.ca</h5>
   </div>
 </div>
 
@@ -224,7 +226,7 @@ body, td, th {
       <div class="page-section" id="code">
         <div class="row">
           <div class="col-md-12">
-            <h4 class="widget-title">My code</h4>
+            <h4 class="widget-title">Featured code</h4>
             <img src="img/astroNN_icon_withname.png" alt="about me">
             <ul>
               <li><b>astroNN</b></li>
@@ -235,6 +237,50 @@ body, td, th {
         </div>
         <!-- .contact-form --> </div>
       <hr>
+      <!-- CONTACT -->
+      <div class="page-section" id="research">
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="widget-title">My Research</h4>
+            My research focused on application of neural network in astronomy. Current projects include
+			  <li><b>Stellar Spectra Analysis using Bayesian Neural Network with Dropout Variational Inference</b></li>
+			  <li><b>Data-Driven stellar distance with Gaia with Neural Network</b></li>
+			  <li><b>Labels transfer from APOGEE to LAMOST DR5 with Neural Network</b></li>
+            <div class="row projects-holder">
+              <div class="col-md-4 col-sm-6">
+                <div class="project-item"> <img src="img/delta_SNR_teff_logg.png" alt="">
+                  <div class="project-hover">
+                    <div class="inside">
+                      <h5><a href="img/delta_SNR_teff_logg.png">Neural Network Prediction against SNR</a></h5>
+                      <p>Application of Nerual Network on APOGEE Spectra Analysis</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="project-item"> <img src="img/example_plot_gaia.png" alt="">
+                  <div class="project-hover">
+                    <div class="inside">
+                      <h5><a href="#">Gaia DR1 with 20% parallax error cut</a></h5>
+                      <p>Neural Network trained on Gaia DR1 to map the milkyway further away</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="project-item"> <img src="img/NA_derivative.png" alt="">
+                  <div class="project-hover">
+                    <div class="inside">
+                      <h5><a href="#">Neural Network Sensitivity</a></h5>
+                      <p>Nerual Network is capable to learn "physics"</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .contact-form --> </div>
+        <hr>
       <!-- CONTACT -->
       <div class="page-section" id="edu">
         <div class="row">
@@ -249,6 +295,7 @@ body, td, th {
               <strong>University of Toronto</strong><br>
             </ul>
             <li>2014-Present: (Pursuing B.Sc.) Specialist in Astronomy and Physics </li>
+			<li>2018 Summer Research (Supervised by Prof. Jo Bovy), Application of Deep Learning with Gaia DR2</li>
             <li>2017-2018 Pursuing Senior Thesis Research Project (Supervised by Prof. Jo Bovy), Application of Deep Learning in Stellar and Galartic Astronomy </li>
             <li>2016 Summer Research (Supervised by Prof. John Percy), Studies of the Long Secondary Periods in Pulsating Red Giants - <a href="https://arxiv.org/abs/1611.03334">arXiv:1611.03334</a> </li>
             <br>
