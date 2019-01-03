@@ -50,8 +50,8 @@ body {
     line-height: 1;
 }
 ol, ul {
-    list-style: none;    
-	margin-left: 20px;
+    list-style: none;
+    margin-left: 20px;
 }
 blockquote, q {
     quotes: none;
@@ -175,13 +175,13 @@ h1, h2, h3, h4, h5 {
 }
 
 @media screen and (max-width: 1290px) {
-.main-content,  .banner-bg {
+.main-content, .banner-bg {
     width: 70%;
 }
 }
 
 @media screen and (max-width: 992px) {
-.main-content,  .banner-bg {
+.main-content, .banner-bg {
     width: 100%;
 }
 }
@@ -230,6 +230,11 @@ hr {
 .sidebar-menu {
     overflow-y: scroll;
     width: 30%;
+}
+}
+@media screen and (max-height: 850px) {
+.sidebar-menu {
+    overflow-y: scroll;
 }
 }
 .top-section {
