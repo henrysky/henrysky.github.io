@@ -104,7 +104,7 @@ body, td, th {
       <div class="page-section" id="about">
         <div class="row">
           <div class="col-md-12">
-            <h4 class="widget-title">Learn About Me</h4>
+            <h4 class="widget-title">About Me</h4>
             <div class="about-image"> <img src="img/pro_big.jpg" alt="about me"> </div>
             <p>Hi, I am Henry, an astronomy student at University of Toronto with interests in astrophotography, you can see my photography <a href="#astrophotography">below</a>. For research aspect, both galactic astrophysics, deep learning and open source science are currently my research interest. The main reserach project I am working on is deep learning application in stellar and galactic astronomy with a python package in development called astroNN to facilitate my reserach. You can learn more about astroNN in <a href="#code">Code section</a>.</p>
             <hr>
@@ -222,6 +222,9 @@ body, td, th {
         <div class="row">
           <div class="col-md-12">
             <h4 class="widget-title">Featured codes</h4>
+			<p>I release most of my code including code for my papers on my Github profile at <a href="https://github.com/henrysky">https://github.com/henrysky</a></p>	
+			<br>
+			<br>
             <img src="img/astroNN_icon_withname.png" alt="about me">
             <ul style="margin-left:0px !important;">
               <li><b>astroNN</b></li>
@@ -235,6 +238,13 @@ body, td, th {
               <li>A handy python package to do plotting on a face-on/edge-on/allsky map milkyway with matplotlib</li>
               <li>mw_plot Github: <a href="https://github.com/henrysky/milkyway_plot">https://github.com/henrysky/milkyway_plot</a></li>
             </ul>
+			<br>
+            <br>
+            <ul style="margin-left:0px !important;">
+              <li><strong>galpy_cuda_demo</strong></li>
+              <li>Technology demonstration of orbits integration with CUDA for galpy</li>
+              <li>galpy_cuda_demo Github: <a href="https://github.com/henrysky/galpy_cuda_demo">https://github.com/henrysky/galpy_cuda_demo</a></li>
+            </ul>
           </div>
         </div>
         <!-- .contact-form --> 
@@ -245,11 +255,16 @@ body, td, th {
         <div class="row">
           <div class="col-md-12">
             <h4 class="widget-title">My Research</h4>
-            My research focused on application of neural network in astronomy. Current projects include
-            <ul style="list-style: disc !important">
+            <p>My current research focuses on using new robust machine learning methodology to analyze big astronomical survey data-sets, such as spectroscopic data from the Sloan Apache Point Observatory Galaxy Evolution Experiment (APOGEE) and Gaia astrometric data to better understand the Milky Way Galaxy. I use new robust machine learning methodologies such as multi-layer ("deep") Bayesian artificial neural networks, which can learn complex mapping functions between inputs andoutputs while considering uncertainty in training data and also providing uncertainty estimates for predicted values. These new machine learning technologies provide data products withhigher precision than available from traditional analyses which helps further our understanding the formation and evolution of the Milky Way galaxy. I am currently applying these techniques tothe problems of determining stellar parameters and chemical abundances, spectro-photometric distances, and stellar ages without relying much on stellar evolutionary models, allowing almost completely data-driven studies of the structure and dynamics of the Milky Way. The elemental abundances I have determined for APOGEE stars are the best available of any method applied to APOGEE stars and the spectro-photometric distance method that I am currently writing up provides distances more precise than 10% for stars out to 10 kpc, much higher precision than Gaia itself provides. These distances are already being used by groups around the world.</p>
+            <br>
+            <p>To facilitate my projects in this new area of big data astronomy with deep learning, I am developing astroNN, an open source python package designed for fast deep learning in astronomy that is based on Tensorflow, a general deep learning framework. The goals of astroNN are:(a) to provide a code that focuses on deep learning in astronomy, (b) to develop tools and datasets that are relevant to astronomers, (c) to provide an easily accessible tool that is well tested against errors, and (d) to act as a platform to share astronomy-oriented neural networks.astroNN makes it easy for non-machine learning experts like typical astronomers to use advanced tools like Bayesian neural networks to analyze data</p>
+            <br>
+			  <br>
+My research focused on application of neural network in astronomy. Current projects include
+<ul style="list-style: disc !important">
               <li><b>Stellar Spectra Analysis using Bayesian Neural Network with Dropout Variational Inference</b></li>
               <li><b>Data-Driven stellar distance trained with Gaia with Neural Network</b></li>
-              <li><b>Labels transfer from APOGEE to LAMOST DR5 with Neural Network</b></li>
+              <li><strong>Labels transfer from APOGEE to LAMOST DR5 with Neural Network</strong></li>
             </ul>
             <div class="row projects-holder">
               <div class="col-md-4 col-sm-6">

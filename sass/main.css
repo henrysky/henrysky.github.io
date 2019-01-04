@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5 {
 }
 }
 h4.widget-title {
-    font-size: 16px;
+    font-size: 22px;
     font-family: 'robotobold';
     text-transform: uppercase;
     margin-bottom: 40px;
@@ -197,6 +197,7 @@ hr {
 }
 .page-section {
     padding-top: 80px;
+	font-size: 16px;
 }
 /*---------------------------------------------------------
  3. Header
@@ -240,7 +241,7 @@ hr {
 h3.profile-title {
     margin-bottom: 5px;
     color: #fff;
-    font-size: 18px;
+    font-size: 28px;
     font-family: 'robotobold';
 }
 .main-navigation {
@@ -253,7 +254,7 @@ h3.profile-title {
     padding: 15px 40px;
     display: block;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
 }
 .main-navigation li a i {
     margin-right: 15px;
@@ -432,6 +433,7 @@ h3.profile-title {
     -ms-transition: all 200ms linear;
     -o-transition: all 200ms linear;
     transition: all 200ms linear;
+	font-size: 18px;
 }
 .project-hover .inside {
     position: absolute;
@@ -441,7 +443,7 @@ h3.profile-title {
     padding: 30px;
 }
 .project-hover h5 {
-    font-size: 16px;
+    font-size: 22px;
     margin-bottom: 15px;
 }
 .project-hover h5 a {
