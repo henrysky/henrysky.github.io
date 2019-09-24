@@ -335,6 +335,10 @@ h3.profile-title {
   background-position: center;
   background-size: cover;
   z-index: 2;
+  min-height: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  min-height: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
   min-height: 100vh; }
   .banner-bg em {
     display: block;
