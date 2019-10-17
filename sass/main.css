@@ -246,7 +246,7 @@ h3.profile-title {
   font-family: 'robotobold'; }
 
 .main-navigation {
-  margin: 30px 0; }
+  margin: 30px 0 0 0; }
   .main-navigation li {
     display: block; }
     .main-navigation li a {
