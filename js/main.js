@@ -1,18 +1,18 @@
-// (function($) {
+(function($) {
 
-// 	"use strict";	
+	"use strict";	
 
   
-//     $('.navigation').singlePageNav({
-//         currentClass : 'active'
-//     });
+    $('.navigation').singlePageNav({
+        currentClass : 'active'
+    });
 
 
-//     $('.toggle-menu').click(function(){
-//         $('.responsive-menu').stop(true,true).slideToggle();
-//         return false;
-//     });
+    $('.toggle-menu').click(function(){
+        $('.responsive-menu').stop(true,true).slideToggle();
+        return false;
+    });
 
 
 
-// })(jQuery);
+})(jQuery);
