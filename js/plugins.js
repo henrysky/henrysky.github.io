@@ -26,10 +26,10 @@
 
 /**
  * Single Page Nav Plugin
- * Copyright (c) 2013 Chris Wojcik <hello@chriswojcik.net>
+ * Copyright (c) 2014 Chris Wojcik <cpw1485@gmail.com>
  * Dual licensed under MIT and GPL.
  * @author Chris Wojcik
- * @version 1.1.0
+ * @version 1.2.1
  */
 
 // Utility
@@ -71,13 +71,12 @@ if (typeof Object.create !== 'function') {
         handleClick: function(e) {
             var self  = this,
                 link  = e.currentTarget,
-                $elem = $(link.hash);  
+                $elem = $(link.hash);
 
             e.preventDefault();             
 
             if ($elem.length) { // Make sure the target elem exists
 
-                
                 // Prevent active link from cycling during the scroll
                 self.clearTimer();
 
@@ -89,9 +88,9 @@ if (typeof Object.create !== 'function') {
                 self.setActiveLink(link.hash);
                 
                 self.scrollTo($elem, function() { 
-                 
-                    if (self.options.updateHash) {
-                        document.location.hash = link.hash;
+
+                    if (self.options.updateHash && history.pushState) {
+                        history.pushState(null,null, link.hash);
                     }
 
                     self.setTimer();
@@ -149,7 +148,9 @@ if (typeof Object.create !== 'function') {
         checkPosition: function() {
             var scrollPos = this.$window.scrollTop();
             var currentSection = this.getCurrentSection(scrollPos);
-            this.setActiveLink(currentSection);
+            if(currentSection!==null) {
+                this.setActiveLink(currentSection);
+            }
         },        
         
         getCoords: function($elem) {
@@ -159,7 +160,7 @@ if (typeof Object.create !== 'function') {
         },
         
         setActiveLink: function(href) {
-            var $activeLink = this.$container.find("a[href='" + href + "']");
+            var $activeLink = this.$container.find("a[href$='" + href + "']");
                             
             if (!$activeLink.hasClass(this.options.currentClass)) {
                 this.$links.removeClass(this.options.currentClass);
@@ -181,9 +182,19 @@ if (typeof Object.create !== 'function') {
                     }
                 }
             }
+
+            // get the last section if we reached the bottom of the page 
+            // before reaching the last section top
+            var pageBottom = $(document).height() - $(window).height();
+            if ( scrollPos == pageBottom ){
+                var numberOfLinks = this.$links.length;
+                if ( numberOfLinks > 0 ){
+                    section = this.$links[ numberOfLinks - 1].hash;
+                }
+            }
             
-            // The current section or the first link
-            return section || this.$links[0].hash;
+            // The current section or the first link if it is found
+            return section || ((this.$links.length===0) ? (null) : (this.$links[0].hash));
         }
     };
     
@@ -207,5 +218,3 @@ if (typeof Object.create !== 'function') {
     };
     
 })(jQuery, window, document);
-
-
