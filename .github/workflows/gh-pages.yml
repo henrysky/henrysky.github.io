@@ -27,7 +27,7 @@ jobs:
       - name: Build list of publication
         run: ADS_TOKEN=${{ secrets.ADS_TOKEN }} python ./src/gen_pub_list.py 
       - name: Build Hugo site
-        run: hugo --minify
+        run: hugo
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
