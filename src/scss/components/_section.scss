@@ -1,0 +1,12 @@
+.blog-section {
+    background: #696969;
+    min-height: calc(100vh - $navbar-height);
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+      ), url("../img/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

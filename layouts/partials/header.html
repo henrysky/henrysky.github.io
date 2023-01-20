@@ -1,0 +1,63 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="{{ $.Site.Params.description }}" />
+    <meta name="author" content="{{ $.Site.Params.authors }}" />
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <title>Henry Leung</title>
+    <link rel="icon" type="image/x-icon" href={{ "assets/favicon.ico" | absURL }} />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.css">
+    <link href={{ "css/styles.css" | absURL }} rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBFQQ2QV4Q"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KBFQQ2QV4Q');
+    </script>
+    <script>
+        var theme = localStorage.getItem('theme') || 'auto';
+        document.documentElement.setAttribute('data-bs-theme', theme);
+
+        function setDarkTheme(init = false) {
+            if (init == false) {
+                if (theme == 'auto') {
+                    theme = 'dark';
+                }
+                else if (theme == 'light') {
+                    theme = 'auto';
+                } else {
+                    theme = 'light';
+                }
+                setButtonIcon();
+                localStorage.setItem('theme', theme);
+                document.documentElement.setAttribute('data-bs-theme', theme);
+            }
+            return
+        }
+
+        function setButtonIcon() {
+            if (theme == 'auto') {
+                document.getElementById("themebutton").className = "fa-solid fa-circle-half-stroke d-lg-flex justify-content-center";
+            }
+            else if (theme == 'light') {
+                document.getElementById("themebutton").className = "fa-solid fa-sun d-lg-flex justify-content-center";
+            }
+            else if (theme == 'dark') {
+                document.getElementById("themebutton").className = "fa-solid fa-moon d-lg-flex justify-content-center";
+            }
+        }
+    </script>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>

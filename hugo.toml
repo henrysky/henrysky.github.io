@@ -1,0 +1,32 @@
+baseURL = 'https://henrysky.github.io/'
+languageCode = 'en-us'
+title = 'Henry Leung'
+enableGitInfo = true
+
+[params]
+  authors = 'Henry W. Leung'
+  description = 'Henry W. Leung personal website'
+  email = 'henrysky.leung [@] utoronto.ca'
+  years = '2018-2023'
+  lastupdate = 'Last Updated'
+  copyright = 'Copyrighted'
+
+[frontmatter]
+  date = ["lastmod", "date", "publishDate"]
+  lastmod = ["publishDate", ":git", "lastmod", "date"]
+  publishDate = ["publishDate", "date"]
+  expiryDate = ["expiryDate"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[languages.en]
+  languageName = "English"
+[languages.zh]
+  languageName = "Chinese"
+  title = '梁瑋軒'
+  authors = '梁瑋軒'
+  lastupdate = '最後更新'
+  copyright = '版權所有'

@@ -1,0 +1,78 @@
+// Scroll padding for all scroll targets on page used with
+// native CSS smooth scrolling
+// 
+// https://caniuse.com/?search=scroll-padding
+
+html {
+    height: 100%;
+    scroll-padding-top: calc(#{$navbar-height} - 1px);
+}
+
+body {
+    width: 100%;
+    margin-top: $navbar-height;
+}
+
+// Header padding accounts for the height of the navbar
+// header {
+//     padding-top: 6rem + 3.5rem;
+//     padding-bottom: 6rem;
+// }
+
+// Section padding
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+h2.widget-title {
+    font-size: 32px;
+    font-family: "Raleway";
+    font-weight: bold;
+    color: #173b6c;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.widget-title::after {
+    content: '';
+    margin-top: 20px;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+
+.sl-overlay {
+    background: #000
+}
+
+// pub
+
+.paper-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #173b6c;
+    bottom: 0;
+    left: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.paper-author {
+    line-height: 0.1;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 767px) {
+    .card,
+    footer,
+    .alert {
+      border-radius: 0;
+    }
+
+  }

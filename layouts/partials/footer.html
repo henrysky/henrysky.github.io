@@ -1,0 +1,46 @@
+<!-- Footer-->
+<footer class="py-4 bg-dark">
+    <div class="container px-4 px-lg-5">
+        <div class="row">
+            <div class="col-lg-3 d-none d-md-none d-lg-block">
+            <div class="small text-center text-muted"></div>
+            </div>
+            <div class="col-lg-6 col-md-12" style="display:flex;flex-direction: column;justify-content: center;">
+            <div class="m-0 text-center text-white">{{ .Site.Params.copyright }} &copy; {{ $.Site.Params.years }} {{ $.Site.Params.authors }}. <br> {{ .Site.Params.lastupdate }}: {{ .Lastmod.Format "2 January 2006" }}</div>
+            </div>
+            <div class="col-lg-3 d-none d-md-none d-lg-flex" style="flex-direction: column;justify-content: center;">
+                <ul class="nav-item text-center" style="margin-bottom: 0px;">
+                <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+                    <a href="https://github.com/henrysky" target="_blank">
+                    <i class="fas fa-circle fa-stack-2x" style="color: #002a5c"></i> <i class="fab fa-github fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy); "title="My Github profile"></i>
+                </a>
+                </span>
+                <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+                    <a href="https://www.linkedin.com/in/henry-leung-2664b3259/" target="_blank">
+                    <i class="fas fa-circle fa-stack-2x" style="color: #002a5c"></i> <i class="fab fa-linkedin fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Linkedin profile"></i>></i>
+                </a>
+                </span>
+                <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+                    <a href={{ "blog/" | absURL }} target="_blank">
+                    <i class="fas fa-circle fa-stack-2x" style="color: #002a5c"></i> <i class="fab fa-blogger fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Blog"></i>></i>
+                </a>
+                </span>
+                </ul>
+            </div>
+        </div>
+        </div>
+</footer>
+<!-- Bootstrap core JS-->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.min.js"></script> -->
+<!-- Core theme JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!-- <script src={{ "js/scripts.js" | absURL }}></script> -->
+<script>
+    (function() {
+        var $gallery1 = new SimpleLightbox('#about-gallery a', {});
+        var $gallery2 = new SimpleLightbox('#astrophotography a', {});
+        var $gallery3 = new SimpleLightbox('#research a', {});
+        var $gallery4 = new SimpleLightbox('#edu a', {});
+    })();
+    setButtonIcon();
+</script>
