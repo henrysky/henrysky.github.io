@@ -77,7 +77,6 @@ for paper in result['response']['docs']:
         if np.sum(idx) == 1:
             for column_name in df.columns[1:]:
                 buttons_code += """<br class="d-none d-lg-block"><a target="_blank" href="{url}" class="btn btn-sm btn-info mt-1">{column_name}</a>""".format(url=df[column_name][idx].to_string()[1:].lstrip(), column_name=column_name)
-                print(column_name)
         buttons_code += """</div>"""
     
     html_code += """<tr>
