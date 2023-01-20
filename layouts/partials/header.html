@@ -28,24 +28,30 @@
         var theme = localStorage.getItem('theme') || 'auto';
         document.documentElement.setAttribute('data-bs-theme', theme);
 
-        function setDarkTheme(init = false) {
-            if (init == false) {
-                if (theme == 'auto') {
-                    theme = 'dark';
-                }
-                else if (theme == 'light') {
-                    theme = 'auto';
-                } else {
-                    theme = 'light';
-                }
-                setButtonIcon();
-                localStorage.setItem('theme', theme);
+        function setDarkTheme() {
+            if (theme == 'auto') {
+                theme = 'dark';
+            }
+            else if (theme == 'light') {
+                theme = 'auto';
+            } else {
+                theme = 'light';
+            }
+            setButtonIcon();
+            localStorage.setItem('theme', theme);
+        };
+
+        function setAutoCorrectTheme() {
+            if (theme == 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-bs-theme', 'dark');
+            } 
+            else {
                 document.documentElement.setAttribute('data-bs-theme', theme);
             }
-            return
-        }
+        };
 
         function setButtonIcon() {
+            setAutoCorrectTheme();
             if (theme == 'auto') {
                 document.getElementById("themebutton").className = "fa-solid fa-circle-half-stroke d-lg-flex justify-content-center";
             }
@@ -55,7 +61,8 @@
             else if (theme == 'dark') {
                 document.getElementById("themebutton").className = "fa-solid fa-moon d-lg-flex justify-content-center";
             }
-        }
+        };
+
     </script>
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
