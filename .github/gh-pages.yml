@@ -3,7 +3,7 @@ name: build and deploy to github pages
 on:
   push:
     branches:
-      - hugo  # Set a branch that will trigger a deployment
+      - master  # Set a branch that will trigger a deployment
 
 jobs:
   deploy:
