@@ -24,7 +24,7 @@ if extra_data:
 html_code = """
 <div class="row">
     <div class="col-md-12">
-    <table id="pub-list" class="table table-striped" style="width:100%">
+        <table id="pub-list" class="table table-striped" style="width:100%">
 """
 
 for paper in result['response']['docs']:
@@ -67,17 +67,23 @@ for paper in result['response']['docs']:
     buttons_code = """
     <div class="row">
         <div class="col-12 col-lg-3">
-    <a target="_blank" href="https://ui.adsabs.harvard.edu/abs/{bibcode}/abstract" class="btn btn-sm btn-primary mt-1">{bibcode}</a>
-    <br class="d-none d-lg-block">
-    <a target="_blank" href="https://ui.adsabs.harvard.edu/abs/{bibcode}/citations" class="btn btn-sm btn-secondary mt-1">{citation} Citations</a>
+            <a target="_blank" href="https://ui.adsabs.harvard.edu/abs/{bibcode}/abstract" class="btn btn-sm btn-primary mt-1">{bibcode}</a>
+            <br class="d-none d-lg-block">
+            <a target="_blank" href="https://ui.adsabs.harvard.edu/abs/{bibcode}/citations" class="btn btn-sm btn-secondary mt-1">{citation} Citations</a>
     """.format(bibcode=paper['bibcode'], citation=paper['citation_count'])
     
     if extra_data:
         idx = df["bibcode"] == paper['bibcode']
         if np.sum(idx) == 1:
             for column_name in df.columns[1:]:
-                buttons_code += """<br class="d-none d-lg-block"><a target="_blank" href="{url}" class="btn btn-sm btn-info mt-1">{column_name}</a>""".format(url=df[column_name][idx].to_string()[1:].lstrip(), column_name=column_name)
-        buttons_code += """</div>"""
+                buttons_code += """
+                
+                <br class="d-none d-lg-block">
+                <a target="_blank" href="{url}" class="btn btn-sm btn-info mt-1">{column_name}</a>
+                """.format(url=df[column_name][idx].to_string()[1:].lstrip(), column_name=column_name)
+        buttons_code += """
+        </div>
+        """
     
     html_code += """<tr>
             <td width="100%">
