@@ -26,7 +26,6 @@ enableGitInfo = true
   languageName = "English"
 [languages.zh]
   languageName = "Chinese"
-  title = '梁瑋軒'
   authors = '梁瑋軒'
   lastupdate = '最後更新'
   copyright = '版權所有'

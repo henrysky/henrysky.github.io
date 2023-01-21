@@ -36,11 +36,39 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <!-- <script src={{ "js/scripts.js" | absURL }}></script> -->
 <script>
+    // simple lightbox javascript
     (function() {
         var $gallery1 = new SimpleLightbox('#about-gallery a', {});
         var $gallery2 = new SimpleLightbox('#astrophotography a', {});
         var $gallery3 = new SimpleLightbox('#research a', {});
         var $gallery4 = new SimpleLightbox('#edu a', {});
     })();
+
+    // set light/dark/auto theme icon
     setButtonIcon();
+
+    // set active elements
+    // Add active class to the current button (highlight it)
+    document.getElementById({{ .Site.Params.languagename }}).className += " active";
+    if ({{ .Type }} == 'blog') {
+        document.getElementById("Blog").className += " active";
+    } 
+    else {
+        try {
+            document.getElementById({{ .Params.title }}).className += " active";
+        }
+        catch(err) {
+        }
+    }
+
+    // var header = document.getElementById("pagemenu");
+    // var btns = header.getElementsByClassName("nav-item");
+    // for (var i = 0; i < btns.length; i++) {
+    //     btns[i].addEventListener("click", function() {
+    //         var current = document.getElementsByClassName("active");
+    //         current[0].className = current[0].className.replace(" active", "");
+    //         this.className += " active";
+    //     });
+    // }
+
 </script>

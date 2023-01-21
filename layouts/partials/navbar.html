@@ -14,24 +14,24 @@
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto" id="pagemenu">
                 <!-- <a href="{{ "index.html" | absURL }}" class="nav-item nav-link"><i
                     class="fa fa-home"></i><span>About</span></a> -->
 
                 {{ range ( where .Site.RegularPages "Type" "page" ) }}
-                <a href="{{ .Permalink }}" class="nav-item nav-link" style="min-width: 50px"><i
+                <a href="{{ .Permalink }}" class="nav-item nav-link" style="min-width: 50px", id="{{ .Params.title }}"><i
                         class="{{ .Params.faIcon }} d-lg-flex justify-content-center"
                         title="{{ .Params.longtitle }}"></i><span class="d-inline d-lg-flex justify-content-center">{{
                         .Params.title }}</span></a>
 
                 {{ end }}
-                <a href={{ "blog/" | absURL }} class="nav-item nav-link" style="min-width: 50px"><i
+                <a href={{ "blog/" | absURL }} class="nav-item nav-link" style="min-width: 50px", id="Blog"><i
                         class="fab fa-blogger d-lg-flex justify-content-center" title="My Blog"></i><span
                         class="d-inline d-lg-flex justify-content-center">Blog</span></a>
             </ul>
-            <span class="nav-item nav-link" style="margin: 5px 15px"><a href={{ "index.html" | absURL }}
-                    class="nav-item nav-link d-inline">EN</a> | <a href={{ "zh/index.html" | absURL }}
-                    class="nav-item nav-link d-inline">粵</a></span>
+            <span class="nav-item nav-link" style="margin: 5px 15px" id="langmenu"><a href={{ "index.html" | absURL }}
+                    class="nav-item nav-link d-inline" style="padding: 2px" id="English">EN</a> | <a href={{ "zh/index.html" | absURL }}
+                    class="nav-item nav-link d-inline" style="padding: 2px" id="Chinese">粵</a></span>
             <span style="margin: 5px 0px">
                 <ul class="navbar-nav"><a href="javascript:void(0);" onclick="setDarkTheme()"
                         class="nav-item nav-link", style="min-width: 34px;"><i

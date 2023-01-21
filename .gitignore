@@ -1,7 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,node
 
-layouts/partials/pub_list.html
+layouts/shortcodes/pub_list.html
 static/css/styles.css
 package.json
 package-lock.json

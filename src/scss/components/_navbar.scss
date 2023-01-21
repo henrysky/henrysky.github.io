@@ -168,3 +168,10 @@
 		width: 100%;
 	}
 }
+
+// Active Element style
+a.nav-item.nav-link.active {
+    background: #fff;
+    color: rgba(0, 51, 102, 1.0);
+    border-radius: .25rem;
+}
