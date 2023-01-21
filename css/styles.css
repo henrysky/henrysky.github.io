@@ -11986,6 +11986,12 @@ h2.widget-title, .widget-title.h2 {
     width: 100%;
   }
 }
+a.nav-item.nav-link.active {
+  background: #fff;
+  color: rgb(0, 51, 102);
+  border-radius: 0.25rem;
+}
+
 .blog-section {
   background: #696969;
   min-height: calc(100vh - 66px);
@@ -11998,7 +12004,7 @@ h2.widget-title, .widget-title.h2 {
 
 header.masthead {
   height: calc(100vh - 66px);
-  min-height: 40rem;
+  min-height: 45rem;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url("../img/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;

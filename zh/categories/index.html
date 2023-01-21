@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Henry W. Leung personal website" />
     <meta name="author" content="梁瑋軒" />
-    <title>Categories | 梁瑋軒</title>
+    <title>Categories | Henry Leung</title>
     <title>Henry Leung</title>
     <link rel="icon" type="image/x-icon" href=https://henrysky.github.io/assets/favicon.ico />
     
@@ -88,17 +88,17 @@
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto" id="pagemenu">
                 
 
                 
-                <a href=https://henrysky.github.io/blog/ class="nav-item nav-link" style="min-width: 50px"><i
+                <a href=https://henrysky.github.io/blog/ class="nav-item nav-link" style="min-width: 50px", id="Blog"><i
                         class="fab fa-blogger d-lg-flex justify-content-center" title="My Blog"></i><span
                         class="d-inline d-lg-flex justify-content-center">Blog</span></a>
             </ul>
-            <span class="nav-item nav-link" style="margin: 5px 15px"><a href=https://henrysky.github.io/index.html
-                    class="nav-item nav-link d-inline">EN</a> | <a href=https://henrysky.github.io/zh/index.html
-                    class="nav-item nav-link d-inline">粵</a></span>
+            <span class="nav-item nav-link" style="margin: 5px 15px" id="langmenu"><a href=https://henrysky.github.io/index.html
+                    class="nav-item nav-link d-inline" style="padding: 2px" id="English">EN</a> | <a href=https://henrysky.github.io/zh/index.html
+                    class="nav-item nav-link d-inline" style="padding: 2px" id="Chinese">粵</a></span>
             <span style="margin: 5px 0px">
                 <ul class="navbar-nav"><a href="javascript:void(0);" onclick="setDarkTheme()"
                         class="nav-item nav-link", style="min-width: 34px;"><i
@@ -160,13 +160,41 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 <script>
+    
     (function() {
         var $gallery1 = new SimpleLightbox('#about-gallery a', {});
         var $gallery2 = new SimpleLightbox('#astrophotography a', {});
         var $gallery3 = new SimpleLightbox('#research a', {});
         var $gallery4 = new SimpleLightbox('#edu a', {});
     })();
+
+    
     setButtonIcon();
+
+    
+    
+    document.getElementById("Chinese").className += " active";
+    if ("categories" == 'blog') {
+        document.getElementById("Blog").className += " active";
+    } 
+    else {
+        try {
+            document.getElementById( null ).className += " active";
+        }
+        catch(err) {
+        }
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 </script>
 </body>
 
