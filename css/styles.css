@@ -11790,6 +11790,15 @@ h2.widget-title, .widget-title.h2 {
   footer,
   .alert {
     border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+  .row {
+    margin-right: 0px;
+  }
+  .row > * {
+    padding-right: 0px;
   }
 }
 .navbar {
@@ -12020,7 +12029,7 @@ header.masthead h1, header.masthead .h1 {
 @media (min-width: 992px) {
   header.masthead {
     height: calc(100vh - 66px);
-    min-height: 40rem;
+    min-height: 45rem;
     padding-bottom: 0;
   }
   header.masthead p {
