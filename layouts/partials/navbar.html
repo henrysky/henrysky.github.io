@@ -31,15 +31,34 @@
                         class="d-inline d-lg-flex justify-content-center">Blog</span></a>
                 {{ end }}
             </ul>
+                <!-- <li class="nav-item py-0 py-lg-1 col-12 col-lg-auto">
+                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                    <hr class="d-lg-none my-2 text-white-50">
+                </li> -->
             <span class="nav-item nav-link" style="margin: 5px 15px" id="langmenu"><a href={{ "index.html" | absURL }}
                     class="nav-item nav-link d-inline" style="padding: 2px" id="English">EN</a> | <a href={{ "zh/index.html" | absURL }}
                     class="nav-item nav-link d-inline" style="padding: 2px" id="Chinese">粵</a></span>
+                <!-- <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                    <hr class="d-lg-none my-2 text-white-50">
+                </li> -->
+
             <span style="margin: 5px 0px">
-                <ul class="navbar-nav"><a href="javascript:void(0);" onclick="setDarkTheme()"
-                        class="nav-item nav-link", style="min-width: 34px;"><i
-                            class="fa-solid fa-circle-half-stroke d-lg-flex justify-content-center"
-                            title="Toggle Light/Dark/Auto theme" id="themebutton"></i></a></ul>
+                <ul class="navbar-nav">
+                    <a href="javascript:void(0);" onclick="setDarkTheme()"
+                        class="nav-item nav-link", style="min-width: 34px;">
+                        <i class="fa-solid fa-circle-half-stroke d-lg-flex justify-content-center"
+                        title="Toggle Light/Dark/Auto theme" id="themebutton"></i>
+                    </a>
+                    </ul>
             </span>
+
+            <!-- <span style="margin: 5px 0px">
+                <ul class="nav-item d-block d-sm-block d-md-block d-lg-none">
+                    <a href="https://twitter.com/uoftastrotours" target="_blank" style="color:#fff" class="nav-item nav-link"><i class="fab fa-github fa-xl"></i></a>
+                    <a href="https://www.facebook.com/utoronto.astrotours/" target="_blank" style="color:#fff" class="nav-item nav-link"><i class="fab fa-linkedin fa-xl"></i></a>
+                </ul>
+            </span> -->
         </div>
     </div>
 </nav>

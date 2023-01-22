@@ -33,13 +33,33 @@
         <div class="container-md px-0 px-md-4 text-left">
             <div class="col-xl-12" style="overflow-x: hidden;">
                 <div class="card">
+                    <div class="card-header">
+                        <h1>Post with Tag - {{ .Title }}</h1>
+                    </div>
                     <div class="card-body">
-                        <h1>{{ .Params.longtitle}}</h1>
-                        <p class="lead">{{ .Content}}</p>
+                    <ul>
+                        {{ range .Data.Pages }}
+                          <li>
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                          </li>
+                        {{ end }}
+                      </ul>
+
                     </div>
                 </div>
             </div>
         </div>
+        <!-- <div class="page-tags" id="tags">
+            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+
+             <h3 style="text-transform: capitalize" id="{{ $name | urlize }}">{{ $name }}</h3>
+             {{ range $taxonomy }}
+               <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+               <p>{{ .Description }}</p>
+             {{ end }}
+
+            {{ end }}
+        </div> -->
     </section>
 
 

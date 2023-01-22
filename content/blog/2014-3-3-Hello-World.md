@@ -7,9 +7,6 @@ author: Henry Leung
 date: 2014-03-04
 ---
 
-* content
-{:toc}
-
 ## test
 
 testing testing

@@ -1,5 +1,5 @@
 ---
-title: Photography
+title: Photos
 longtitle: My Astrophotography
 faIcon: "fa fa-camera"
 type: page

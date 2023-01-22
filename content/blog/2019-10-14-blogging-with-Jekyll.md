@@ -7,9 +7,6 @@ author: Henry Leung
 date: 2019-10-14
 ---
 
-* content
-{:toc}
-
 ## Introduction
 
 I was looking into how blogging is done with Github Page with Jekyll and come across a nice one

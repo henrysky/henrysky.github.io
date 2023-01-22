@@ -42,12 +42,32 @@
             </div>
             <div class="card-body p-2 p-md-4">
               <div class="post-content">
+                <h1>Table of Content</h1>
+                {{ .TableOfContents }}
+                <hr>
                 {{ .Content }}
               </div>
               <hr>
 
               <nav aria-label="Page navigation">
-                <ul class="pager">
+                <div class="row">
+                  <div class="col-12 col-lg-5">
+                    {{ with .NextInSection }}
+                    <a href="{{ .Permalink }}"> <i class="fa-solid fa-left-long"></i>Next: {{ .Title }}</a>
+                    {{ end }}
+                  </div>
+                  <div class="d-none d-md-block col-lg-2">
+                    <span aria-hidden="true">
+                        
+                    </span>
+                  </div>
+                  <div class="col-12 col-lg-5">
+                    {{ with .PrevInSection }}
+                    <a href="{{ .Permalink }}" class="float-end"> Previous: {{ .Title }}<i class="fa-solid fa-right-long"></i></a>
+                    {{ end }}
+                  </div>
+                </div>
+                <!-- <ul class="pager">
                   {{ with .PrevInSection }}
                   <li class="previous">
                     <a href="{{ .Permalink }}"><span aria-hidden="true">&larr;</span> {{ .Title }}</a>
@@ -58,20 +78,32 @@
                     <a href="{{ .Permalink }}"> {{ .Title }} <span aria-hidden="true">&rarr;</span></a>
                   </li>
                   {{ end }}
-                </ul>
+                </ul> -->
               </nav>
             </div>
           </div>
         </div>
-        <div class="d-none d-xl-block col-lg-1 col-xl-3" style="overflow-x: hidden;">
+        <div class="d-none d-xl-block col-lg-1 col-xl-3 affix" style="overflow-x: hidden;">
           <div class="card">
             <div class="card-header">
-              <p></p><i class="fa-solid fa-magnifying-glass"></i>Search</p>
+              <p><i class="fa-solid fa-magnifying-glass"></i>Search</p>
             </div>
             <div class="card-body p-2">
               <input type="text" id="search_box" class="form-control" placeholder="Search...">
+
             </div>
           </div>
+          <div class="card">
+            <div class="card-header">
+              <p><i class="fa-solid fa-magnifying-glass"></i>Tags</p>
+            </div>
+            {{ $taxo := "tags" }}
+              {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
+                  {{ range .Pages }}
+                      <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
+              {{ end }}
+            {{ end }}
+            </div>
         </div>
       </div>
     </div>

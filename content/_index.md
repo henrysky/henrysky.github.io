@@ -16,4 +16,5 @@ addressDepartment: "Department of Astronomy and Astrophysics"
 addressInstitute: "University of Toronto"
 address1: "50 St. George Street, Toronto"
 address2: "ON M5S 3H4, Canada"
+socialname: Social
 ---
