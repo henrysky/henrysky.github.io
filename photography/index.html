@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Henry W. Leung personal website" />
     <meta name="author" content="Henry W. Leung" />
-    <title>Photography | Henry Leung</title>
+    <title>Photos | Henry Leung</title>
     <title>Henry Leung</title>
     <link rel="icon" type="image/x-icon" href=https://henrysky.github.io/assets/favicon.ico />
     
@@ -92,9 +92,9 @@
                 
 
                 
-                <a href="https://henrysky.github.io/photography/" class="nav-item nav-link" style="min-width: 50px", id="Photography"><i
+                <a href="https://henrysky.github.io/photography/" class="nav-item nav-link" style="min-width: 50px", id="Photos"><i
                         class="fa fa-camera d-lg-flex justify-content-center"
-                        title="My Astrophotography"></i><span class="d-inline d-lg-flex justify-content-center">Photography</span></a>
+                        title="My Astrophotography"></i><span class="d-inline d-lg-flex justify-content-center">Photos</span></a>
 
                 
                 <a href="https://henrysky.github.io/codes/" class="nav-item nav-link" style="min-width: 50px", id="Codes"><i
@@ -123,15 +123,23 @@
                         class="d-inline d-lg-flex justify-content-center">Blog</span></a>
                 
             </ul>
+                
             <span class="nav-item nav-link" style="margin: 5px 15px" id="langmenu"><a href=https://henrysky.github.io/index.html
                     class="nav-item nav-link d-inline" style="padding: 2px" id="English">EN</a> | <a href=https://henrysky.github.io/zh/index.html
                     class="nav-item nav-link d-inline" style="padding: 2px" id="Chinese">粵</a></span>
+                
+
             <span style="margin: 5px 0px">
-                <ul class="navbar-nav"><a href="javascript:void(0);" onclick="setDarkTheme()"
-                        class="nav-item nav-link", style="min-width: 34px;"><i
-                            class="fa-solid fa-circle-half-stroke d-lg-flex justify-content-center"
-                            title="Toggle Light/Dark/Auto theme" id="themebutton"></i></a></ul>
+                <ul class="navbar-nav">
+                    <a href="javascript:void(0);" onclick="setDarkTheme()"
+                        class="nav-item nav-link", style="min-width: 34px;">
+                        <i class="fa-solid fa-circle-half-stroke d-lg-flex justify-content-center"
+                        title="Toggle Light/Dark/Auto theme" id="themebutton"></i>
+                    </a>
+                    </ul>
             </span>
+
+            
         </div>
     </div>
 </nav>
@@ -149,7 +157,7 @@
                         <p class="lead"><div class="row" id="astrophotography">
     <div class="col-md-12">
         <p class="lead">I like astrophotography, here are some of my works done at different places around the globe.
-            Most of them are captured with Skywatcher 80ED on Star Adventurer equaatorial mount with a modified Canon
+            Most of them are captured with Skywatcher 80ED on Star Adventurer equatorial mount with a modified Canon
             600D.</p>
         <p class="lead">Some of the best stargazing place I have been include Mount Everest Base Camp at 5400m above sea
             level and Uluru, Australia</p>
@@ -357,23 +365,23 @@
             <div class="small text-center text-muted"></div>
             </div>
             <div class="col-lg-6 col-md-12" style="display:flex;flex-direction: column;justify-content: center;">
-            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2023 Henry W. Leung. <br> Last Updated: 20 January 2023</div>
+            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2023 Henry W. Leung. <br> Last Updated: 22 January 2023</div>
             </div>
             <div class="col-lg-3 d-none d-md-none d-lg-flex" style="flex-direction: column;justify-content: center;">
                 <ul class="nav-item text-center" style="margin-bottom: 0px;">
                 <span class="fa-stack fa-1x" style="flex-shrink: 0;">
                     <a href="https://github.com/henrysky" target="_blank">
-                    <i class="fas fa-circle fa-stack-2x" style="color: #002a5c"></i> <i class="fab fa-github fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy); "title="My Github profile"></i>
+                    <i class="fab fa-github fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy); "title="My Github profile"></i>
                 </a>
                 </span>
                 <span class="fa-stack fa-1x" style="flex-shrink: 0;">
                     <a href="https://www.linkedin.com/in/henry-leung-2664b3259/" target="_blank">
-                    <i class="fas fa-circle fa-stack-2x" style="color: #002a5c"></i> <i class="fab fa-linkedin fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Linkedin profile"></i>></i>
+                    <i class="fab fa-linkedin fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Linkedin profile"></i>
                 </a>
                 </span>
                 <span class="fa-stack fa-1x" style="flex-shrink: 0;">
                     <a href=https://henrysky.github.io/blog/ target="_blank">
-                    <i class="fas fa-circle fa-stack-2x" style="color: #002a5c"></i> <i class="fab fa-blogger fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Blog"></i>></i>
+                    <i class="fab fa-blogger fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Blog"></i>
                 </a>
                 </span>
                 </ul>
@@ -382,9 +390,9 @@
         </div>
 </footer>
 
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.min.js"></script>
 
 <script>
     
@@ -406,7 +414,7 @@
     } 
     else {
         try {
-            document.getElementById("Photography").className += " active";
+            document.getElementById("Photos").className += " active";
         }
         catch(err) {
         }

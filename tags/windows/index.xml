@@ -9,11 +9,12 @@
     <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://henrysky.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blogging with Hugo</title>
-      <link>https://henrysky.github.io/blog/earhjewa-copy/</link>
+      <link>https://henrysky.github.io/blog/2022-01-19-post/</link>
       <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://henrysky.github.io/blog/earhjewa-copy/</guid>
-      <description>content {:toc} Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ and https://tomoya92.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.</description>
+      <guid>https://henrysky.github.io/blog/2022-01-19-post/</guid>
+      <description>Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ and https://tomoya92.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.
+So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.</description>
     </item>
     
     <item>
@@ -22,7 +23,8 @@
       <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://henrysky.github.io/blog/2019-10-14-blogging-with-jekyll/</guid>
-      <description>content {:toc} Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ and https://tomoya92.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.</description>
+      <description>Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ and https://tomoya92.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.
+So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.</description>
     </item>
     
   </channel>

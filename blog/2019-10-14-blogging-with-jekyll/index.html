@@ -101,9 +101,9 @@
                 
 
                 
-                <a href="https://henrysky.github.io/photography/" class="nav-item nav-link" style="min-width: 50px", id="Photography"><i
+                <a href="https://henrysky.github.io/photography/" class="nav-item nav-link" style="min-width: 50px", id="Photos"><i
                         class="fa fa-camera d-lg-flex justify-content-center"
-                        title="My Astrophotography"></i><span class="d-inline d-lg-flex justify-content-center">Photography</span></a>
+                        title="My Astrophotography"></i><span class="d-inline d-lg-flex justify-content-center">Photos</span></a>
 
                 
                 <a href="https://henrysky.github.io/codes/" class="nav-item nav-link" style="min-width: 50px", id="Codes"><i
@@ -132,15 +132,23 @@
                         class="d-inline d-lg-flex justify-content-center">Blog</span></a>
                 
             </ul>
+                
             <span class="nav-item nav-link" style="margin: 5px 15px" id="langmenu"><a href=https://henrysky.github.io/index.html
                     class="nav-item nav-link d-inline" style="padding: 2px" id="English">EN</a> | <a href=https://henrysky.github.io/zh/index.html
                     class="nav-item nav-link d-inline" style="padding: 2px" id="Chinese">粵</a></span>
+                
+
             <span style="margin: 5px 0px">
-                <ul class="navbar-nav"><a href="javascript:void(0);" onclick="setDarkTheme()"
-                        class="nav-item nav-link", style="min-width: 34px;"><i
-                            class="fa-solid fa-circle-half-stroke d-lg-flex justify-content-center"
-                            title="Toggle Light/Dark/Auto theme" id="themebutton"></i></a></ul>
+                <ul class="navbar-nav">
+                    <a href="javascript:void(0);" onclick="setDarkTheme()"
+                        class="nav-item nav-link", style="min-width: 34px;">
+                        <i class="fa-solid fa-circle-half-stroke d-lg-flex justify-content-center"
+                        title="Toggle Light/Dark/Auto theme" id="themebutton"></i>
+                    </a>
+                    </ul>
             </span>
+
+            
         </div>
     </div>
 </nav>
@@ -161,20 +169,27 @@
                 </span>
 
                  
-<ul>
-   <li>
-    <a href="https://henrysky.github.io/tags/windows/">windows</a>
-  </li></ul>
 
+
+ <span class="badge rounded-pill text-bg-primary"><a href="https://henrysky.github.io/tags/windows/" class="text-white text-decoration-none">windows</a></span>
               </small>
             </div>
             <div class="card-body p-2 p-md-4">
               <div class="post-content">
-                <ul>
-<li>content
-{:toc}</li>
-</ul>
-<h2 id="introduction">Introduction</h2>
+                <h1>Table of Content</h1>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#python-code">Python code</a></li>
+    <li><a href="#maths">Maths</a></li>
+    <li><a href="#image">Image</a></li>
+    <li><a href="#quote">Quote</a></li>
+    <li><a href="#table">Table</a></li>
+    <li><a href="#tree-list">Tree List</a></li>
+  </ul>
+</nav>
+                <hr>
+                <h2 id="introduction">Introduction</h2>
 <p>I was looking into how blogging is done with Github Page with Jekyll and come across a nice one
 developed by <a href="https://gaohaoyang.github.io/">https://gaohaoyang.github.io/</a> and <a href="https://tomoya92.github.io/">https://tomoya92.github.io/</a>
 which this blog is based on.  While making new post which is written in markdown is straight-forward, local development such as testing
@@ -288,31 +303,51 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
               <hr>
 
               <nav aria-label="Page navigation">
-                <ul class="pager">
-                  
-                  <li class="previous">
-                    <a href="https://henrysky.github.io/blog/2014-3-3-hello-world/"><span aria-hidden="true">&larr;</span> You&#39;re up and running!</a>
-                  </li>
-                  
-                  
-                  <li class="next">
-                    <a href="https://henrysky.github.io/blog/earhjewa-copy/"> Blogging with Hugo <span aria-hidden="true">&rarr;</span></a>
-                  </li>
-                  
-                </ul>
+                <div class="row">
+                  <div class="col-12 col-lg-5">
+                    
+                    <a href="https://henrysky.github.io/blog/2022-01-19-post/"> <i class="fa-solid fa-left-long"></i>Next: Blogging with Hugo</a>
+                    
+                  </div>
+                  <div class="d-none d-md-block col-lg-2">
+                    <span aria-hidden="true">
+                        
+                    </span>
+                  </div>
+                  <div class="col-12 col-lg-5">
+                    
+                    <a href="https://henrysky.github.io/blog/2014-3-3-hello-world/" class="float-end"> Previous: You&#39;re up and running!<i class="fa-solid fa-right-long"></i></a>
+                    
+                  </div>
+                </div>
+                
               </nav>
             </div>
           </div>
         </div>
-        <div class="d-none d-xl-block col-lg-1 col-xl-3" style="overflow-x: hidden;">
+        <div class="d-none d-xl-block col-lg-1 col-xl-3 affix" style="overflow-x: hidden;">
           <div class="card">
             <div class="card-header">
-              <p></p><i class="fa-solid fa-magnifying-glass"></i>Search</p>
+              <p><i class="fa-solid fa-magnifying-glass"></i>Search</p>
             </div>
             <div class="card-body p-2">
               <input type="text" id="search_box" class="form-control" placeholder="Search...">
+
             </div>
           </div>
+          <div class="card">
+            <div class="card-header">
+              <p><i class="fa-solid fa-magnifying-glass"></i>Tags</p>
+            </div>
+            
+              
+                  
+                      <li><a href="https://henrysky.github.io/tags/windows/">Windows</a></li>
+              
+                      <li><a href="https://henrysky.github.io/tags/general/">General</a></li>
+              
+            
+            </div>
         </div>
       </div>
     </div>
@@ -326,23 +361,23 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
             <div class="small text-center text-muted"></div>
             </div>
             <div class="col-lg-6 col-md-12" style="display:flex;flex-direction: column;justify-content: center;">
-            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2023 Henry W. Leung. <br> Last Updated: 20 January 2023</div>
+            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2023 Henry W. Leung. <br> Last Updated: 22 January 2023</div>
             </div>
             <div class="col-lg-3 d-none d-md-none d-lg-flex" style="flex-direction: column;justify-content: center;">
                 <ul class="nav-item text-center" style="margin-bottom: 0px;">
                 <span class="fa-stack fa-1x" style="flex-shrink: 0;">
                     <a href="https://github.com/henrysky" target="_blank">
-                    <i class="fas fa-circle fa-stack-2x" style="color: #002a5c"></i> <i class="fab fa-github fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy); "title="My Github profile"></i>
+                    <i class="fab fa-github fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy); "title="My Github profile"></i>
                 </a>
                 </span>
                 <span class="fa-stack fa-1x" style="flex-shrink: 0;">
                     <a href="https://www.linkedin.com/in/henry-leung-2664b3259/" target="_blank">
-                    <i class="fas fa-circle fa-stack-2x" style="color: #002a5c"></i> <i class="fab fa-linkedin fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Linkedin profile"></i>></i>
+                    <i class="fab fa-linkedin fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Linkedin profile"></i>
                 </a>
                 </span>
                 <span class="fa-stack fa-1x" style="flex-shrink: 0;">
                     <a href=https://henrysky.github.io/blog/ target="_blank">
-                    <i class="fas fa-circle fa-stack-2x" style="color: #002a5c"></i> <i class="fab fa-blogger fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Blog"></i>></i>
+                    <i class="fab fa-blogger fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Blog"></i>
                 </a>
                 </span>
                 </ul>
@@ -351,9 +386,9 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
         </div>
 </footer>
 
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.min.js"></script>
 
 <script>
     

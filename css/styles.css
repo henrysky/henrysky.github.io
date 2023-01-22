@@ -12003,7 +12003,7 @@ a.nav-item.nav-link.active {
 
 .blog-section {
   background: #696969;
-  min-height: calc(100vh - 66px);
+  min-height: calc(100vh - 66px - 96px);
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
