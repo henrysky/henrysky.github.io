@@ -42,7 +42,7 @@
             </div>
             <div class="card-body p-2 p-md-4">
               <div class="post-content">
-                <h1>Table of Content</h1>
+                <h6>Table of Content</h6>
                 {{ .TableOfContents }}
                 <hr>
                 {{ .Content }}
@@ -84,7 +84,7 @@
           </div>
         </div>
         <div class="d-none d-xl-block col-lg-1 col-xl-3 affix" style="overflow-x: hidden;">
-          <div class="card">
+          <div class="card" style="margin-bottom: 20px">
             <div class="card-header">
               <p><i class="fa-solid fa-magnifying-glass"></i>Search</p>
             </div>
@@ -93,16 +93,18 @@
 
             </div>
           </div>
-          <div class="card">
+          <div class="card" style="margin-bottom: 20px">
             <div class="card-header">
               <p><i class="fa-solid fa-magnifying-glass"></i>Tags</p>
             </div>
-            {{ $taxo := "tags" }}
-              {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
-                  {{ range .Pages }}
-                      <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
-              {{ end }}
-            {{ end }}
+              <div class="card-body p-2">
+                {{ $taxo := "tags" }}
+                  {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
+                      {{ range .Pages }}
+                          <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
+                  {{ end }}
+                {{ end }}
+              </div>
             </div>
         </div>
       </div>
