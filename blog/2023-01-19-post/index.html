@@ -18,7 +18,6 @@
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.min.js"></script>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBFQQ2QV4Q"></script>
     <script>
@@ -162,7 +161,7 @@
               <h1>Blogging with Hugo</h1>
               <small>
                 <span class="item">
-                  <i class="far fa-calendar-check"></i> 01 Jan 2022
+                  <i class="far fa-calendar-check"></i> 01 Jan 2023
                 </span>
                 <span class="item">
                   <i class="fa fa-user"></i> Henry Leung
@@ -176,7 +175,7 @@
             </div>
             <div class="card-body p-2 p-md-4">
               <div class="post-content">
-                <h1>Table of Content</h1>
+                <h6>Table of Content</h6>
                 <nav id="TableOfContents">
   <ul>
     <li><a href="#introduction">Introduction</a></li>
@@ -197,34 +196,34 @@ after you modified the code is not easy. Mainly due to Jekyll requires Ruby whic
 <p>So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.
 Just follow <a href="https://jekyllrb.com/docs/installation/ubuntu/">https://jekyllrb.com/docs/installation/ubuntu/</a>
 to install Jekyll on your WSL. Create a file called <code>blog.sh</code> and edit it by</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch blog.sh
-</span></span><span style="display:flex;"><span>nano blog.sh
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">touch blog.sh
+</span></span><span class="line"><span class="cl">nano blog.sh
 </span></span></code></pre></div><p>Copy and Paste the following and then press <code>CTRL+S</code> to save and then <code>CTRL+X</code> to exit to the terminal.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e"># remove old files</span>
-</span></span><span style="display:flex;"><span>rm -rf blog
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># copy new files from windows, assuming from C drive here</span>
-</span></span><span style="display:flex;"><span>cp -r /mnt/c/path/to/your/blog ./blog
-</span></span><span style="display:flex;"><span>cd  blog
-</span></span><span style="display:flex;"><span>bundle exec jekyll serve
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># remove old files</span>
+</span></span><span class="line"><span class="cl">rm -rf blog
+</span></span><span class="line"><span class="cl"><span class="c1"># copy new files from windows, assuming from C drive here</span>
+</span></span><span class="line"><span class="cl">cp -r /mnt/c/path/to/your/blog ./blog
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span>  blog
+</span></span><span class="line"><span class="cl">bundle <span class="nb">exec</span> jekyll serve
 </span></span></code></pre></div><p>You should see a line something like this: <code>Server address: http://127.0.0.1:4000/</code></p>
 <p>Now go to a browser on Windows, type the address above and you will see your blog locally. Once you have
 done some further editing on windows, just press <code>CTRL+C</code> on WSL and type <code>sh blog.sh</code> and refresh the page
 to see the new changes. If new changes are satisfying, you can commit and push to Github from Windows.</p>
 <h2 id="python-code">Python code</h2>
 <p>{% include codeHeader.html %}</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>):
-</span></span><span style="display:flex;"><span>    print(i)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">123</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello World!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </span></span></code></pre></div><h2 id="maths">Maths</h2>
 <p>Use <code>$$ \somemath $$</code> for maths</p>
 <p>$$y = x^2 \hbox{ when $x &gt; 2$}$$</p>
-<pre tabindex="0"><code>$$y = x^2 \hbox{ when $x &gt; 2$}$$
-</code></pre><p>Or do block:$$log((\sigma_{predictive, i})^2 + (\sigma_{known, i})^2)$$ in line</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$$y = x^2 \hbox{ when $x &gt; 2$}$$
+</span></span></code></pre></div><p>Or do block:$$log((\sigma_{predictive, i})^2 + (\sigma_{known, i})^2)$$ in line</p>
 <h2 id="image">Image</h2>
 <p class="lead"> test </p>
 <img src="https://fujifilm-x.com/wp-content/uploads/2021/01/gfx100s_sample_01_thum.jpg" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
@@ -290,15 +289,15 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
 </table>
 <h2 id="tree-list">Tree List</h2>
 <p>Tree diagram example</p>
-<pre tabindex="0"><code>Content
-├── 1
-├── 2
-├── 3
-│   ├── 4
-│   └── 5
-├── 6
-└── 7
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Content
+</span></span><span class="line"><span class="cl">├── 1
+</span></span><span class="line"><span class="cl">├── 2
+</span></span><span class="line"><span class="cl">├── 3
+</span></span><span class="line"><span class="cl">│   ├── 4
+</span></span><span class="line"><span class="cl">│   └── 5
+</span></span><span class="line"><span class="cl">├── 6
+</span></span><span class="line"><span class="cl">└── 7
+</span></span></code></pre></div>
               </div>
               <hr>
 
@@ -324,7 +323,7 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
           </div>
         </div>
         <div class="d-none d-xl-block col-lg-1 col-xl-3 affix" style="overflow-x: hidden;">
-          <div class="card">
+          <div class="card" style="margin-bottom: 20px">
             <div class="card-header">
               <p><i class="fa-solid fa-magnifying-glass"></i>Search</p>
             </div>
@@ -333,18 +332,20 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
 
             </div>
           </div>
-          <div class="card">
+          <div class="card" style="margin-bottom: 20px">
             <div class="card-header">
               <p><i class="fa-solid fa-magnifying-glass"></i>Tags</p>
             </div>
-            
-              
+              <div class="card-body p-2">
+                
                   
-                      <li><a href="https://henrysky.github.io/tags/windows/">Windows</a></li>
-              
-                      <li><a href="https://henrysky.github.io/tags/general/">General</a></li>
-              
-            
+                      
+                          <li><a href="https://henrysky.github.io/tags/windows/">Windows</a></li>
+                  
+                          <li><a href="https://henrysky.github.io/tags/general/">General</a></li>
+                  
+                
+              </div>
             </div>
         </div>
       </div>
@@ -359,7 +360,7 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
             <div class="small text-center text-muted"></div>
             </div>
             <div class="col-lg-6 col-md-12" style="display:flex;flex-direction: column;justify-content: center;">
-            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2023 Henry W. Leung. <br> Last Updated: 22 January 2023</div>
+            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2023 Henry W. Leung. <br> Last Updated: 1 February 2023</div>
             </div>
             <div class="col-lg-3 d-none d-md-none d-lg-flex" style="flex-direction: column;justify-content: center;">
                 <ul class="nav-item text-center" style="margin-bottom: 0px;">
