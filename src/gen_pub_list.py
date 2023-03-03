@@ -14,7 +14,7 @@ save_to_file = "./layouts/shortcodes/pub_list.html"
 
 
 result = requests.get(
-    f"https://api.adsabs.harvard.edu/v1/search/query?q=orcid%3A{ocrid}&rows=2000&sort=date%20desc%2C%20bibcode%20desc&fl=bibcode,citation_count,year,title,author",
+    f"https://api.adsabs.harvard.edu/v1/search/query?q=orcid%3A{ocrid}&rows=2000&sort=date%20desc%2C%20bibcode%20desc&fl=bibcode,citation_count,year,title,author,doctype",
     headers={"Authorization": "Bearer " + ads_token},
 ).json()
 
