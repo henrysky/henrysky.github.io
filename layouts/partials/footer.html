@@ -49,7 +49,7 @@
 
     // set active elements
     // Add active class to the current button (highlight it)
-    document.getElementById({{ .Site.Params.languagename }}).className += " active";
+    document.getElementById({{ .Site.Language.LanguageName }}).className += " active";
     if ({{ .Type }} == 'blog') {
         document.getElementById("Blog").className += " active";
     } 

@@ -4,12 +4,9 @@ title = 'Henry Leung'
 enableGitInfo = true
 
 [params]
-  authors = 'Henry W. Leung'
   description = 'Henry W. Leung personal website'
   email = 'henrysky.leung [@] utoronto.ca'
   years = '2018-2023'
-  lastupdate = 'Last Updated'
-  copyright = 'Copyrighted'
 
 [frontmatter]
   date = ["lastmod", "date", "publishDate"]
@@ -34,10 +31,16 @@ enableGitInfo = true
         pygmentsUseClasses = true
         pygmentsCodefences = true
 
-[languages.en]
-  languageName = "English"
-[languages.zh]
-  languageName = "Chinese"
-  authors = '梁瑋軒'
-  lastupdate = '最後更新'
-  copyright = '版權所有'
+[languages]
+  [languages.en]
+    languageName = "English"
+    [languages.en.params]
+      authors = 'Henry W. Leung'
+      lastupdate = 'Last Updated'
+      copyright = 'Copyrighted'
+  [languages.zh]
+    languageName = "Chinese"
+    [languages.zh.params]
+      authors = '梁瑋軒'
+      lastupdate = '最後更新'
+      copyright = '版權所有'
