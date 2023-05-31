@@ -5,7 +5,6 @@
     <link>https://henrysky.github.io/zh/</link>
     <description>Recent content in About on Henry Leung</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <copyright>版權所有</copyright><atom:link href="https://henrysky.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh</language><atom:link href="https://henrysky.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
