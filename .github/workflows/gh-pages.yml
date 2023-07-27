@@ -24,7 +24,7 @@ jobs:
           pip install numpy pandas requests
       - name: Build Bootstrap CSS
         run: | 
-          npm i bootstrap@5.3.0 autoprefixer upath sass shelljs 
+          npm i bootstrap autoprefixer upath sass shelljs 
           node src/build-scss.js
       - name: Build list of publication
         run: ADS_TOKEN=${{ secrets.ADS_TOKEN }} python ./src/gen_pub_list.py 
