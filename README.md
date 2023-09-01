@@ -2,6 +2,7 @@
 
 Go away this is my website respository
 
+Website favicon by ``freepik`` on https://flaticon.com/
 ## Local development
 
 This website is developed using ``HUGO`` (https://gohugo.io/), please install ``HUGO`` before developing this website locally on your own computer.
