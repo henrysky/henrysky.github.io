@@ -24,6 +24,23 @@
             {{ .Params.address1 }} <br>
             {{ .Params.address2 }}</p>
           <h4 class="d-block d-lg-none">{{ .Params.socialname }}:</h4>
+          <div class="d-none d-md-none d-lg-flex">
+            <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+                <a href="https://github.com/henrysky" target="_blank">
+                <i class="fab fa-github fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy); "title="My Github profile"></i>
+            </a>
+            </span>
+            <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+                <a href="https://www.linkedin.com/in/henry-leung-2664b3259/" target="_blank">
+                <i class="fab fa-linkedin fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Linkedin profile"></i>
+            </a>
+            </span>
+            <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+                <a href={{ "blog/" | absURL }} target="_blank">
+                <i class="fab fa-blogger fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Blog"></i>
+            </a>
+            </span>
+        </div>
           <ul class="nav-item d-block d-lg-none" style="margin-bottom: 0px;padding-left: 0px;">
             <span class="fa-stack fa-1x" style="flex-shrink: 0;">
               <a href="https://goo.gl/maps/D5gpbofguEMQTK2w6" target="_blank">
