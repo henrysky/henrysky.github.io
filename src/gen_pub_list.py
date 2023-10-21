@@ -4,7 +4,7 @@ import pandas
 import numpy as np
 
 ocrid = "0000-0002-0036-2752"
-# lower case for possible names
+# lower case for possible names that need to be standardized
 possible_names = ["henry leung", "henry w. leung", "henry w leung", "w. henry leung", "w henry leung", "w. h. leung", "h. w. leung", "h w leung"]
 standardized_names = "Henry W. Leung"
 ads_token = os.environ["ADS_TOKEN"]
@@ -12,9 +12,10 @@ ads_token = os.environ["ADS_TOKEN"]
 extra_data = "./src/pub_data.csv"
 save_to_file = "./layouts/shortcodes/pub_list.html"
 
-
+# list of possible parameters: https://github.com/adsabs/adsabs-dev-api/blob/master/openapi/parameters.yaml
+request_cols = ["bibcode","citation_count","year","title","author","doctype","doi","pub","volume","page_range"]
 result = requests.get(
-    f"https://api.adsabs.harvard.edu/v1/search/query?q=orcid%3A{ocrid}&rows=2000&sort=date%20desc%2C%20bibcode%20desc&fl=bibcode,citation_count,year,title,author,doctype",
+    f"https://api.adsabs.harvard.edu/v1/search/query?q=orcid%3A{ocrid}&rows=2000&sort=date%20desc%2C%20bibcode%20desc&fl={','.join(request_cols)}",
     headers={"Authorization": "Bearer " + ads_token},
 ).json()
 
@@ -62,7 +63,7 @@ for paper in result['response']['docs']:
             authors_str = f"{first_author_str}, el al. (includes <b>{standardized_names}</b>)"
         detected = True
     if not detected:
-        print(f"Your author name not detected in '{paper['title']}', suggest you to add an addition possible name")
+        print(f"Your author name not detected in '{paper['title']}'. I suggest you to add an additional possible name")
 
     buttons_code = """
     <div class="row">
