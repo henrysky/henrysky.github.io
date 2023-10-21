@@ -13,7 +13,9 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
     <link href=https://henrysky.github.io/css/styles.css rel="stylesheet" />
+    <link href=https://henrysky.github.io/css/copy_button.css rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
@@ -45,8 +47,12 @@
         };
 
         function setAutoCorrectTheme() {
-            if (theme == 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.documentElement.setAttribute('data-bs-theme', 'dark');
+            if (theme == 'auto') {
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', 'light');
+                }
             } 
             else {
                 document.documentElement.setAttribute('data-bs-theme', theme);
@@ -69,7 +75,6 @@
     </script>
     
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 </head>
 
 <body id="page-top">
@@ -148,6 +153,11 @@
                 <i class="fab fa-blogger fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Blog"></i>
             </a>
             </span>
+            <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+              <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0002-0036-2752&sort=date+desc" target="_blank">
+              <i class="ai ai-ads-square ai-stack-2x ai-inverse" style="--fa-inverse:var(--fa-navy);" title="My Blog"></i>
+          </a>
+          </span>
         </div>
           <ul class="nav-item d-block d-lg-none" style="margin-bottom: 0px;padding-left: 0px;">
             <span class="fa-stack fa-1x" style="flex-shrink: 0;">
@@ -170,6 +180,11 @@
                 <i class="fab fa-blogger fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);" title="My Blog"></i>
             </a>
             </span>
+            <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+              <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0002-0036-2752&sort=date+desc" target="_blank">
+              <i class="ai ai-ads-square ai-stack-2x ai-inverse" style="--fa-inverse:var(--fa-navy);" title="My Blog"></i>
+          </a>
+          </span>
             </ul>
         </div>
         
@@ -290,7 +305,7 @@
             <div class="small text-center text-muted"></div>
             </div>
             <div class="col-lg-6 col-md-12" style="display:flex;flex-direction: column;justify-content: center;">
-            <div class="m-0 text-center text-white">版權所有 &copy; 2018-2023 梁瑋軒. <br> 最後更新: 11 September 2023</div>
+            <div class="m-0 text-center text-white">版權所有 &copy; 2018-2023 梁瑋軒. <br> 最後更新: 21 October 2023</div>
             </div>
             <div class="col-lg-3 d-none d-md-none d-lg-flex" style="flex-direction: column;justify-content: center;">
                 <ul class="nav-item text-center" style="margin-bottom: 0px;">
@@ -318,7 +333,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"></script>
-
+<script src=https://henrysky.github.io/js/copy_code.js></script>
 <script>
     
     (function() {
@@ -354,7 +369,6 @@
     
     
     
-
 </script>
 </body>
 

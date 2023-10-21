@@ -13,7 +13,9 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
     <link href=https://henrysky.github.io/css/styles.css rel="stylesheet" />
+    <link href=https://henrysky.github.io/css/copy_button.css rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
@@ -45,8 +47,12 @@
         };
 
         function setAutoCorrectTheme() {
-            if (theme == 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.documentElement.setAttribute('data-bs-theme', 'dark');
+            if (theme == 'auto') {
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', 'light');
+                }
             } 
             else {
                 document.documentElement.setAttribute('data-bs-theme', theme);
@@ -69,7 +75,6 @@
     </script>
     
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 </head>
   <style>
     .page-section img {
@@ -125,6 +130,10 @@
                         title="My Curriculum Vitae"></i><span class="d-inline d-lg-flex justify-content-center">CV</span></a>
 
                 
+                
+                <a href=https://henrysky.github.io/blog/ class="nav-item nav-link" style="min-width: 50px", id="Blog"><i
+                        class="fab fa-blogger d-lg-flex justify-content-center" title="My Blog"></i><span
+                        class="d-inline d-lg-flex justify-content-center">Blog</span></a>
                 
             </ul>
                 
@@ -192,34 +201,75 @@ after you modified the code is not easy. Mainly due to Jekyll requires Ruby whic
 <p>So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.
 Just follow <a href="https://jekyllrb.com/docs/installation/ubuntu/">https://jekyllrb.com/docs/installation/ubuntu/</a>
 to install Jekyll on your WSL. Create a file called <code>blog.sh</code> and edit it by</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">touch blog.sh
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">touch blog.sh
 </span></span><span class="line"><span class="cl">nano blog.sh
-</span></span></code></pre></div><p>Copy and Paste the following and then press <code>CTRL+S</code> to save and then <code>CTRL+X</code> to exit to the terminal.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Copy and Paste the following and then press <code>CTRL+S</code> to save and then <code>CTRL+X</code> to exit to the terminal.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># remove old files</span>
 </span></span><span class="line"><span class="cl">rm -rf blog
 </span></span><span class="line"><span class="cl"><span class="c1"># copy new files from windows, assuming from C drive here</span>
 </span></span><span class="line"><span class="cl">cp -r /mnt/c/path/to/your/blog ./blog
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span>  blog
 </span></span><span class="line"><span class="cl">bundle <span class="nb">exec</span> jekyll serve
-</span></span></code></pre></div><p>You should see a line something like this: <code>Server address: http://127.0.0.1:4000/</code></p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>You should see a line something like this: <code>Server address: http://127.0.0.1:4000/</code></p>
 <p>Now go to a browser on Windows, type the address above and you will see your blog locally. Once you have
 done some further editing on windows, just press <code>CTRL+C</code> on WSL and type <code>sh blog.sh</code> and refresh the page
 to see the new changes. If new changes are satisfying, you can commit and push to Github from Windows.</p>
 <h2 id="python-code">Python code</h2>
 <p>{% include codeHeader.html %}</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">123</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello World!&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="maths">Maths</h2>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="maths">Maths</h2>
 <p>Use <code>$$ \somemath $$</code> for maths</p>
 <p>$$y = x^2 \hbox{ when $x &gt; 2$}$$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$$y = x^2 \hbox{ when $x &gt; 2$}$$
-</span></span></code></pre></div><p>Or do block:$$log((\sigma_{predictive, i})^2 + (\sigma_{known, i})^2)$$ in line</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$$y = x^2 \hbox{ when $x &gt; 2$}$$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Or do block:$$log((\sigma_{predictive, i})^2 + (\sigma_{known, i})^2)$$ in line</p>
 <h2 id="image">Image</h2>
 <p class="lead"> test </p>
 <img src="https://fujifilm-x.com/wp-content/uploads/2021/01/gfx100s_sample_01_thum.jpg" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
@@ -285,7 +335,19 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
 </table>
 <h2 id="tree-list">Tree List</h2>
 <p>Tree diagram example</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Content
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Content
 </span></span><span class="line"><span class="cl">├── 1
 </span></span><span class="line"><span class="cl">├── 2
 </span></span><span class="line"><span class="cl">├── 3
@@ -293,7 +355,9 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
 </span></span><span class="line"><span class="cl">│   └── 5
 </span></span><span class="line"><span class="cl">├── 6
 </span></span><span class="line"><span class="cl">└── 7
-</span></span></code></pre></div>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
               </div>
               <hr>
 
@@ -358,7 +422,7 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
             <div class="small text-center text-muted"></div>
             </div>
             <div class="col-lg-6 col-md-12" style="display:flex;flex-direction: column;justify-content: center;">
-            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2023 Henry W. Leung. <br> Last Updated: 11 September 2023</div>
+            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2023 Henry W. Leung. <br> Last Updated: 21 October 2023</div>
             </div>
             <div class="col-lg-3 d-none d-md-none d-lg-flex" style="flex-direction: column;justify-content: center;">
                 <ul class="nav-item text-center" style="margin-bottom: 0px;">
@@ -386,7 +450,7 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"></script>
-
+<script src=https://henrysky.github.io/js/copy_code.js></script>
 <script>
     
     (function() {
@@ -422,7 +486,6 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
     
     
     
-
 </script>
 
 </body>
