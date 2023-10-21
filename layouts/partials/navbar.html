@@ -25,7 +25,7 @@
                         .Params.title }}</span></a>
 
                 {{ end }}
-                {{ if eq .Site.Params.languagename "English" }}
+                {{ if eq .Site.Language.LanguageName "English" }}
                 <a href={{ "blog/" | absURL }} class="nav-item nav-link" style="min-width: 50px", id="Blog"><i
                         class="fab fa-blogger d-lg-flex justify-content-center" title="My Blog"></i><span
                         class="d-inline d-lg-flex justify-content-center">Blog</span></a>
