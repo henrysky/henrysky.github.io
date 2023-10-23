@@ -12,13 +12,6 @@
 </head>
 
 <body id="page-top">
-  {{ if eq .Params.covidwarning "TRUE" }}
-  <div class="alert alert-warning d-none d-md-none d-lg-block"
-    style="border-radius: 0 !important; margin: 0; line-height: 30px;" role="alert">
-    <center><i class='fas fa-exclamation-triangle' style="font-size: 20px; color:red"></i><strong>&nbsp;&nbsp; Important
-        Message: </strong> In-person Astrotours are back but face masks are strongly recommended.</center>
-  </div>
-  {{ end }}
   <!-- Navigation-->
   {{ partial "navbar.html" . }}
 
@@ -30,21 +23,25 @@
             <div class="card-header">
               <h1>{{ .Params.title }}</h1>
               <small>
-                <span class="item">
+                <span class="item" style="padding-right: 10px;">
                   <i class="far fa-calendar-check"></i> {{ .Params.date.Format "01 Jan 2006" }}
                 </span>
-                <span class="item">
+                <span class="item" style="padding-right: 10px;">
                   <i class="fa fa-user"></i> {{ .Params.author}}
                 </span>
-
+                <span class="item">
+                  <i class="fa fa-tag"></i>
+                </span>
                 {{ partial "tags.html" .}}
               </small>
             </div>
             <div class="card-body p-2 p-md-4">
               <div class="post-content">
+                {{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
                 <h6>Table of Content</h6>
                 {{ .TableOfContents }}
                 <hr>
+                {{ end }}
                 {{ .Content }}
               </div>
               <hr>
