@@ -13,7 +13,7 @@
 /* ------------------------ monokai ------------------------ */
 --code-bg-color: #272822;
 /* Background */ .bg { color: #f8f8f2; background-color: #272822; }
-/* PreWrapper */ .chroma { color: #f8f8f2; background-color: #272822; border-radius: 0rem 0.375rem 0.375rem 0.375rem; padding: 5px;}
+/* PreWrapper */ .chroma { color: #f8f8f2; background-color: #272822; border-radius: 0rem 0.375rem 0.375rem 0.375rem; padding: 5px 0px 5px 5px;}
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color: #960050; background-color: #1e0010 }
 /* CodeLine */ .chroma .cl {  }
@@ -101,9 +101,9 @@
 }
 [data-bs-theme=dark] { 
 /* ------------------------ monokailight ------------------------ */
---code-bg-color: #fafafa;
-/* Background */ .bg { color: #272822; background-color: #fafafa; }
-/* PreWrapper */ .chroma { color: #272822; background-color: #fafafa; border-radius: 0rem 0.375rem 0.375rem 0.375rem; padding: 5px;}
+--code-bg-color: #dadada;
+/* Background */ .bg { color: #272822; background-color: #dadada; }
+/* PreWrapper */ .chroma { color: #272822; background-color: #dadada; border-radius: 0rem 0.375rem 0.375rem 0.375rem; padding: 5px 0px 5px 5px;}
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color: #960050; background-color: #1e0010 }
 /* CodeLine */ .chroma .cl {  }
@@ -225,22 +225,16 @@
   border-radius: 4px;
 }
 
-// .highlight > .chroma {
-//   color: #d0d0d0;
-//   background-color: #212121;
-//   position: static;
-//   z-index: 1;
-//   border-radius: 0px 4px 4px 4px;
-//   padding: 10px;
-// }
-
+.highlight>.chroma {
+  overflow: auto;
+}
 .chroma .lntd:first-child {
   padding: 7px 0px 7px 0px;
   margin: 0;
 }
 
 .chroma .lntd:last-child {
-  padding: 7px 10px 7px 7px;
+  padding: 7px 10px 7px 0px;
   margin: 0;
 }
 
