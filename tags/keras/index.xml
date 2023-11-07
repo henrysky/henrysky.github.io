@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Keras on Henry Leung</title>
+    <link>https://henrysky.github.io/tags/keras/</link>
+    <description>Recent content in Keras on Henry Leung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://henrysky.github.io/tags/keras/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Converting Keras 1D Convulution to PyTorch</title>
+      <link>https://henrysky.github.io/blog/2023-10-23-keras-torch/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://henrysky.github.io/blog/2023-10-23-keras-torch/</guid>
+      <description>Recently I need to convert a model trained with Keras to PyTorch containing 1D convolution layer. Since keras uses channels last and PyTorch uses channels first, the weight matrix needs to be transposed in a consistent way such that the output of the two models are the same after flattening.
+We can do a simple test to make sure we know how to convert the weight matrix. Here we will create the same model in Keras and PyTorch first and get the weight matrix from the Keras model and transpose it to PyTorch format,</description>
+    </item>
+  </channel>
+</rss>

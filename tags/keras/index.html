@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="auto">
 
 <head>
-  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Henry W. Leung personal website" />
     <meta name="author" content="Henry W. Leung" />
     <meta name="theme-color" content="#003366"/>
-    <title>Blog | Henry Leung</title>
+    <title>Keras | Henry Leung</title>
     <title>Henry Leung</title>
     <link rel="icon" type="image/x-icon" href=https://henrysky.github.io/assets/favicon.ico />
     
@@ -76,18 +75,10 @@
     
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-  <style>
-    .page-section img {
-      max-width: 1000px;
-      width: 100%
-    }
-  </style>
-</head>
 
 <body id="page-top">
-  
-  
-  
+    
+    
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container-md">
         <a href=https://henrysky.github.io/index.html class="navbar-brand"
@@ -156,114 +147,37 @@
         </div>
     </div>
 </nav>
+    
+    
+    
 
-  <section class="blog-section py-0 py-md-4">
-    <div class="container-md px-0 px-md-4 text-left">
-      <div class="row">
-        
-        <div class="col-12 col-md-6 col-xl-4">
-          <div class="card mb-0 mb-md-4 box-shadow">
-            
-              <div class="card-header">
-                <h3 class="card-text">Converting Keras 1D Convulution to PyTorch</h3>
-                <p class="card-text" style="text-align:left;">
-                  By Henry Leung
-                  <span style="float:right;">
-                    <em>10 Oct 2023</em>
-                  </span>
-              </p>
-              </div>
-            <div class="card-body">
-            <p>Recently I need to convert a model trained with Keras to PyTorch containing 1D convolution layer. Since keras uses channels last and PyTorch uses channels first, the weight matrix needs to be transposed in a consistent way such that the output of the two models are the same after flattening.
-We can do a simple test to make sure we know how to convert the weight matrix. Here we will create the same model in Keras and PyTorch first and get the weight matrix from the Keras model and transpose it to PyTorch format,</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group d-grid">
-                  <a href="https://henrysky.github.io/blog/2023-10-23-keras-torch/"><button type="button" class="btn btn-lg btn-outline-secondary", title="Read More">Read More</button></a>
+
+    <section class="blog-section py-0 py-md-4">
+        <div class="container-md px-0 px-md-4 text-left">
+            <div class="col-xl-12" style="overflow-x: hidden;">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Post with Tag - Keras</h1>
+                    </div>
+                    <div class="card-body">
+                    <ul>
+                        
+                          <li>
+                            <a href="https://henrysky.github.io/blog/2023-10-23-keras-torch/">Converting Keras 1D Convulution to PyTorch</a>
+                          </li>
+                        
+                      </ul>
+
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
         
-        <div class="col-12 col-md-6 col-xl-4">
-          <div class="card mb-0 mb-md-4 box-shadow">
-            
-              <div class="card-header">
-                <h3 class="card-text">Blogging with Hugo</h3>
-                <p class="card-text" style="text-align:left;">
-                  By Henry Leung
-                  <span style="float:right;">
-                    <em>01 Jan 2023</em>
-                  </span>
-              </p>
-              </div>
-            <div class="card-body">
-            <p>Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ and https://tomoya92.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.
-So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group d-grid">
-                  <a href="https://henrysky.github.io/blog/2023-01-19-post/"><button type="button" class="btn btn-lg btn-outline-secondary", title="Read More">Read More</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-12 col-md-6 col-xl-4">
-          <div class="card mb-0 mb-md-4 box-shadow">
-            
-              <div class="card-header">
-                <h3 class="card-text">Blogging with Jekyll and Developing it on Windows</h3>
-                <p class="card-text" style="text-align:left;">
-                  By Henry Leung
-                  <span style="float:right;">
-                    <em>10 Oct 2019</em>
-                  </span>
-              </p>
-              </div>
-            <div class="card-body">
-            <p>Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ and https://tomoya92.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.
-So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group d-grid">
-                  <a href="https://henrysky.github.io/blog/2019-10-14-blogging-with-jekyll/"><button type="button" class="btn btn-lg btn-outline-secondary", title="Read More">Read More</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-12 col-md-6 col-xl-4">
-          <div class="card mb-0 mb-md-4 box-shadow">
-            
-              <div class="card-header">
-                <h3 class="card-text">You&#39;re up and running!</h3>
-                <p class="card-text" style="text-align:left;">
-                  By Henry Leung
-                  <span style="float:right;">
-                    <em>03 Mar 2014</em>
-                  </span>
-              </p>
-              </div>
-            <div class="card-body">
-            <p>test testing testing
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
-![_config.yml]({{ site.baseurl }}/images/config.png)
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the Jekyll Now repository on GitHub.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group d-grid">
-                  <a href="https://henrysky.github.io/blog/2014-3-3-hello-world/"><button type="button" class="btn btn-lg btn-outline-secondary", title="Read More">Read More</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-  
-  
+    </section>
+
+
+    
+    
 <footer class="py-4 bg-dark">
     <div class="container px-4 px-lg-5">
         <div class="row">
@@ -315,12 +229,12 @@ The easiest way to make your first post is to edit this one. Go into /_posts/ an
     
     
     document.getElementById("English").className += " active";
-    if ("blog" == 'blog') {
+    if ("tags" == 'blog') {
         document.getElementById("Blog").className += " active";
     } 
     else {
         try {
-            document.getElementById("Blog").className += " active";
+            document.getElementById("Keras").className += " active";
         }
         catch(err) {
         }
@@ -336,7 +250,6 @@ The easiest way to make your first post is to edit this one. Go into /_posts/ an
     
     
 </script>
-
 </body>
 
 </html>

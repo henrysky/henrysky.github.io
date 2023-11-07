@@ -8,7 +8,7 @@
     <meta name="description" content="Henry W. Leung personal website" />
     <meta name="author" content="Henry W. Leung" />
     <meta name="theme-color" content="#003366"/>
-    <title>Blogging with Jekyll and Developing it on Windows | Henry Leung</title>
+    <title>Converting Keras 1D Convulution to PyTorch | Henry Leung</title>
     <title>Henry Leung</title>
     <link rel="icon" type="image/x-icon" href=https://henrysky.github.io/assets/favicon.ico />
     
@@ -162,10 +162,10 @@
         <div class="col-lg-12 col-xl-9" style="overflow-x: hidden;">
           <div class="card">
             <div class="card-header">
-              <h1>Blogging with Jekyll and Developing it on Windows</h1>
+              <h1>Converting Keras 1D Convulution to PyTorch</h1>
               <small>
                 <span class="item" style="padding-right: 10px;">
-                  <i class="far fa-calendar-check"></i> 10 Oct 2019
+                  <i class="far fa-calendar-check"></i> 10 Oct 2023
                 </span>
                 <span class="item" style="padding-right: 10px;">
                   <i class="fa fa-user"></i> Henry Leung
@@ -176,199 +176,113 @@
                  
 
 
- <span class="badge rounded-pill text-bg-primary"><a href="https://henrysky.github.io/tags/windows/" class="text-white text-decoration-none">windows</a></span>
+ <span class="badge rounded-pill text-bg-primary"><a href="https://henrysky.github.io/tags/deeplearning/" class="text-white text-decoration-none">deeplearning</a></span> <span class="badge rounded-pill text-bg-primary"><a href="https://henrysky.github.io/tags/keras/" class="text-white text-decoration-none">keras</a></span> <span class="badge rounded-pill text-bg-primary"><a href="https://henrysky.github.io/tags/pytorch/" class="text-white text-decoration-none">pytorch</a></span>
               </small>
             </div>
             <div class="card-body p-2 p-md-4">
               <div class="post-content">
                 
-                <h6>Table of Content</h6>
-                <nav id="TableOfContents">
-  <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#python-code">Python code</a></li>
-    <li><a href="#maths">Maths</a></li>
-    <li><a href="#image">Image</a></li>
-    <li><a href="#quote">Quote</a></li>
-    <li><a href="#table">Table</a></li>
-    <li><a href="#tree-list">Tree List</a></li>
-  </ul>
-</nav>
-                <hr>
-                
-                <h2 id="introduction">Introduction</h2>
-<p>I was looking into how blogging is done with Github Page with Jekyll and come across a nice one
-developed by <a href="https://gaohaoyang.github.io/">https://gaohaoyang.github.io/</a> and <a href="https://tomoya92.github.io/">https://tomoya92.github.io/</a>
-which this blog is based on.  While making new post which is written in markdown is straight-forward, local development such as testing
-after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.</p>
-<p>So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.
-Just follow <a href="https://jekyllrb.com/docs/installation/ubuntu/">https://jekyllrb.com/docs/installation/ubuntu/</a>
-to install Jekyll on your WSL. Create a file called <code>blog.sh</code> and edit it by</p>
+                <p>Recently I need to convert a model trained with Keras to PyTorch containing 1D convolution layer.
+Since keras uses channels last and PyTorch uses channels first, the weight matrix needs to be
+transposed in a consistent way such that the output of the two models are the same after flattening.</p>
+<p>We can do a simple test to make sure we know how to convert the weight matrix. Here we will create the
+same model in Keras and PyTorch first and get the weight matrix from the Keras model and transpose it to PyTorch format,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">touch blog.sh
-</span></span><span class="line"><span class="cl">nano blog.sh
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Copy and Paste the following and then press <code>CTRL+S</code> to save and then <code>CTRL+X</code> to exit to the terminal.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># remove old files</span>
-</span></span><span class="line"><span class="cl">rm -rf blog
-</span></span><span class="line"><span class="cl"><span class="c1"># copy new files from windows, assuming from C drive here</span>
-</span></span><span class="line"><span class="cl">cp -r /mnt/c/path/to/your/blog ./blog
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span>  blog
-</span></span><span class="line"><span class="cl">bundle <span class="nb">exec</span> jekyll serve
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>You should see a line something like this: <code>Server address: http://127.0.0.1:4000/</code></p>
-<p>Now go to a browser on Windows, type the address above and you will see your blog locally. Once you have
-done some further editing on windows, just press <code>CTRL+C</code> on WSL and type <code>sh blog.sh</code> and refresh the page
-to see the new changes. If new changes are satisfying, you can commit and push to Github from Windows.</p>
-<h2 id="python-code">Python code</h2>
-<p>{% include codeHeader.html %}</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">keras</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Conv1D</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Flatten</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">123</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello World!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">np_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">keras</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">set_random_seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ======================= Keras =======================</span>
+</span></span><span class="line"><span class="cl"><span class="n">x_tf</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">convert_to_tensor</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">conv1d_keras</span> <span class="o">=</span> <span class="n">Conv1D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">dense1_keras</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Forward pass of Keras model</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">dense1_keras</span><span class="p">(</span><span class="n">Flatten</span><span class="p">()(</span><span class="n">conv1d_keras</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ======================= PyTorch =======================</span>
+</span></span><span class="line"><span class="cl"><span class="n">x_torch</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x_torch</span> <span class="o">=</span> <span class="n">x_torch</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Pytorch expects channels first</span>
+</span></span><span class="line"><span class="cl"><span class="n">conv1d_torch</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Conv1d</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">in_channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">out_channels</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">dense1_torch</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">254</span><span class="p">,</span> <span class="n">out_features</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Keras to Pytorch weights conversion</span>
+</span></span><span class="line"><span class="cl"><span class="n">conv1d_torch</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">conv1d_keras</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl"><span class="n">conv1d_torch</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">conv1d_keras</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl"><span class="n">dense1_torch</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">dense1_keras</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl"><span class="n">dense1_torch</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">dense1_keras</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Forward pass of PyTorch model</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">dense1_torch</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">conv1d_torch</span><span class="p">(</span><span class="n">x_torch</span><span class="p">))))</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="maths">Maths</h2>
-<p>Use <code>$$ \somemath $$</code> for maths</p>
-<p>$$y = x^2 \hbox{ when $x &gt; 2$}$$</p>
+</div><p>which gives the output,</p>
+<p><code>tf.Tensor([[0.44686446]], shape=(1, 1), dtype=float32)</code><br>
+<code>tensor([-0.0667], grad_fn=&lt;ViewBackward0&gt;)</code></p>
+<p>The output of the two models are DIFFERENT. But why?
+We have transposed the weight matrix, right? The reason is that the weight matrix of the Keras model
+is not in the same order as the PyTorch model even thought they share the same shape which make the
+code failed silently. To make sure we are the weight matrix in the correct order after flattening,
+we need to make the matrix channel last again before flattening! So the correct code of forward pass of PyTorch model should be,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$$y = x^2 \hbox{ when $x &gt; 2$}$$
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">dense1_torch</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">conv1d_torch</span><span class="p">(</span><span class="n">x_torch</span><span class="p">)</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))))</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Or do block:$$log((\sigma_{predictive, i})^2 + (\sigma_{known, i})^2)$$ in line</p>
-<h2 id="image">Image</h2>
-<p class="lead"> test </p>
-<img src="https://fujifilm-x.com/wp-content/uploads/2021/01/gfx100s_sample_01_thum.jpg" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
-<p><code>[&lt;img src=&quot;{{ site.baseurl }}/images/404.jpg&quot; alt=&quot;With alt text here, limited the image to 200px wide, click to go to homepage&quot;  style=&quot;width: 200px;&quot;/&gt;]({{ site.baseurl }}/)</code></p>
-<p>[<img src="{{ site.baseurl }}/images/404.jpg" alt="With alt text here, limited the image to 200px wide, click to go to homepage" 
-style="width: 200px;"/>]({{ site.baseurl }}/)</p>
-<h2 id="quote">Quote</h2>
-<blockquote>
-<p>Blockquotes are very handy in email to emulate reply text.
-This line is part of the same quote.</p>
-</blockquote>
-<h2 id="table">Table</h2>
-<p>Colons can be used to align columns.</p>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>zebra stripes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
-</table>
-<p>There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don&rsquo;t need to make the
-raw Markdown line up prettily. You can also use inline Markdown.</p>
-<table>
-<thead>
-<tr>
-<th>Markdown</th>
-<th>Less</th>
-<th>Pretty</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>Still</em></td>
-<td><code>renders</code></td>
-<td><strong>nicely</strong></td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<h2 id="tree-list">Tree List</h2>
-<p>Tree diagram example</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Content
-</span></span><span class="line"><span class="cl">├── 1
-</span></span><span class="line"><span class="cl">├── 2
-</span></span><span class="line"><span class="cl">├── 3
-</span></span><span class="line"><span class="cl">│   ├── 4
-</span></span><span class="line"><span class="cl">│   └── 5
-</span></span><span class="line"><span class="cl">├── 6
-</span></span><span class="line"><span class="cl">└── 7
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+</div><p>which gives the output,</p>
+<p><code>tensor([0.4469], grad_fn=&lt;ViewBackward0&gt;)</code></p>
+<p>Now both models share the same weight matrixes and produce the same output.</p>
+
               </div>
               <hr>
 
               <nav aria-label="Page navigation">
                 <div class="row">
                   <div class="col-12 col-lg-5">
-                    
-                    <a href="https://henrysky.github.io/blog/2023-01-19-post/"> <i class="fa-solid fa-left-long"></i>Next: Blogging with Hugo</a>
                     
                   </div>
                   <div class="d-none d-md-block col-lg-2">
@@ -378,7 +292,7 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
                   </div>
                   <div class="col-12 col-lg-5">
                     
-                    <a href="https://henrysky.github.io/blog/2014-3-3-hello-world/" class="float-end"> Previous: You&#39;re up and running!<i class="fa-solid fa-right-long"></i></a>
+                    <a href="https://henrysky.github.io/blog/2023-01-19-post/" class="float-end"> Previous: Blogging with Hugo<i class="fa-solid fa-right-long"></i></a>
                     
                   </div>
                 </div>
@@ -480,7 +394,7 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
     } 
     else {
         try {
-            document.getElementById("Blogging with Jekyll and Developing it on Windows").className += " active";
+            document.getElementById("Converting Keras 1D Convulution to PyTorch").className += " active";
         }
         catch(err) {
         }
