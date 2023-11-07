@@ -4,7 +4,7 @@ title:  Blogging with Jekyll and Developing it on Windows
 categories: ["Tech"]
 tags: ["Windows"]
 author: Henry Leung
-date: 2019-10-14
+date: 2019-10-14T00:00:00-00:00
 ---
 
 ## Introduction

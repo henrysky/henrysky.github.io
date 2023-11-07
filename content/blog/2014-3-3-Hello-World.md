@@ -4,7 +4,7 @@ title: You're up and running!
 categories: ["General"]
 tags: ["General"]
 author: Henry Leung
-date: 2014-03-04
+date: 2014-03-04T00:00:00-00:00
 ---
 
 ## test
