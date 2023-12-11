@@ -12,25 +12,14 @@
       <link>https://henrysky.github.io/photography/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://henrysky.github.io/photography/</guid>
-      <description>I like astrophotography, here are some of my works done at different places around the globe. Most of them are captured with Skywatcher 80ED on Star Adventurer equatorial mount with a modified Canon 600D.
-Some of the best stargazing place I have been include Mount Everest Base Camp at 5400m above sea level and Uluru, Australia
-M42 Orion Nebula 8 Nov 2015, Home at Downtown Toronto
-Startrails over University College at UofT 18-19 March 2016, Front Campus at U of Toronto</description>
+      <description>I like astrophotography, here are some of my works done at different places around the globe. Most of them are captured with Skywatcher 80ED on Star Adventurer equatorial mount with a modified Canon 600D.&#xA;Some of the best stargazing place I have been include Mount Everest Base Camp at 5400m above sea level and Uluru, Australia&#xA;M42 Orion Nebula 8 Nov 2015, Home at Downtown Toronto&#xA;Startrails over University College at UofT 18-19 March 2016, Front Campus at U of Toronto</description>
     </item>
     <item>
       <title>Codes</title>
       <link>https://henrysky.github.io/codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://henrysky.github.io/codes/</guid>
-      <description>I release most of my code including code for my papers on my Github profile
-astroNN Deep Learning for Astronomers with Tensorflow
-astroNN Github: https://github.com/henrysky/astroNN
-mw_plot A handy python package to do plotting on a face-on/edge-on/allsky map milkyway with matplotlib and bokeh
-mw_plot Github: https://github.com/henrysky/milkyway_plot
-Galaxy10 A CIFAR10-like galaxy image dataset
-Galaxy10 Github: https://github.com/henrysky/Galaxy10
-galpy_cuda_demo Technology demonstration of orbits integration with CUDA for galpy
-galpy_cuda_demo Github: https://github.com/henrysky/galpy_cuda_demo</description>
+      <description>I release most of my code including code for my papers on my Github profile&#xA;astroNN Deep Learning for Astronomers with Tensorflow&#xA;astroNN Github: https://github.com/henrysky/astroNN&#xA;mw_plot A handy python package to do plotting on a face-on/edge-on/allsky map milkyway with matplotlib and bokeh&#xA;mw_plot Github: https://github.com/henrysky/milkyway_plot&#xA;Galaxy10 A CIFAR10-like galaxy image dataset&#xA;Galaxy10 Github: https://github.com/henrysky/Galaxy10&#xA;galpy_cuda_demo Technology demonstration of orbits integration with CUDA for galpy&#xA;galpy_cuda_demo Github: https://github.com/henrysky/galpy_cuda_demo</description>
     </item>
     <item>
       <title>Research</title>
@@ -44,56 +33,42 @@ galpy_cuda_demo Github: https://github.com/henrysky/galpy_cuda_demo</description
       <link>https://henrysky.github.io/publication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://henrysky.github.io/publication/</guid>
-      <description>You can view the list of my papers on SAO/NASA Astrophysics Data System 2024MNRAS.527.1494L 4 Citations Code Towards an astronomical foundation model for stars with a transformer-based modelHenry W. Leung, Jo Bovy 2023MNRAS.526.1997P 0 Citations Code Decoding the age-chemical structure of the Milky Way disc: an application of copulas and elicitable mapsAarya A. Patil, Jo Bovy, Sebastian Jaimungal, Neige Frankel, Henry W. Leung 2023MNRAS.522.4577L 8 Citations Code A variational encoder-decoder approach to precise spectroscopic age estimation for large Galactic surveysHenry W.</description>
+      <description>You can view the list of my papers on SAO/NASA Astrophysics Data System 2024MNRAS.527.1494L 5 Citations Code Towards an astronomical foundation model for stars with a transformer-based modelHenry W. Leung, Jo Bovy 2023MNRAS.526.1997P 0 Citations Code Decoding the age-chemical structure of the Milky Way disc: an application of copulas and elicitable mapsAarya A. Patil, Jo Bovy, Sebastian Jaimungal, Neige Frankel, Henry W. Leung 2023MNRAS.522.4577L 8 Citations Code A variational encoder-decoder approach to precise spectroscopic age estimation for large Galactic surveysHenry W.</description>
     </item>
     <item>
       <title>CV</title>
       <link>https://henrysky.github.io/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://henrysky.github.io/cv/</guid>
-      <description>My LinkedIn profile: Curriculum Vitae in PDF format is available on request
-Education: PhD, University of Toronto (2020-Ongoing)
-MSc, University of Toronto (2019-2020)
-BSc, University of Toronto (2014-2019)
-Hong Kong Diploma of Secondary Education (2008-2014)
-Research/Teaching: 2019 Fall: Teaching Assistant for AST101H1: The Sun and Its Neighbours
-2019-2023 Summer/Winter: Teaching Assistant for AST201H1: Stars and Galaxies
-2022-2023: Teaching Assistant for AST251: Life on Other Worlds
-2020-2021: Teaching Assistant for AST325/326: Practical Astronomy</description>
+      <description>My LinkedIn profile: Curriculum Vitae in PDF format is available on request&#xA;Education: PhD, University of Toronto (2020-Ongoing)&#xA;MSc, University of Toronto (2019-2020)&#xA;BSc, University of Toronto (2014-2019)&#xA;Hong Kong Diploma of Secondary Education (2008-2014)&#xA;Research/Teaching: 2019 Fall: Teaching Assistant for AST101H1: The Sun and Its Neighbours&#xA;2019-2023 Summer/Winter: Teaching Assistant for AST201H1: Stars and Galaxies&#xA;2022-2023: Teaching Assistant for AST251: Life on Other Worlds&#xA;2020-2021: Teaching Assistant for AST325/326: Practical Astronomy</description>
     </item>
     <item>
       <title>Converting Keras 1D Convulution to PyTorch</title>
       <link>https://henrysky.github.io/blog/2023-10-23-keras-torch/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://henrysky.github.io/blog/2023-10-23-keras-torch/</guid>
-      <description>Recently I need to convert a model trained with Keras to PyTorch containing 1D convolution layer. Since keras uses channels last and PyTorch uses channels first, the weight matrix needs to be transposed in a consistent way such that the output of the two models are the same after flattening.
-We can do a simple test to make sure we know how to convert the weight matrix. Here we will create the same model in Keras and PyTorch first and get the weight matrix from the Keras model and transpose it to PyTorch format,</description>
+      <description>Recently I need to convert a model trained with Keras to PyTorch containing 1D convolution layer. Since keras uses channels last and PyTorch uses channels first, the weight matrix needs to be transposed in a consistent way such that the output of the two models are the same after flattening.&#xA;We can do a simple test to make sure we know how to convert the weight matrix. Here we will create the same model in Keras and PyTorch first and get the weight matrix from the Keras model and transpose it to PyTorch format,</description>
     </item>
     <item>
       <title>Blogging with Hugo</title>
       <link>https://henrysky.github.io/blog/2023-01-19-post/</link>
       <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://henrysky.github.io/blog/2023-01-19-post/</guid>
-      <description>Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ and https://tomoya92.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.
-So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.</description>
+      <description>Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ and https://tomoya92.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.&#xA;So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.</description>
     </item>
     <item>
       <title>Blogging with Jekyll and Developing it on Windows</title>
       <link>https://henrysky.github.io/blog/2019-10-14-blogging-with-jekyll/</link>
       <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
       <guid>https://henrysky.github.io/blog/2019-10-14-blogging-with-jekyll/</guid>
-      <description>Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ and https://tomoya92.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.
-So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.</description>
+      <description>Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ and https://tomoya92.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.&#xA;So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.</description>
     </item>
     <item>
       <title>You&#39;re up and running!</title>
       <link>https://henrysky.github.io/blog/2014-3-3-hello-world/</link>
       <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       <guid>https://henrysky.github.io/blog/2014-3-3-hello-world/</guid>
-      <description>test testing testing
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
-![_config.yml]({{ site.baseurl }}/images/config.png)
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the Jekyll Now repository on GitHub.</description>
+      <description>test testing testing&#xA;Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).&#xA;![_config.yml]({{ site.baseurl }}/images/config.png)&#xA;The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the Jekyll Now repository on GitHub.</description>
     </item>
   </channel>
 </rss>
