@@ -12016,10 +12016,6 @@ h2.widget-title, .widget-title.h2 {
   left: 0;
 }
 
-.sl-overlay {
-  background: #000;
-}
-
 .paper-title::after {
   content: "";
   display: block;
