@@ -8,7 +8,7 @@ date: 2023-10-23T00:00:00-00:00
 ---
 
 Recently I need to convert a model trained with Keras to PyTorch containing 1D convolution layer. 
-Since keras uses channels last and PyTorch uses channels first, the weight matrix needs to be 
+Since Keras uses channels last and PyTorch uses channels first, the weight matrix needs to be 
 transposed in a consistent way such that the output of the two models are the same after flattening.
 
 We can do a simple test to make sure we know how to convert the weight matrix. Here we will create the 
@@ -16,9 +16,7 @@ same model in Keras and PyTorch first and get the weight matrix from the Keras m
 
 ```python
 import torch
-import torch
 import numpy as np
-import tensorflow as tf
 import keras
 from keras.layers import Conv1D, Dense, Flatten
 
@@ -27,7 +25,7 @@ keras.utils.set_random_seed(0)
 x = np.random.random((1, 128, 1))
 
 # ======================= Keras =======================
-x_tf = tf.convert_to_tensor(x)
+x_tf = keras.backend.numpy.array(x)
 conv1d_keras = Conv1D(filters=2, kernel_size=2)
 dense1_keras = Dense(1)
 # Forward pass of Keras model
