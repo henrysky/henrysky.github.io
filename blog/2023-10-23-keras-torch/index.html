@@ -182,7 +182,7 @@
               <div class="post-content">
                 
                 <p>Recently I need to convert a model trained with Keras to PyTorch containing 1D convolution layer.
-Since keras uses channels last and PyTorch uses channels first, the weight matrix needs to be
+Since Keras uses channels last and PyTorch uses channels first, the weight matrix needs to be
 transposed in a consistent way such that the output of the two models are the same after flattening.</p>
 <p>We can do a simple test to make sure we know how to convert the weight matrix. Here we will create the
 same model in Keras and PyTorch first and get the weight matrix from the Keras model and transpose it to PyTorch format,</p>
@@ -218,14 +218,10 @@ same model in Keras and PyTorch first and get the weight matrix from the Keras m
 </span><span class="lnt">28
 </span><span class="lnt">29
 </span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">keras</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Conv1D</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Flatten</span>
 </span></span><span class="line"><span class="cl">
@@ -234,7 +230,7 @@ same model in Keras and PyTorch first and get the weight matrix from the Keras m
 </span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># ======================= Keras =======================</span>
-</span></span><span class="line"><span class="cl"><span class="n">x_tf</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">convert_to_tensor</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x_tf</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">conv1d_keras</span> <span class="o">=</span> <span class="n">Conv1D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">dense1_keras</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Forward pass of Keras model</span>
@@ -344,7 +340,7 @@ we need to make the matrix channel last again before flattening! So the correct 
             <div class="small text-center text-muted"></div>
             </div>
             <div class="col-lg-6 col-md-12" style="display:flex;flex-direction: column;justify-content: center;">
-            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2023 Henry W. Leung. <br> Last Updated: 2 January 2024</div>
+            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2023 Henry W. Leung. <br> Last Updated: 3 January 2024</div>
             </div>
             <div class="col-lg-3 d-none d-md-none d-lg-flex" style="flex-direction: column;justify-content: center;">
                 <ul class="nav-item text-center" style="margin-bottom: 0px;">

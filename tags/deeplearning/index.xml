@@ -13,7 +13,7 @@
       <link>https://henrysky.github.io/blog/2023-10-23-keras-torch/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://henrysky.github.io/blog/2023-10-23-keras-torch/</guid>
-      <description>Recently I need to convert a model trained with Keras to PyTorch containing 1D convolution layer. Since keras uses channels last and PyTorch uses channels first, the weight matrix needs to be transposed in a consistent way such that the output of the two models are the same after flattening.&#xA;We can do a simple test to make sure we know how to convert the weight matrix. Here we will create the same model in Keras and PyTorch first and get the weight matrix from the Keras model and transpose it to PyTorch format,</description>
+      <description>Recently I need to convert a model trained with Keras to PyTorch containing 1D convolution layer. Since Keras uses channels last and PyTorch uses channels first, the weight matrix needs to be transposed in a consistent way such that the output of the two models are the same after flattening.&#xA;We can do a simple test to make sure we know how to convert the weight matrix. Here we will create the same model in Keras and PyTorch first and get the weight matrix from the Keras model and transpose it to PyTorch format,</description>
     </item>
   </channel>
 </rss>
