@@ -13112,3 +13112,9 @@ header.masthead2 h1, header.masthead2 .h1 {
   z-index: -1;
   opacity: 0.01;
 }
+
+.btn.nohover:hover {
+  /* here copy default .btn class styles */
+  cursor: default !important;
+  /* or something like that */
+}
