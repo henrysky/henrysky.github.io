@@ -6,7 +6,7 @@ enableGitInfo = true
 [params]
   description = 'Henry W. Leung personal website'
   email = 'henrysky.leung [@] utoronto.ca'
-  years = '2018-2023'
+  years = '2018-2024'
   themecolor = '003366'
 
 [frontmatter]
