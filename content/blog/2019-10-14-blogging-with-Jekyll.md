@@ -73,7 +73,7 @@ Or do block:$$log((\sigma_{predictive, i})^2 + (\sigma_{known, i})^2)$$ in line
 ``[<img src="{{ site.baseurl }}/assets/img/404.jpg" alt="With alt text here, limited the image to 200px wide, click to go to homepage" 
 style="width: 200px;"/>]({{ site.baseurl }}/)``
 
-[<img src="{{ site.baseurl }}/assets/img/404.jpg" alt="With alt text here, limited the image to 200px wide, click to go to homepage" 
+[<img src="{{ "assets/img/404.jpg" | absURL }}" alt="With alt text here, limited the image to 200px wide, click to go to homepage" 
 style="width: 200px;"/>]({{ site.baseurl }}/)
 
 ## Quote
