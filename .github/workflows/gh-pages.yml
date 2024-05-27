@@ -32,6 +32,12 @@ jobs:
         run: ADS_TOKEN=${{ secrets.ADS_TOKEN }} python ./src/gen_pub_list.py 
       - name: Build Hugo site
         run: hugo
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/master'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1
         with:
@@ -39,10 +45,4 @@ jobs:
           format: markdown
           output: /tmp/result.md
           token: ${{ secrets.GH_TOKEN }}
-          fail: false
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/master'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          fail: true
