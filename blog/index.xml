@@ -19,7 +19,7 @@
       <link>https://henrysky.github.io/blog/2023-01-19-post/</link>
       <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://henrysky.github.io/blog/2023-01-19-post/</guid>
-      <description>Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ and https://tomoya92.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.&#xA;So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.</description>
+      <description>Introduction I was looking into how blogging is done with Github Page with Jekyll and come across a nice one developed by https://gaohaoyang.github.io/ which this blog is based on. While making new post which is written in markdown is straight-forward, local development such as testing after you modified the code is not easy. Mainly due to Jekyll requires Ruby which requires MSYS2 which personally dislike.&#xA;So I use Windows Subsystem for Linux (WSL) which is already installed on my Windows to do the job.</description>
     </item>
     <item>
       <title>Blogging with Jekyll and Developing it on Windows</title>
