@@ -35,9 +35,9 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --base . --verbose --no-progress './**/*.md' './**/*.html' './**/*.rst'
+          args: --base . --verbose --no-progress './public/**/*.html'
           format: markdown
-          output: /tmp/foo.md
+          output: /tmp/result.md
           fail: true
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
