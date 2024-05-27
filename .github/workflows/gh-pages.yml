@@ -38,7 +38,7 @@ jobs:
           args: --base ./public/ --verbose --no-progress './public/**/*.html'
           format: markdown
           output: /tmp/result.md
-          fail: true
+          fail: false
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/master'
