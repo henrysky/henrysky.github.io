@@ -101,13 +101,14 @@ for paper in result["response"]["docs"]:
     if extra_data:
         idx = df["bibcode"] == paper["bibcode"]
         if np.sum(idx) == 1:
+            idx = idx.idxmax()
             for column_name in df.columns[1:]:
                 buttons_code += """
                 
                 <br class="d-none d-lg-block">
                 <a target="_blank" href="{url}" class="btn btn-sm btn-info mt-1">{column_name}</a>
                 """.format(
-                    url=df[column_name][idx].to_string()[1:].lstrip(),
+                    url=df[column_name][idx].lstrip(),
                     column_name=column_name,
                 )
         buttons_code += """
