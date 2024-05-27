@@ -26,6 +26,8 @@ jobs:
         run: | 
           npm i bootstrap autoprefixer upath sass shelljs 
           node src/build-scss.js
+          node src/build-scripts.js
+          node src/build-assets.js
       - name: Build list of publication
         run: ADS_TOKEN=${{ secrets.ADS_TOKEN }} python ./src/gen_pub_list.py 
       - name: Build Hugo site

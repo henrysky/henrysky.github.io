@@ -15,4 +15,4 @@ We also need to fetch list of publication on ADS by ``python ./src/gen_pub_list.
 
 We use scss to build the CSS stylesheet for the website. It makes it easier to, for example upgrade bootstrap version while keeping our own style. To build a new one
 
-``npm i bootstrap autoprefixer upath sass shelljs`` and ``node src/build-scss.js`` in the root directory of this repository
+``npm i bootstrap autoprefixer upath sass shelljs`` and ``node src/build-scss.js``, ``node src/build-scrips.js``, ``node src/build-assets.js`` in the root directory of this repository

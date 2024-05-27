@@ -2,7 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,node
 
 layouts/shortcodes/pub_list.html
-static/css/styles.css
+static/*
 package.json
 package-lock.json
 .hugo_build.lock
