@@ -12,11 +12,8 @@ const destPath = upath.resolve(upath.dirname(__filename), '../static/css/styles.
 
 module.exports = function renderSCSS() {
     
-    const results = sass.renderSync({
-        data: entryPoint,
-        includePaths: [
-            upath.resolve(upath.dirname(__filename), '../node_modules')
-        ],
+    const results = sass.compileString(`@import "${stylesPath}";`, {
+        loadPaths: [upath.resolve(upath.dirname(__filename), '../node_modules')]
       });
 
     const destPathDirname = upath.dirname(destPath);
@@ -32,11 +29,3 @@ module.exports = function renderSCSS() {
     })
 
 };
-
-const entryPoint = `/*!
-* Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
-* Copyright 2013-${new Date().getFullYear()} ${packageJSON.author}
-* Licensed under ${packageJSON.license} (https://github.com/StartBootstrap/${packageJSON.name}/blob/master/LICENSE)
-*/
-@import "${stylesPath}"
-`
