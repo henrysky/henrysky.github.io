@@ -49,11 +49,13 @@ html_code = """
         <table id="pub-list" class="table table-striped" style="width:100%">
 """
 
+my_places = []  # a list to store the place of my name in the author list
+
 for paper in result["response"]["docs"]:
     authors_str = ""
     detected = False
     if len(paper["author"]) < 30:
-        for i in paper["author"]:
+        for my_place, i in enumerate(paper["author"]):
             i = i.split(",")
             i.reverse()
             try:  # there is white space in first character
@@ -63,6 +65,7 @@ for paper in result["response"]["docs"]:
             if temp_authors_str.lower() in possible_names:
                 authors_str += f"<b>{standardized_names}</b>"
                 detected = True
+                my_places.append(my_place + 1)
                 if len(paper["author"]) > 10:
                     authors_str += ", el al.  "
                     break
@@ -85,6 +88,7 @@ for paper in result["response"]["docs"]:
                 f"{first_author_str}, el al. (includes <b>{standardized_names}</b>)"
             )
         detected = True
+        my_places.append(999)
     if not detected:
         print(
             f"Your author name not detected in '{paper['title']}'. I suggest you to add an additional possible name"
