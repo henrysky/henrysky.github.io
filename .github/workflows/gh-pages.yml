@@ -35,7 +35,7 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --base . --verbose --no-progress './public/**/*.html'
+          args: --base ./public/ --verbose --no-progress './public/**/*.html'
           format: markdown
           output: /tmp/result.md
           fail: true
