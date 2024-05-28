@@ -36,13 +36,13 @@ jobs:
         uses: dawidd6/action-download-artifact@v3
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
-          workflow: 99959437
+          workflow: development.yml
           workflow_search: true
           branch: main
           event: push
-          name: CV_PDFs
+          name: astrotours-devel
           name_is_regexp: false
-          repo: 'henrysky/CV'
+          repo: 'uoftgasa/astrotours-website'
           #  "fail", "warn", "ignore"
           if_no_artifact_found: ignore
       - name: Deploy
