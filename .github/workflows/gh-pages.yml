@@ -32,6 +32,19 @@ jobs:
         run: ADS_TOKEN=${{ secrets.ADS_TOKEN }} python ./src/gen_pub_list.py 
       - name: Build Hugo site
         run: hugo
+      - name: Download my CV artifact
+        uses: dawidd6/action-download-artifact@v3
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          workflow: 99959437
+          workflow_search: true
+          branch: main
+          event: push
+          name: CV_PDFs
+          name_is_regexp: false
+          repo: 'henrysky/CV'
+          #  "fail", "warn", "ignore"
+          if_no_artifact_found: ignore
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/master'
