@@ -37,7 +37,7 @@ jobs:
           python ./src/download_CV.py --token ${{ secrets.GH_TOKEN }}
           unzip -qq CV_PDFs.zip -d CV_PDFs
           mkdir ./public/assets/cvpdf/
-          cp CV_PDFs/CV_Full.pdf ./public/assets/cvpdf/
+          cp CV_PDFs/CV_HWLeung.pdf ./public/assets/cvpdf/
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/master'
@@ -47,7 +47,7 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --base ./public/ --verbose --no-progress './public/**/*.html' --max-concurrency 1
+          args: --base ./public/ --verbose --no-progress './public/**/*.html'
           format: markdown
           output: /tmp/result.md
           token: ${{ secrets.GH_TOKEN }}
