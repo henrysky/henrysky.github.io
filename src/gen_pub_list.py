@@ -1,4 +1,5 @@
 import os
+import re
 
 import numpy as np
 import pandas
@@ -54,6 +55,7 @@ my_places = []  # a list to store the place of my name in the author list
 for paper in result["response"]["docs"]:
     authors_str = ""
     detected = False
+    etal_done = False
     if len(paper["author"]) < 30:
         for my_place, i in enumerate(paper["author"]):
             i = i.split(",")
@@ -68,11 +70,14 @@ for paper in result["response"]["docs"]:
                 my_places.append(my_place + 1)
                 if len(paper["author"]) > 10:
                     authors_str += ", el al.  "
+                    etal_done = True
                     break
             else:
                 authors_str += temp_authors_str
             authors_str += ", "
         authors_str = authors_str[:-2]
+        if not etal_done:
+            authors_str = re.sub(r",(?!.*,)", r" &", authors_str)
     else:  # long author list
         i = paper["author"][0]
         i = i.split(",")
@@ -84,15 +89,29 @@ for paper in result["response"]["docs"]:
         if first_author_str.lower() in possible_names:
             authors_str = f" <b>{standardized_names}</b>, el al."
         else:
+            if len(paper["author"]) > 100:  # safe to assume it is a collaboration paper
+                collab_text = "Collaboration paper; "
+            else:
+                collab_text = ""
             authors_str = (
-                f"{first_author_str}, el al. (includes <b>{standardized_names}</b>)"
+                f"{first_author_str}, el al. ({collab_text}includes <b>{standardized_names}</b>)"
             )
         detected = True
         my_places.append(999)
     if not detected:
         print(
-            f"Your author name not detected in '{paper['title']}'. I suggest you to add an additional possible name"
+            f"Your author name was not detected in '{paper['title']}'. I suggest you to add an additional possible name"
         )
+
+    # Try to use re.search to find the pattern of arXiv id in the doi field
+    try:
+        arxiv_possible_matches = [re.search(r"arXiv\.(\d+\.\d+)", i) for i in paper["doi"]]
+        # Check if a match was found, those without matches will be None
+        for i in arxiv_possible_matches:
+            if i:
+                arxiv_id = i.group(1)
+    except KeyError:
+        arxiv_id = None
 
     buttons_code = """
     <div class="row">
