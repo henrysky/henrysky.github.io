@@ -33,18 +33,11 @@ jobs:
       - name: Build Hugo site
         run: hugo
       - name: Download my CV artifact
-        uses: dawidd6/action-download-artifact@v3
-        with:
-          github_token: ${{secrets.GITHUB_TOKEN}}
-          workflow: development.yml
-          workflow_search: true
-          branch: main
-          event: push
-          name: astrotours-devel
-          name_is_regexp: false
-          repo: 'uoftgasa/astrotours-website'
-          #  "fail", "warn", "ignore"
-          if_no_artifact_found: ignore
+        run: |
+          python ./src/download_CV.py --token ${{ secrets.GH_TOKEN }}
+          unzip -qq CV_PDFs.zip -d CV_PDFs
+          mkdir ./public/assets/cvpdf/
+          cp CV_PDFs/CV_Full.pdf ./public/assets/cvpdf/
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/master'
