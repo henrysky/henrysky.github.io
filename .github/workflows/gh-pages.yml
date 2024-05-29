@@ -4,8 +4,8 @@ on:
   push:
     branches: [ master ]  # Set a branch that will trigger a deployment
   schedule:
-    # Runs at 13:00 UTC (08:00 Toronto?) on every Monday because ADS update on every weekend
-    - cron: '0 13 * * 1'
+    # Runs at 12:42 UTC (08:42/09:42 Toronto time) on every Monday because ADS update on every weekend
+    - cron: '42 12 * * 1'
 jobs:
   deploy:
     runs-on: ubuntu-latest
