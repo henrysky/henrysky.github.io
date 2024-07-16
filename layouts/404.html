@@ -1,7 +1,8 @@
 ﻿<html>
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8">
-	<title>Access Forbidden</title>
+	<title>Error 404 Not Found</title>
+	<link rel="icon" type="image/x-icon" href={{ "assets/favicon.ico" | absURL }} />
 	<style type="text/css">
 		html, body, div, span, applet, object, iframe,
 		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -37,9 +38,10 @@
 		html, body {
 			width: 100%;
 			height: 100%;
-			background-image: url(https://astro.utoronto.ca/~hleung/header_highres.jpg);
+			background-image: url({{ "assets/header_highres.jpg" | absURL }});
 			background-repeat: no-repeat;
 			background-size: cover;
+			background-position: center center;
 		}
 
 		.wrapper {
@@ -188,7 +190,7 @@
 			document.getElementById("date").innerHTML = d;
 		}
 	</script>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 <body>
 	<table class="wrapper">
@@ -201,7 +203,7 @@
 					</div>
 					<div class="aside">
 						<i class="fa-solid fa-circle-exclamation fa-xl" style="color: #ed2939"></i>
-						<h1>Access Forbidden!</h1>
+						<h1>Not Found!</h1>
 					</div>
 					<div class="content">
 						<div>
@@ -211,7 +213,7 @@
 								<p class="url-section-wrap__url" id="url"></p>
 							</div>
 							<script>urldisplay()</script>
-							<p class="url-section-verdict">Reason: HTTP 403 or HTTP 404</p>
+							<p class="url-section-verdict">Reason: HTTP 404</p>
 							<p class="url-section-title bold">You can refer to: </p>
 							<p>My website: <a href="https://henrysky.github.io/">https://henrysky.github.io/</a></p>
 							<p>My blog: <a href="https://henrysky.github.io/blog/">https://henrysky.github.io/blog/</a></p>
