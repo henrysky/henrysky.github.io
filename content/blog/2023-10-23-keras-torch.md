@@ -25,7 +25,6 @@ keras.utils.set_random_seed(0)
 x = np.random.random((1, 128, 1))
 
 # ======================= Keras =======================
-x_tf = keras.backend.numpy.array(x)
 conv1d_keras = Conv1D(filters=2, kernel_size=2)
 dense1_keras = Dense(1)
 # Forward pass of Keras model
