@@ -12,9 +12,7 @@ oneSentenceIntro: "I am a PhD candidate in astronomy at the University of Toront
 emailname: Email
 email: "henrysky [dot] leung [at] utoronto [dot] ca"
 addressname: Address
-addressDepartment: "Department of Astronomy and Astrophysics"
-addressInstitute: "University of Toronto"
-address1: "50 St. George Street, Toronto"
-address2: "ON M5S 3H4, Canada"
+address1: "University of Toronto, Canada"
+address2: ""
 socialname: Social
 ---

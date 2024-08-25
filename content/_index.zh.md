@@ -12,9 +12,7 @@ oneSentenceIntro: "我係多倫多大學天文學嘅博士生，歡迎訪問我�
 emailname: "電郵 (僅限英文/English only)"
 email: "henrysky [dot] leung [at] utoronto [dot] ca"
 addressname: "地址"
-addressDepartment: "天文及天體物理學系"
-addressInstitute: "多倫多大學"
-address1: "50 St. George Street, 多倫多"
-address2: "安省 M5S 3H4, 加拿大"
+address1: "加拿大多倫多大學"
+address2: ""
 socialname: "社交"
 ---

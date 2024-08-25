@@ -19,9 +19,8 @@
           <h4>{{ .Params.emailname }}:</h4>
           <p class="lead" style="margin-bottom: 5%;">{{ .Params.email}}</p>
           <h4 class="d-none d-lg-block">{{ .Params.addressname }}:</h4>
-          <p class="lead d-none d-lg-block">{{ .Params.addressDepartment }} <br>
-            {{ .Params.addressInstitute }}<br>
-            {{ .Params.address1 }} <br>
+          <p class="lead d-none d-lg-block">
+            {{ .Params.address1 }}<br>
             {{ .Params.address2 }}</p>
           <h4 class="d-block d-lg-none">{{ .Params.socialname }}:</h4>
           <div class="d-none d-md-none d-lg-flex">
@@ -77,7 +76,7 @@
         <!-- <a class="btn btn-lg btn-light" href="#about">More about Me!</a><br> -->
 
         <div class="d-none d-sm-inline-block"
-          style="margin-bottom:20px; bottom:0px; color: LightGray; font-style: italic; display: flex; align-self: flex-end; font-size: 14px">
+          style="margin-bottom:20px; bottom:0px; color: LightGray; font-style: italic; display: flex; align-self: flex-end; font-size: 12px">
           <em>
             {{ .Params.imageTitleName }}: {{ .Params.imageTitle }} <br> {{ .Params.imageCreditName }}: {{ .Params.imageCredit }}<br>
           </em>
