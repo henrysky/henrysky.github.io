@@ -10,7 +10,6 @@ imageCredit: NASA, ESA, CSA, STScI
 greeting: "Hi! I am Henry!"
 oneSentenceIntro: "I am a PhD candidate in astronomy at the University of Toronto, welcome to my personal website!!"
 emailname: Email
-email: "henrysky [dot] leung [at] utoronto [dot] ca"
 addressname: Address
 address1: "University of Toronto, Canada"
 address2: ""

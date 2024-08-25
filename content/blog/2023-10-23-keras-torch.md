@@ -22,7 +22,7 @@ from keras.layers import Conv1D, Dense, Flatten
 
 np_rng = np.random.default_rng(seed=0)
 keras.utils.set_random_seed(0)
-x = np.random.random((1, 128, 1))
+x = np_rng.standard_normal((1, 128, 1))
 
 # ======================= Keras =======================
 conv1d_keras = Conv1D(filters=2, kernel_size=2)
