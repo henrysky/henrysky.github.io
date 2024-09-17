@@ -5,8 +5,8 @@
     <link>https://henrysky.github.io/tags/pytorch/</link>
     <description>Recent content in PyTorch on Henry Leung</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 25 Aug 2024 00:24:48 -0400</lastBuildDate>
+    <language>en-CA</language>
+    <lastBuildDate>Tue, 17 Sep 2024 10:23:54 -0400</lastBuildDate>
     <atom:link href="https://henrysky.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Converting Keras 1D Convulution to PyTorch</title>

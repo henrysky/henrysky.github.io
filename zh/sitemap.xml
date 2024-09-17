@@ -3,39 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://henrysky.github.io/zh/</loc>
-    <lastmod>2024-08-25T00:24:48-04:00</lastmod>
+    <lastmod>2024-09-17T10:23:54-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-CA"
                 href="https://henrysky.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
+                hreflang="zh-yue"
                 href="https://henrysky.github.io/zh/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/zh/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-CA"
                 href="https://henrysky.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
+                hreflang="zh-yue"
                 href="https://henrysky.github.io/zh/categories/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/zh/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-CA"
                 href="https://henrysky.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
+                hreflang="zh-yue"
                 href="https://henrysky.github.io/zh/tags/"
                 />
   </url>
