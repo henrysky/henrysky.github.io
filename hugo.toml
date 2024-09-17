@@ -34,12 +34,14 @@ enableGitInfo = true
 
 [languages]
   [languages.en]
+    languageCode = "en-CA"
     languageName = "English"
     [languages.en.params]
       authors = 'Henry W. Leung'
       lastupdate = 'Last Updated'
       copyright = 'Copyrighted'
   [languages.zh]
+    languageCode = "zh-yue"
     languageName = "Chinese"
     [languages.zh.params]
       authors = '梁瑋軒'
