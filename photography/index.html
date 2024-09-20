@@ -71,8 +71,15 @@
         };
 
     </script>
-    
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+        tex: {
+        displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+        inlineMath:  [['\\(', '\\)'], ['$', '$']],  
+        }
+    };
+    </script>
 </head>
 
 <body id="page-top">
@@ -165,7 +172,10 @@
                 <div class="card p-2 p-md-5">
                     <div class="card-body">
                         <h1>My Astrophotography</h1>
-                        <p class="lead"><div class="row" id="astrophotography">
+                        <p class="lead"><p class="lead">I like astrophotography, here are some of my works done at different places around the globe.
+    Most of them are captured with Skywatcher 80ED on Star Adventurer equatorial mount with a modified Canon
+    600D.</p>
+<div class="row" id="astrophotography">
     <div class="col-md-12">
         <p class="lead">I like astrophotography, here are some of my works done at different places around the globe.
             Most of them are captured with Skywatcher 80ED on Star Adventurer equatorial mount with a modified Canon
@@ -376,7 +386,7 @@
             <div class="small text-center text-muted"></div>
             </div>
             <div class="col-lg-6 col-md-12" style="display:flex;flex-direction: column;justify-content: center;">
-            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2024 Henry W. Leung. <br> Last Updated: 17 September 2024</div>
+            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2024 Henry W. Leung. <br> Last Updated: 20 September 2024</div>
             </div>
             <div class="col-lg-3 d-none d-md-none d-lg-flex" style="flex-direction: column;justify-content: center;">
                 <ul class="nav-item text-center" style="margin-bottom: 0px;">
@@ -440,6 +450,17 @@
     
     
     
+</script>
+
+<script>
+    document.getElementById("page-top").onscroll = function myFunction() {  
+        var scrolltotop = document.scrollingElement.scrollTop;
+        var target = document.getElementById("header1");
+        var xvalue = "center";
+        var factor = 0.5;
+        var yvalue = scrolltotop * factor;
+        target.style.backgroundPosition = xvalue + " " + yvalue + "px";
+    }
 </script>
 </body>
 

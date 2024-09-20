@@ -71,8 +71,15 @@
         };
 
     </script>
-    
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+        tex: {
+        displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+        inlineMath:  [['\\(', '\\)'], ['$', '$']],  
+        }
+    };
+    </script>
 </head>
 
 <body id="page-top">
@@ -211,6 +218,17 @@
     
     
     
+</script>
+
+<script>
+    document.getElementById("page-top").onscroll = function myFunction() {  
+        var scrolltotop = document.scrollingElement.scrollTop;
+        var target = document.getElementById("header1");
+        var xvalue = "center";
+        var factor = 0.5;
+        var yvalue = scrolltotop * factor;
+        target.style.backgroundPosition = xvalue + " " + yvalue + "px";
+    }
 </script>
 </body>
 

@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.134.2">
+	<meta name="generator" content="Hugo 0.134.3">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Henry W. Leung personal website" />
@@ -72,8 +72,15 @@
         };
 
     </script>
-    
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+        tex: {
+        displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+        inlineMath:  [['\\(', '\\)'], ['$', '$']],  
+        }
+    };
+    </script>
 </head>
 
 <body id="page-top">
@@ -156,7 +163,7 @@
     </div>
 </nav>
   
-  <header class="masthead text-white">
+  <header class="masthead text-white" id="header1">
     <div class="container-md px-3 px-lg-4 h-100">
       <div class="row h-100">
         <div class="col-lg-8 align-self-end">
@@ -340,7 +347,7 @@
             <div class="small text-center text-muted"></div>
             </div>
             <div class="col-lg-6 col-md-12" style="display:flex;flex-direction: column;justify-content: center;">
-            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2024 Henry W. Leung. <br> Last Updated: 17 September 2024</div>
+            <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2024 Henry W. Leung. <br> Last Updated: 20 September 2024</div>
             </div>
             <div class="col-lg-3 d-none d-md-none d-lg-flex" style="flex-direction: column;justify-content: center;">
                 <ul class="nav-item text-center" style="margin-bottom: 0px;">
@@ -404,6 +411,17 @@
     
     
     
+</script>
+
+<script>
+    document.getElementById("page-top").onscroll = function myFunction() {  
+        var scrolltotop = document.scrollingElement.scrollTop;
+        var target = document.getElementById("header1");
+        var xvalue = "center";
+        var factor = 0.5;
+        var yvalue = scrolltotop * factor;
+        target.style.backgroundPosition = xvalue + " " + yvalue + "px";
+    }
 </script>
 </body>
 
