@@ -12,17 +12,10 @@
 </head>
 
 <body id="page-top">
-  {{ if eq .Params.covidwarning "TRUE" }}
-  <div class="alert alert-warning d-none d-md-none d-lg-block"
-    style="border-radius: 0 !important; margin: 0; line-height: 30px;" role="alert">
-    <center><i class='fas fa-exclamation-triangle' style="font-size: 20px; color:red"></i><strong>&nbsp;&nbsp; Important
-        Message: </strong> In-person Astrotours are back but face masks are strongly recommended.</center>
-  </div>
-  {{ end }}
   <!-- Navigation-->
   {{ partial "navbar.html" . }}
 
-  <section class="blog-section py-0 py-md-4">
+  <section class="blog-section py-0 py-md-4", id="header1">
     <div class="container-md px-0 px-md-4 text-left">
       <div class="row">
         {{ range .Data.Pages.ByDate.Reverse }}
