@@ -1,11 +1,10 @@
 baseURL = 'https://henrysky.github.io/'
 languageCode = 'en-us'
-title = 'Henry Leung'
 enableGitInfo = true
 
 [params]
-  description = 'Henry W. Leung personal website'
-  email = 'henrysky [dot] leung [at] utoronto [dot ] ca'
+  description = 'Personal Website of Henry W. Leung'
+  email = 'henrysky [dot] leung [at] utoronto [dot] ca'
   years = '2018-2024'
   themecolor = '003366'
 
@@ -36,14 +35,18 @@ enableGitInfo = true
   [languages.en]
     languageCode = "en-CA"
     languageName = "English"
+    title = '''Henry Leung's Personal Website'''
     [languages.en.params]
       authors = 'Henry W. Leung'
+      navbar_shortdesc = 'Astronomer & Data Scientist'
       lastupdate = 'Last Updated'
       copyright = 'Copyrighted'
   [languages.zh]
     languageCode = "zh-yue"
     languageName = "Chinese"
+    title = 'Henry Leung 嘅個人網站'
     [languages.zh.params]
       authors = '梁瑋軒'
+      navbar_shortdesc = '天文學 & 數據科學家'
       lastupdate = '最後更新'
       copyright = '版權所有'
