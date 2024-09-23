@@ -93,18 +93,9 @@
           <div style="overflow: hidden" align="center"> <img
               style="width: 100%; display: block; max-width: 1000px; border: 4px solid #dddddd; margin: 40px 0px;"
               src="{{ "assets/img/pro_big.jpg" | absURL }}" alt="about me"> </div>
-          <p class="lead">Hi, I am Henry, a recent Astonomy & Astrophysics PhD graduate at University of Toronto with interests
-            in astrophotography, you can see my photography below. For research aspect, both galactic
-            astrophysics, deep learning and open source science are currently my research interest. The main
-            reserach project I am working on is deep learning application in stellar and galactic astronomy
-            with a python package in development called astroNN to facilitate my reserach. You can learn
-            more about astroNN in Code.
-            <br><br>
-            I am a Hong Kong Canadian grew up in Hong Kong which is named the worst light polluted country
-            in the world because of the dense population. But it makes the universe more mysterious to the
-            young me.
-            <br>
-          </p>
+          <div class="lead">
+            {{ .Content }}
+          </div>
 
           <div class="row projects-holder" id="about-gallery">
             <div class="col-md-4 col-sm-6">
@@ -141,8 +132,6 @@
           </div>
           <br>
           <br>
-          <p class="lead"> Some stargazing activity</p>
-
           <div class="row projects-holder" id="edu">
             <div class="col-md-4 col-sm-6">
               <div class="project-item"> <img src="{{ "assets/img/about_me/winter_trip2017.jpg" | absURL }}" alt=""> <a
