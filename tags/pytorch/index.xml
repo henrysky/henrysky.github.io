@@ -6,7 +6,7 @@
     <description>Recent content in PyTorch on Henry Leung&#39;s Personal Website</description>
     <generator>Hugo</generator>
     <language>en-CA</language>
-    <lastBuildDate>Sun, 22 Sep 2024 14:45:51 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2024 00:18:05 -0400</lastBuildDate>
     <atom:link href="https://henrysky.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Converting Keras 1D Convulution to PyTorch</title>
