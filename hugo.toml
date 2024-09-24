@@ -5,7 +5,7 @@ enableGitInfo = true
 [params]
   description = 'Personal Website of Henry W. Leung'
   email = 'henrysky [dot] leung [at] utoronto [dot] ca'
-  years = '2018-2024'
+  startyears = '2018'
   themecolor = '003366'
 
 [frontmatter]
@@ -43,7 +43,7 @@ enableGitInfo = true
       copyright = 'Copyrighted'
   [languages.zh]
     languageCode = "zh-yue"
-    languageName = "Chinese"
+    languageName = "Cantonese"
     title = 'Henry Leung 嘅個人網站'
     [languages.zh.params]
       authors = '梁瑋軒'

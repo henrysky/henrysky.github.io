@@ -7,6 +7,6 @@ layout: single
 weight: 5
 ---
 
-<p class="lead"> You can view the list of my papers on <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0002-0036-2752&sort=date+desc">SAO/NASA Astrophysics Data System </a></p>
+You can view the list of my papers on [SAO/NASA Astrophysics Data System](https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0002-0036-2752&sort=date+desc)
 
 {{< pub_list >}}
