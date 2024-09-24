@@ -65,7 +65,7 @@ for paper in result["response"]["docs"]:
             except IndexError:
                 temp_authors_str = i[0].lstrip()
             if temp_authors_str.lower() in possible_names:
-                authors_str += f"<b>{standardized_names}</b>"
+                authors_str += f"<span style='font-weight: bold;'>{standardized_names}</span>"
                 detected = True
                 my_places.append(my_place + 1)
                 if len(paper["author"]) > 10:

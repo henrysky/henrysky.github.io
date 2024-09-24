@@ -1,11 +1,6 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container-md">
-        <!-- <a href={{ "index.html" | absURL }} class="navbar-brand"
-            style="padding-top: 0px !important; padding-bottom: 0px !important">
-            <img src={{ "assets/img/profile.jpg" | absURL }} alt="My profile picture" title="Home Page"
-                class="img-fluid rounded-circle">
-            <span>Henry Leung</span></a> -->
         <a href={{ .Site.Language.Lang | absURL }} style="padding-top: 0px !important; padding-bottom: 0px !important">
             <img src={{ "assets/img/profile.jpg" | absURL }} alt="My profile picture" title="Home Page"
                 class="img-fluid rounded-circle"></a>
@@ -17,18 +12,11 @@
                     {{ $.Site.Params.navbar_shortdesc }}</p>
             </div>
         </div>
-        <!-- <span class="d-none d-sm-inline-block" style="font-size: 10px">Astronomer @ University of Toronto</span> -->
-        <!-- </a><span class="navbar-nav ms-auto">
-            <span class="navbar-brand" style="font-size: 25px">Henry Leung</span><span> Astronomer @ University of Toronto</span>
-        </span> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto" id="pagemenu">
-                <!-- <a href="{{ "index.html" | absURL }}" class="nav-item nav-link"><i
-                    class="fa fa-home"></i><span>About</span></a> -->
-
                 {{ range ( where .Site.RegularPages "Type" "page" ) }}
                 <a href="{{ .Permalink }}" class="nav-item nav-link" style="min-width: 50px" ,
                     id="{{ .Params.title }}"><i class="{{ .Params.faIcon }} d-lg-flex justify-content-center"
@@ -42,18 +30,10 @@
                         class="d-inline d-lg-flex justify-content-center">Blog</span></a>
                 {{ end }}
             </ul>
-            <!-- <li class="nav-item py-0 py-lg-1 col-12 col-lg-auto">
-                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                    <hr class="d-lg-none my-2 text-white-50">
-                </li> -->
             <span class="nav-item nav-link" style="margin: 5px 15px" id="langmenu"><a href={{ "" | absURL }}
-                    class="nav-item nav-link d-inline" style="padding: 2px" id="English" title="English - 英文">EN</a> | <a
-                    href={{ "zh" | absURL }} class="nav-item nav-link d-inline" style="padding: 2px"
-                    id="Cantonese" title="Cantonese - 廣東話">粵</a></span>
-            <!-- <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
-                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                    <hr class="d-lg-none my-2 text-white-50">
-                </li> -->
+                    class="nav-item nav-link d-inline" style="padding: 2px" id="English" title="English - 英文">EN</a> |
+                <a href={{ "zh" | absURL }} class="nav-item nav-link d-inline" style="padding: 2px" id="Cantonese"
+                    title="Cantonese - 廣東話">粵</a></span>
 
             <span style="margin: 5px 0px">
                 <ul class="navbar-nav">
@@ -64,13 +44,6 @@
                     </a>
                 </ul>
             </span>
-
-            <!-- <span style="margin: 5px 0px">
-                <ul class="nav-item d-block d-sm-block d-md-block d-lg-none">
-                    <a href="https://twitter.com/uoftastrotours" target="_blank" style="color:#fff" class="nav-item nav-link"><i class="fab fa-github fa-xl"></i></a>
-                    <a href="https://www.facebook.com/utoronto.astrotours/" target="_blank" style="color:#fff" class="nav-item nav-link"><i class="fab fa-linkedin fa-xl"></i></a>
-                </ul>
-            </span> -->
         </div>
     </div>
 </nav>
