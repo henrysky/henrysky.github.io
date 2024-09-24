@@ -13,7 +13,6 @@ emailname: Email
 addressname: Location
 address1: University of Toronto, Canada
 address2: 
-socialname: Social
 ---
 
 ## About Me!

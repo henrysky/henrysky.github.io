@@ -12,7 +12,6 @@ emailname: 電郵 (僅限英文)
 addressname: 地點
 address1: 加拿大多倫多大學
 address2: 
-socialname: 社交媒體
 ---
 
 ## 關於我!

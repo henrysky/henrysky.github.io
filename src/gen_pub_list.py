@@ -45,9 +45,7 @@ if extra_data:
     df = pandas.read_csv(extra_data, index_col=False)
 
 html_code = """
-<div class="row">
-    <div class="col-md-12">
-        <table id="pub-list" class="table table-striped" style="width:100%">
+<table id="pub-list" class="table table-striped" style="width:100%">
 """
 
 my_places = []  # a list to store the place of my name in the author list
@@ -152,9 +150,7 @@ for paper in result["response"]["docs"]:
     )
 
 html_code += """
-        </table>
-    </div>
-</div>
+</table>
 """
 
 with open(save_to_file, "w") as f:
