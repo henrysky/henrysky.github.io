@@ -69,7 +69,7 @@
     // Add active class to the current button (highlight it)
     document.getElementById({{ .Site.Language.LanguageName }}).className += " active";
     {{ $blogpage := site.GetPage "blog" }}
-    if ({{ .Type }} == 'blog') {
+    if ({{ .Type }} == 'blog') {  // make sure all blog pages are highlighted as blog
         document.getElementById({{ $blogpage.Title }}).className += " active";
     } 
     else {
@@ -80,16 +80,6 @@
             console.log("No active element found");
         }
     }
-
-    // var header = document.getElementById("pagemenu");
-    // var btns = header.getElementsByClassName("nav-item");
-    // for (var i = 0; i < btns.length; i++) {
-    //     btns[i].addEventListener("click", function() {
-    //         var current = document.getElementsByClassName("active");
-    //         current[0].className = current[0].className.replace(" active", "");
-    //         this.className += " active";
-    //     });
-    // }
 </script>
 <!-- Background parallax effect -->
 <script>

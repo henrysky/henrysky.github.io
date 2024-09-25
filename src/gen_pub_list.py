@@ -85,14 +85,14 @@ for paper in result["response"]["docs"]:
         except IndexError:
             first_author_str = i[0].lstrip()
         if first_author_str.lower() in possible_names:
-            authors_str = f" <b>{standardized_names}</b>, el al."
+            authors_str = f" <span style='font-weight: bold;'>{standardized_names}</span>, el al."
         else:
             if len(paper["author"]) > 100:  # safe to assume it is a collaboration paper
                 collab_text = "Collaboration paper; "
             else:
                 collab_text = ""
             authors_str = (
-                f"{first_author_str}, el al. ({collab_text}includes <b>{standardized_names}</b>)"
+                f"{first_author_str}, el al. ({collab_text}includes <span style='font-weight: bold;'>{standardized_names}</span>)"
             )
         detected = True
         my_places.append(999)
