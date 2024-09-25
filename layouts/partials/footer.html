@@ -35,6 +35,7 @@
 <script src={{ "js/bootstrap.min.js" | absURL }}></script>
 <script src={{ "js/copy_code.js" | absURL }}></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
+<!-- CV PDF display not correctly on mobile, so show text to download instead -->
 <script>
     function isMobileDevice() {
         return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
@@ -43,12 +44,15 @@
     window.onload = function() {
         if (isMobileDevice()) {
             // Hide the <object> container and show the mobile warning
-            document.getElementById('pdf-container').style.display = 'none';
-            document.getElementById('mobile-warning').style.display = 'block';
+            pdfContainer = document.getElementById('pdf-container');
+            // check if the pdf-container exists
+            if (pdfContainer) {
+                pdfContainer.style.display = 'none';
+                document.getElementById('mobile-warning').style.display = 'block';
+            }
         }
     };
 </script>
-
 <script>
     // simple lightbox javascript
     (function() {
@@ -64,14 +68,16 @@
     // set active elements
     // Add active class to the current button (highlight it)
     document.getElementById({{ .Site.Language.LanguageName }}).className += " active";
+    {{ $blogpage := site.GetPage "blog" }}
     if ({{ .Type }} == 'blog') {
-        document.getElementById("Blog").className += " active";
+        document.getElementById({{ $blogpage.Title }}).className += " active";
     } 
     else {
         try {
             document.getElementById({{ .Params.title }}).className += " active";
         }
         catch(err) {
+            console.log("No active element found");
         }
     }
 

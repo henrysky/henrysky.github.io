@@ -17,28 +17,34 @@
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto" id="pagemenu">
+                {{ $aboutpage := site.GetPage "index" }}
+                <a href="{{ "" | relLangURL }}" class="nav-item nav-link" style="min-width: 50px" id="{{ $aboutpage.Title }}">
+                    <i class="{{ $aboutpage.Params.faIcon }} d-lg-flex justify-content-center" title="{{ $aboutpage.Params.longtitle }}"></i>
+                    <span class="d-inline d-lg-flex justify-content-center">{{ $aboutpage.Title }}</span>
+                </a>
                 {{ range ( where .Site.RegularPages "Type" "page" ) }}
-                <a href="{{ .Permalink }}" class="nav-item nav-link" style="min-width: 50px" ,
-                    id="{{ .Params.title }}"><i class="{{ .Params.faIcon }} d-lg-flex justify-content-center"
-                        title="{{ .Params.longtitle }}"></i><span class="d-inline d-lg-flex justify-content-center">{{
-                        .Params.title }}</span></a>
+                <a href="{{ .Permalink }}" class="nav-item nav-link" style="min-width: 50px" id="{{ .Params.title }}">
+                    <i class="{{ .Params.faIcon }} d-lg-flex justify-content-center" title="{{ .Params.longtitle }}"></i>
+                    <span class="d-inline d-lg-flex justify-content-center">{{ .Params.title }}</span>
+                </a>
 
                 {{ end }}
-                {{ if eq .Site.Language.LanguageName "English" }}
-                <a href={{ "blog/" | absURL }} class="nav-item nav-link" style="min-width: 50px" , id="Blog"><i
-                        class="fab fa-blogger d-lg-flex justify-content-center" title="My Blog"></i><span
-                        class="d-inline d-lg-flex justify-content-center">Blog</span></a>
-                {{ end }}
+                {{ $blogpage := site.GetPage "blog" }}
+                <a href="{{ "/blog" | relLangURL}}" class="nav-item nav-link" style="min-width: 50px" id="{{ $blogpage.Title }}">
+                    <i class="fab {{ $blogpage.Params.faIcon }} d-lg-flex justify-content-center" title="{{ $blogpage.Params.longtitle }}"></i>
+                    <span class="d-inline d-lg-flex justify-content-center">{{ $blogpage.Title }}</span>
+                </a>
             </ul>
-            <span class="nav-item nav-link" style="margin: 5px 15px" id="langmenu"><a href={{ "" | absURL }}
-                    class="nav-item nav-link d-inline" style="padding: 2px" id="English" title="English - 英文">EN</a> |
-                <a href={{ "zh" | absURL }} class="nav-item nav-link d-inline" style="padding: 2px" id="Cantonese"
-                    title="Cantonese - 廣東話">粵</a></span>
+            <span class="nav-item nav-link" style="margin: 5px 15px" id="langmenu">
+                <a href={{ "" | absURL }} class="nav-item nav-link d-inline" style="padding: 2px" id="English" 
+                title="English - 英文">EN</a> |
+                <a href={{ "zh" | absURL }} class="nav-item nav-link d-inline" style="padding: 2px" id="Cantonese" 
+                title="Cantonese - 廣東話">粵</a>
+            </span>
 
             <span style="margin: 5px 0px">
                 <ul class="navbar-nav">
-                    <a href="javascript:void(0);" onclick="setDarkTheme()" class="nav-item nav-link" ,
-                        style="min-width: 34px;">
+                    <a href="javascript:void(0);" onclick="setDarkTheme()" class="nav-item nav-link" style="min-width: 34px;">
                         <i class="fa-solid fa-circle-half-stroke d-lg-flex justify-content-center"
                             title="Toggle Light/Dark theme" id="themebutton"></i>
                     </a>

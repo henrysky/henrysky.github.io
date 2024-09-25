@@ -1,8 +1,10 @@
 ---
-title: About Me
+title: About
+longtitle: About Me
 type: page
 layout: index
 weight: 1
+faIcon: "fa-solid fa-user"
 imageTitleName: Background Image
 imageTitle: Pillars of Creation
 imageCreditName: Credit
