@@ -160,8 +160,14 @@
                         <h1>我嘅簡歷</h1>
                         <div class="lead"><p>My LinkedIn profile: <a href="https://www.linkedin.com/in/henry-leung-2664b3259/"><span class="fab fa-linkedin fa-2xl" title="My Linkedin profile" aria-hidden="true"></a></span></a>
 <br>
-<br>
+<br></p>
+<div id="pdf-container">
 <object class="pdf" data="/assets/cvpdf/CV_HWLeung.pdf" width="100%" height="800">PDF簡歷可以係<a href="/assets/cvpdf/CV_HWLeung.pdf">依到下載</a>
+</div>
+<!-- Warning text for mobile devices -->
+<div id="mobile-warning" style="display: None">
+PDF簡歷可以係<a href="/assets/cvpdf/CV_HWLeung.pdf">依到下載</a>
+</div>
 <br>
 <br>
 <h4>Henry On the News:</h4>
@@ -233,7 +239,7 @@
       <p>2015-2017: Director of Observation, UofT Amateur Astronomers' Society</p>
     </td>
   </tr>
-</table></p>
+</table>
 </div>
                     </div>
                 </div>
@@ -280,6 +286,20 @@
 <script src=https://henrysky.github.io/js/bootstrap.min.js></script>
 <script src=https://henrysky.github.io/js/copy_code.js></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
+<script>
+    function isMobileDevice() {
+        return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+    }
+
+    window.onload = function() {
+        if (isMobileDevice()) {
+            
+            document.getElementById('pdf-container').style.display = 'none';
+            document.getElementById('mobile-warning').style.display = 'block';
+        }
+    };
+</script>
+
 <script>
     
     (function() {
