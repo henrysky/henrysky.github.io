@@ -2,8 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://henrysky.github.io/zh/blog/</loc>
+    <lastmod>2024-09-24T20:23:42-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/blog/"
+                />
+  </url><url>
     <loc>https://henrysky.github.io/zh/</loc>
-    <lastmod>2024-09-24T16:24:32-04:00</lastmod>
+    <lastmod>2024-09-24T20:23:42-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
@@ -15,8 +28,47 @@
                 href="https://henrysky.github.io/zh/"
                 />
   </url><url>
+    <loc>https://henrysky.github.io/zh/photography/</loc>
+    <lastmod>2024-09-24T20:23:42-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/photography/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/photography/"
+                />
+  </url><url>
+    <loc>https://henrysky.github.io/zh/codes/</loc>
+    <lastmod>2024-09-24T20:23:42-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/codes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/codes/"
+                />
+  </url><url>
+    <loc>https://henrysky.github.io/zh/research/</loc>
+    <lastmod>2024-09-24T20:23:42-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/research/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/research/"
+                />
+  </url><url>
     <loc>https://henrysky.github.io/zh/publication/</loc>
-    <lastmod>2024-09-24T16:24:32-04:00</lastmod>
+    <lastmod>2024-09-24T20:23:42-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
@@ -26,6 +78,19 @@
                 rel="alternate"
                 hreflang="zh-yue"
                 href="https://henrysky.github.io/zh/publication/"
+                />
+  </url><url>
+    <loc>https://henrysky.github.io/zh/cv/</loc>
+    <lastmod>2024-09-24T20:23:42-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/cv/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/cv/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/zh/categories/</loc>

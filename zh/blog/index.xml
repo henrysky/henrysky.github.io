@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>部落格 on Henry Leung 嘅個人網站</title>
+    <link>https://henrysky.github.io/zh/blog/</link>
+    <description>Recent content in 部落格 on Henry Leung 嘅個人網站</description>
+    <generator>Hugo</generator>
+    <language>zh-yue</language>
+    <atom:link href="https://henrysky.github.io/zh/blog/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
