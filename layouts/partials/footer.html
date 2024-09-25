@@ -36,6 +36,20 @@
 <script src={{ "js/copy_code.js" | absURL }}></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
 <script>
+    function isMobileDevice() {
+        return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+    }
+
+    window.onload = function() {
+        if (isMobileDevice()) {
+            // Hide the <object> container and show the mobile warning
+            document.getElementById('pdf-container').style.display = 'none';
+            document.getElementById('mobile-warning').style.display = 'block';
+        }
+    };
+</script>
+
+<script>
     // simple lightbox javascript
     (function() {
         var $gallery1 = new SimpleLightbox('#about-gallery a', {});
