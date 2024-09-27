@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
     <link href=https://henrysky.github.io/css/styles.css rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBFQQ2QV4Q"></script>
     <script>
@@ -85,7 +82,7 @@
     
     
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <div class="container-md">
+    <div class="container-xl">
         <a href=https://henrysky.github.io/en style="padding-top: 0px !important; padding-bottom: 0px !important">
             <img src=https://henrysky.github.io/assets/img/profile.jpg alt="My profile picture" title="Home Page"
                 class="img-fluid rounded-circle"></a>
@@ -168,13 +165,61 @@
 
 
     <section class="blog-section py-0 py-md-4", id="header1">
-        <div class="container-md px-0 px-md-4 text-left">
+        <div class="container-xl px-0 px-md-4 text-left">
             <div class="col-xl-12" style="overflow-x: hidden;">
                 <div class="card p-2 p-md-5">
                     <div class="card-body">
                         <h1>My Research</h1>
-                        <div class="lead"><p>My current research focuses on using new robust machine learning methodology to analyze big astronomical survey data-sets, such as spectroscopic data from the Sloan Apache Point Observatory Galaxy Evolution Experiment (APOGEE) and Gaia astrometric data to better understand the Milky Way Galaxy. I use new robust machine learning methodologies such as multi-layer (&ldquo;deep&rdquo;) Bayesian artificial neural networks, which can learn complex mapping functions between inputs andoutputs while considering uncertainty in training data and also providing uncertainty estimates for predicted values. These new machine learning technologies provide data products withhigher precision than available from traditional analyses which helps further our understanding the formation and evolution of the Milky Way galaxy. I am currently applying these techniques tothe problems of determining stellar parameters and chemical abundances, spectro-photometric distances, and stellar ages without relying much on stellar evolutionary models, allowing almost completely data-driven studies of the structure and dynamics of the Milky Way. The elemental abundances I have determined for APOGEE stars are the best available of any method applied to APOGEE stars and the spectro-photometric distance method that I am currently writing up provides distances more precise than 10% for stars out to 10 kpc, much higher precision than Gaia itself provides. These distances are already being used by groups around the world.</p>
+                        <div class="lead">
+
+
+
+
+
+<div class="container mt-5 text-center"> 
+    <figure class="mx-auto" style="border-radius: 5px 5px 5px 5px; border: 4px solid #dddddd; width: 100%; max-width: 400px">
+        <img style="width: 100%; display: block; max-width: 400px;" src="https://henrysky.github.io/assets/img/mw_nn_dr2.jpg" alt="About Me">
+        
+        <figcaption style="background-color: #dddddd;" class="figure-caption text-left fs-6">
+            Neural Network distance vs Gaia DR2
+        </figcaption>
+        
+    </figure>
+</div>
+<p>My current research focuses on using new robust machine learning methodology to analyze big astronomical survey data-sets, such as spectroscopic data from the Sloan Apache Point Observatory Galaxy Evolution Experiment (APOGEE) and Gaia astrometric data to better understand the Milky Way Galaxy. I use new robust machine learning methodologies such as multi-layer (&ldquo;deep&rdquo;) Bayesian artificial neural networks, which can learn complex mapping functions between inputs andoutputs while considering uncertainty in training data and also providing uncertainty estimates for predicted values. These new machine learning technologies provide data products withhigher precision than available from traditional analyses which helps further our understanding the formation and evolution of the Milky Way galaxy. I am currently applying these techniques tothe problems of determining stellar parameters and chemical abundances, spectro-photometric distances, and stellar ages without relying much on stellar evolutionary models, allowing almost completely data-driven studies of the structure and dynamics of the Milky Way. The elemental abundances I have determined for APOGEE stars are the best available of any method applied to APOGEE stars and the spectro-photometric distance method that I am currently writing up provides distances more precise than 10% for stars out to 10 kpc, much higher precision than Gaia itself provides. These distances are already being used by groups around the world.</p>
+
+
+
+
+
+
+<div class="container mt-5 text-center"> 
+    <figure class="mx-auto" style="border-radius: 5px 5px 5px 5px; border: 4px solid #dddddd; width: 100%; max-width: 400px">
+        <img style="width: 100%; display: block; max-width: 400px;" src="https://henrysky.github.io/assets/img/example_plot_gaia.png" alt="About Me">
+        
+        <figcaption style="background-color: #dddddd;" class="figure-caption text-left fs-6">
+            Gaia DR1 with 20% parallax error cut
+        </figcaption>
+        
+    </figure>
+</div>
 <p>To facilitate my projects in this new area of big data astronomy with deep learning, I am developing astroNN, an open source python package designed for fast deep learning in astronomy that is based on Tensorflow, a general deep learning framework. The goals of astroNN are:(a) to provide a code that focuses on deep learning in astronomy, (b) to develop tools and datasets that are relevant to astronomers, (c) to provide an easily accessible tool that is well tested against errors, and (d) to act as a platform to share astronomy-oriented neural networks.astroNN makes it easy for non-machine learning experts like typical astronomers to use advanced tools like Bayesian neural networks to analyze data</p>
+
+
+
+
+
+
+<div class="container mt-5 text-center"> 
+    <figure class="mx-auto" style="border-radius: 5px 5px 5px 5px; border: 4px solid #dddddd; width: 100%; max-width: 400px">
+        <img style="width: 100%; display: block; max-width: 400px;" src="https://henrysky.github.io/assets/img/mw_vt.jpg" alt="About Me">
+        
+        <figcaption style="background-color: #dddddd;" class="figure-caption text-left fs-6">
+            This map is made with distances from neural network and Gaia DR2
+        </figcaption>
+        
+    </figure>
+</div>
 <p>My research focused on application of neural network in astronomy. Current projects include</p>
 <ol>
 <li>Stellar Spectra Analysis using Bayesian Neural Network with Dropout Variational Inference</li>
@@ -182,48 +227,6 @@
 <li>Asteroseismic ages with deep learning</li>
 <li>Novel deep learning methods for astronomical time-series data</li>
 </ol>
-<div class="col-md-12">
-    <div class="row projects-holder" id="research">
-        
-    <div class="col-md-4 col-sm-6">
-        <div class="project-item"> <img src="https://henrysky.github.io/assets/img/mw_nn_dr2.jpg" alt=""> <a
-            href="https://henrysky.github.io/assets/img/mw_nn_dr2.jpg">
-            <div class="project-hover">
-              <div class="inside">
-                <h5>Neural Network distance vs Gaia DR2</h5>
-                <p>Neural Network did much better than Gaia DR2</p>
-                </div>
-            </div>
-        </a>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-6">
-        <div class="project-item"> <img src="https://henrysky.github.io/assets/img/example_plot_gaia.png" alt=""> <a
-            href="https://henrysky.github.io/assets/img/example_plot_gaia.png">
-            <div class="project-hover">
-              <div class="inside">
-                <h5>Gaia DR1 with 20% parallax error cut</h5>
-                <p>Neural Network trained on Gaia DR1 to map the milkyway further away</p>
-                </div>
-            </div>
-        </a>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-6">
-        <div class="project-item"> <img src="https://henrysky.github.io/assets/img/mw_vt.jpg" alt=""> <a
-            href="https://henrysky.github.io/assets/img/mw_vt.jpg">
-            <div class="project-hover">
-              <div class="inside">
-                <h5>MilkyWay kinematics map</h5>
-                <p>This map is made with distances from neural network and Gaia DR2</p>
-                </div>
-            </div>
-        </a>
-        </div>
-    </div>
-
-    </div>
-</div>
 </div>
                     </div>
                 </div>
@@ -242,7 +245,7 @@
             </div>
             <div class="col-lg-6 col-md-12" style="display:flex;flex-direction: column;justify-content: center;">
             <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2024
-                                Henry W. Leung. <br> Last Updated: September 25, 2024</div>
+                                Henry W. Leung. <br> Last Updated: September 27, 2024</div>
             </div>
             <div class="col-lg-3 d-none d-md-none d-lg-flex" style="flex-direction: column;justify-content: center;">
                 <ul class="nav-item text-center" style="margin-bottom: 0px;">
