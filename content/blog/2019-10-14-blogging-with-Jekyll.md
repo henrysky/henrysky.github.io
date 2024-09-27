@@ -68,7 +68,10 @@ Or do block:$$log((\sigma_{predictive, i})^2 + (\sigma_{known, i})^2)$$ in line
 
 <p class="lead"> test </p>
 
-<img src="https://dummyimage.com/600x400/000/fff" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+{{< centered_img source_path="https://dummyimage.com/600x400/000/fff" alttext="MarineGEO circle logo" maxwidth="300">}}
+
+{{< centered_img source_path="https://dummyimage.com/600x400/000/fff" alttext="MarineGEO circle logo">}}
+
 
 ``[<img src="{{ site.baseurl }}/assets/img/404.jpg" alt="With alt text here, limited the image to 200px wide, click to go to homepage" 
 style="width: 200px;"/>]({{ site.baseurl }}/)``

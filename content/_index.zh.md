@@ -18,7 +18,7 @@ address2:
 
 ## 關於我!
 
-{{< centered_img source_path="assets/img/pro_big.jpg" alttext="關於我">}}
+{{< centered_img source_path="assets/img/pro_big.jpg" alttext="關於我"  maxwidth="800">}}
 
 大家好，我係Henry。我最近喺多倫多大學完成咗天文學同天體物理學博士學位，同時都係數據科學院 (Data Science Institute at the University of Toronto) 嘅博士研究生。我嘅研究主要係將深度學習方法包括Transformers同Denoising Diffusions應用喺大型嘅天文數據集。我嘅研究有好大一部分係涉及開發同使用基礎模型 (Foundation Models) 嚟做科學應用，特別係喺未來分析大型天文數據嘅時候。
 

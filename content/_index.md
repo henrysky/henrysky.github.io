@@ -19,7 +19,7 @@ address2:
 
 ## About Me!
 
-{{< centered_img source_path="assets/img/pro_big.jpg" alttext="About Me">}}
+{{< centered_img source_path="assets/img/pro_big.jpg" alttext="About Me" maxwidth="800">}}
 
 Hello, I am Henry. I recently completed my PhD in Astronomy & Astrophysics at the University of Toronto and am a Doctoral Fellow at the Data Science Institute. My research boardly focused on applying deep learning methodologies including Transformers and Denoising Diffusions to large-scale astronomical datasets. A significant part of my work involved developing and using Foundation Models for scientific applications, particularly in the analysis of large-scale astronomical data in the future.
 
