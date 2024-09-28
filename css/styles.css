@@ -12065,39 +12065,6 @@ h2.widget-title, .widget-title.h2 {
   margin-right: 5px;
 }
 
-.search-box {
-  position: relative;
-}
-
-.search-box input {
-  padding-right: 35px;
-  min-height: 38px;
-  border: none;
-  background: #faf7fd;
-  border-radius: 3px !important;
-}
-
-.search-box input:focus {
-  background: #fff;
-  box-shadow: none;
-}
-
-.search-box .input-group-addon {
-  min-width: 35px;
-  border: none;
-  background: transparent;
-  position: absolute;
-  right: 0;
-  z-index: 9;
-  padding: 10px 7px;
-  height: 100%;
-}
-
-.search-box i {
-  color: #a0a5b1;
-  font-size: 19px;
-}
-
 .navbar .nav-item i {
   font-size: 18px;
 }
@@ -12192,39 +12159,41 @@ h2.widget-title, .widget-title.h2 {
   background-color: #e9ecef !important;
 }
 
-@media (min-width: 1200px) {
-  .form-inline .input-group {
-    width: 350px;
-    margin-left: 30px;
-  }
+/* Navbar button styling */
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px; /* Consistent padding */
 }
-@media (max-width: 1199px) {
-  .navbar .navbar-nav > a > i {
-    display: inline-block;
-    text-align: left;
-    min-width: 30px;
-    position: relative;
-    top: 4px;
-  }
-  .navbar .navbar-collapse {
-    border: none;
-    box-shadow: none;
-    padding: 0;
-  }
-  .navbar .navbar-form {
-    border: none;
-    display: block;
-    margin: 10px 0;
-    padding: 0;
-  }
+
+/* Icon size for large screens */
+.nav-link i {
+  font-size: 24px; /* Default large icon size */
+}
+
+.nav-link span {
+  font-size: 12px; /* Default large text size */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 767px) {
   .navbar .navbar-nav {
     margin: 8px 0;
   }
-  .navbar .navbar-toggle {
-    margin-right: 0;
+  .nav-link {
+    flex-direction: row; /* Text next to icon on mobile */
+    padding: 10px 15px; /* Adjust padding for mobile */
+    justify-content: start; /* Align icon and text to the left */
+    text-align: left; /* Ensure text is left-aligned */
   }
-  .input-group {
-    width: 100%;
+  .nav-link i {
+    font-size: 18px; /* Smaller icon size on mobile */
+    margin-right: 8px; /* Space between icon and text */
+  }
+  .nav-link span {
+    font-size: 14px; /* Larger text size on mobile */
   }
 }
 a.nav-item.nav-link.active {
