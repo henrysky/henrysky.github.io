@@ -65,9 +65,9 @@
     // set light/dark/auto theme icon
     setButtonIcon();
 
-    // set active elements
+    // set active elements (actually the next two lines not in use anymore because we don't show all language at once)
     // Add active class to the current button (highlight it)
-    document.getElementById({{ .Site.Language.LanguageName }}).className += " active";
+    // document.getElementById({{ .Site.Language.LanguageName }}).className += " active";
     {{ $blogpage := site.GetPage "blog" }}
     if ({{ .Type }} == 'blog') {  // make sure all blog pages are highlighted as blog
         document.getElementById({{ $blogpage.Title }}).className += " active";
