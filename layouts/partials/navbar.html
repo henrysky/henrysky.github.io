@@ -1,15 +1,17 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container-xl">
-        <a href={{ .Site.Language.Lang | absURL }} style="padding-top: 0px !important; padding-bottom: 0px !important">
+        <a href={{ .Site.Language.Lang | absURL }}>
             <img src={{ "assets/img/profile.jpg" | absURL }} alt="My profile picture" title="Home Page"
                 class="img-fluid rounded-circle"></a>
         <div class="col-md-4 d-inline-block me-auto">
             <div class="site-logo">
-                <h3 style="margin-bottom: 0px;font-family: 'Josefin Sans', sans-serif;font-weight: bolder;">Henry Leung
+                <h3 style="margin-bottom: 0px; font-weight: bolder;">
+                    Henry Leung
                 </h3>
-                <p style="margin-bottom: 0px;font-size:14px;font-family: 'Josefin Sans', sans-serif;color: darkgray;">
-                    {{ $.Site.Params.navbar_shortdesc }}</p>
+                <p style="margin-bottom: 0px; font-size:14px; color: darkgray;">
+                    {{ $.Site.Params.navbar_shortdesc }}
+                </p>
             </div>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
@@ -18,42 +20,50 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto" id="pagemenu">
                 {{ $aboutpage := site.GetPage "index" }}
-                <a href="{{ "" | relLangURL }}" class="nav-item nav-link" style="min-width: 50px" id="{{ $aboutpage.Title }}">
-                    <i class="{{ $aboutpage.Params.faIcon }} d-lg-flex justify-content-center" title="{{ $aboutpage.Params.longtitle }}"></i>
-                    <span class="d-inline d-lg-flex justify-content-center">{{ $aboutpage.Title }}</span>
-                </a>
+                <li class="nav-item">
+                    <a href="{{ "" | relLangURL }}" class="nav-link" id="{{ $aboutpage.Title }}">
+                        <i class="{{ $aboutpage.Params.faIcon }} d-lg-flex" title="{{ $aboutpage.Params.longtitle }}"></i>
+                        <span>{{ $aboutpage.Title }}</span>
+                    </a>
+                </li>
                 {{ range ( where .Site.RegularPages "Type" "page" ) }}
-                <a href="{{ .Permalink }}" class="nav-item nav-link" style="min-width: 50px" id="{{ .Params.title }}">
-                    <i class="{{ .Params.faIcon }} d-lg-flex justify-content-center" title="{{ .Params.longtitle }}"></i>
-                    <span class="d-inline d-lg-flex justify-content-center">{{ .Params.title }}</span>
-                </a>
-
+                <li class="nav-item">
+                    <a href="{{ .Permalink }}" class="nav-link" id="{{ .Params.title }}">
+                        <i class="{{ .Params.faIcon }} d-lg-flex" title="{{ .Params.longtitle }}"></i>
+                        <span>{{ .Params.title }}</span>
+                    </a>
+                </li>
                 {{ end }}
                 {{ $blogpage := site.GetPage "blog" }}
-                <a href="{{ "/blog" | relLangURL}}" class="nav-item nav-link" style="min-width: 50px" id="{{ $blogpage.Title }}">
-                    <i class="fab {{ $blogpage.Params.faIcon }} d-lg-flex justify-content-center" title="{{ $blogpage.Params.longtitle }}"></i>
-                    <span class="d-inline d-lg-flex justify-content-center">{{ $blogpage.Title }}</span>
-                </a>
+                <li class="nav-item">
+                    <a href="{{ "/blog" | relLangURL}}" class="nav-link" id="{{ $blogpage.Title }}">
+                        <i class="fab {{ $blogpage.Params.faIcon }} d-lg-flex" title="{{ $blogpage.Params.longtitle }}"></i>
+                        <span>{{ $blogpage.Title }}</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- If language is english, show cantonese and vice versa -->
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <span id="langmenu">
+                        {{ if eq .Site.Language.Lang "en" }}
+                            <a href={{ "zh" | absURL }} class="nav-link" style="min-width: 30px; /* make it shorter */" id="Cantonese" 
+                            title="Cantonese - 廣東話">粵</a>
+                        {{ else }}
+                            <a href={{ "" | absURL }} class="nav-link" style="min-width: 30px; /* make it shorter */" id="English" 
+                            title="English - 英文">EN</a>
+                        {{ end }}
+                    </span>
+                </li>
             </ul>
 
-            <!-- If language is english, show cantonese and vice versa -->
-            {{ if eq .Site.Language.Lang "en" }}
-            <span class="navbar-nav" id="langmenu">
-                <a href={{ "zh" | absURL }} class="nav-link" id="Cantonese" 
-                title="Cantonese - 廣東話">粵</a>
-            </span>
-            {{ else }}
-            <span class="navbar-nav" id="langmenu">
-                <a href={{ "" | absURL }} class="nav-link" id="English" 
-                title="English - 英文">EN</a>
-            </span>
-            {{ end }}
-
             <ul class="navbar-nav" id="thememenu">
-                <a href="javascript:void(0);" onclick="setDarkTheme()" class="nav-item nav-link" style="min-width: 34px;">
-                    <i class="fa-solid fa-circle-half-stroke d-lg-flex justify-content-center"
-                        title="Toggle Light/Dark theme" id="themebutton"></i>
-                </a>
+                <li class="nav-item ">
+                    <a href="javascript:void(0);" onclick="setDarkTheme()" class="nav-link" style="min-width: 30px; /* make it shorter */">
+                        <i class="fa-solid fa-circle-half-stroke d-lg-flex justify-content-center"
+                            title="Toggle Light/Dark theme" id="themebutton"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
