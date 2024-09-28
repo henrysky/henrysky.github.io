@@ -5,10 +5,10 @@
 
 
 <div class="container mt-5 text-center"> 
-    <figure class="mx-auto" style="border-radius: 5px 5px 5px 5px; border: 4px solid #dddddd; width: 100%; max-width: {{ if $maxwidth }}{{ $maxwidth }}{{ else }}600{{ end }}px">
+    <figure class="mx-auto" style="border-radius: 5px 5px 5px 5px; border: 4px solid var(--img-border-color); width: 100%; max-width: {{ if $maxwidth }}{{ $maxwidth }}{{ else }}600{{ end }}px">
         <img style="width: 100%; display: block; max-width: {{ if $maxwidth }}{{ $maxwidth }}{{ else }}600{{ end }}px;" src="{{ $src | absURL }}" alt="{{ $alttext }}">
         {{ if $caption }}
-        <figcaption style="background-color: #dddddd;" class="figure-caption text-left fs-6">
+        <figcaption style="background-color: var(--img-border-color);" class="figure-caption text-left fs-6">
             {{ $caption}}
         </figcaption>
         {{ end }}
