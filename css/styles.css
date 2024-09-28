@@ -11967,12 +11967,12 @@ textarea.form-control-lg {
 }
 html {
   height: 100%;
-  scroll-padding-top: calc(66px - 1px);
+  scroll-padding-top: calc(63px - 1px);
 }
 
 body {
   width: 100%;
-  margin-top: 66px;
+  margin-top: 63px;
 }
 
 section {
@@ -12039,145 +12039,35 @@ h2.widget-title, .widget-title.h2 {
   border-radius: 0;
   border: none;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  min-height: 66px;
+  min-height: 63px;
 }
 
 .navbar img {
   border-radius: 50%;
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
   margin-right: 10px;
 }
 
-.navbar .navbar-brand {
-  font-family: "Varela Round", sans-serif;
-  padding-left: 0;
-  font-size: 24px;
-}
-
-.navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
-  color: #fff;
-}
-
-.navbar .navbar-brand i {
-  font-size: 25px;
-  margin-right: 5px;
-}
-
 .navbar .nav-item i {
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.navbar .nav-item span {
-  position: relative;
-  top: 3px;
+.nav-link span {
+  font-size: 13px;
 }
 
-.navbar .navbar-nav > a {
-  color: #fff;
-  padding: 8px 15px;
-  font-size: 14px;
-}
-
-.navbar .navbar-nav > a:hover, .navbar .navbar-nav > a:focus {
-  color: #fff;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
-}
-
-.navbar .navbar-nav > a > i {
-  display: block;
-  text-align: center;
-}
-
-.navbar .dropdown-item i {
-  font-size: 16px;
-  min-width: 22px;
-}
-
-.navbar .dropdown-item .material-icons {
-  font-size: 21px;
-  line-height: 16px;
-  vertical-align: middle;
-  margin-top: -2px;
-}
-
-.navbar .nav-item.open > a, .navbar .nav-item.open > a:hover, .navbar .nav-item.open > a:focus {
-  color: #fff;
-  background: none !important;
-}
-
-.navbar .dropdown-menu {
-  border-radius: 1px;
-  border-color: #e5e5e5;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.navbar .dropdown-menu a {
-  color: #777 !important;
-  padding: 8px 20px;
-  line-height: normal;
-  font-size: 15px;
-}
-
-.navbar .dropdown-menu a:hover, .navbar .dropdown-menu a:focus {
-  color: #333 !important;
-  background: transparent !important;
-}
-
-.navbar .navbar-nav .active a, .navbar .navbar-nav .active a:hover, .navbar .navbar-nav .active a:focus {
-  color: #fff;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
-  background: transparent !important;
-}
-
-.navbar .navbar-nav .user-action {
-  padding: 9px 15px;
-  font-size: 15px;
-}
-
-.navbar .navbar-toggle {
-  border-color: #fff;
-}
-
-.navbar .navbar-toggle .icon-bar {
-  background: #fff;
-}
-
-.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
-  background: transparent;
-}
-
-.navbar .navbar-nav .open .dropdown-menu {
-  background: #faf7fd;
-  border-radius: 1px;
-  border-color: #faf7fd;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.navbar .divider {
-  background-color: #e9ecef !important;
-}
-
-/* Navbar button styling */
 .nav-link {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 10px; /* Consistent padding */
+  padding: 5px;
+  color: #fff;
+  min-width: 45px;
 }
 
-/* Icon size for large screens */
-.nav-link i {
-  font-size: 24px; /* Default large icon size */
-}
-
-.nav-link span {
-  font-size: 12px; /* Default large text size */
-}
-
-/* Responsive adjustments for mobile */
 @media (max-width: 767px) {
   .navbar .navbar-nav {
     margin: 8px 0;
@@ -12196,15 +12086,15 @@ h2.widget-title, .widget-title.h2 {
     font-size: 14px; /* Larger text size on mobile */
   }
 }
-a.nav-item.nav-link.active {
+.nav-link.active {
   background: #fff;
-  color: rgb(0, 51, 102);
+  color: rgb(0, 51, 102) !important;
   border-radius: 0.25rem;
 }
 
 .blog-section {
   background: #696969;
-  min-height: calc(100vh - 66px - 96px);
+  min-height: calc(100vh - 63px - 96px);
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/img/bg.jpg");
   background-position: top;
   background-repeat: no-repeat;
@@ -12222,7 +12112,7 @@ a.nav-item.nav-link.active {
 }
 
 header.masthead {
-  height: calc(100vh - 66px);
+  height: calc(100vh - 63px);
   min-height: 45rem;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url("../assets/img/banner.jpg");
   background-position: top;
@@ -12238,7 +12128,7 @@ header.masthead h1, header.masthead .h1 {
 }
 @media (min-width: 992px) {
   header.masthead {
-    height: calc(100vh - 66px);
+    height: calc(100vh - 63px);
     min-height: 45rem;
     padding-bottom: 0;
   }
