@@ -1,4 +1,4 @@
-/*------ projects ------ */
+// image hover
 .projects-holder {
     margin-right: 0; 
     margin-left: 0; 
@@ -35,14 +35,10 @@
     height: 100%;
     top: 40px;
     left: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: 0;
-    -webkit-transition: all 200ms linear;
-    -moz-transition: all 200ms linear;
-    -ms-transition: all 200ms linear;
-    -o-transition: all 200ms linear;
-    transition: all 200ms linear;
+    transition: all 200ms ease-in;
     font-size: 18px;
 }
 
@@ -55,9 +51,15 @@
 }
 
 .project-hover h5 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 15px;
-    color: #fff
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-color: #222222;
+    border-radius: 3px;
+    padding: 5px;
+    display: inline-block;
 }
 
 .project-hover p {
