@@ -4,76 +4,76 @@
 {{ partial "header.html" . }}
 
 <body id="page-top">
-  <!-- Navigation-->
-  {{ partial "navbar.html" . }}
-  <!-- Header-->
-  <header class="masthead text-white" id="header1">
-    <div class="container-xl px-3 px-lg-4 h-100">
-      <div class="row h-100">
-        <div class="col-lg-8 align-self-end">
-          <h1 class="fw-bolder align-self-end">{{ .Params.greeting }}</h1>
-          <p class="lead" style="margin-bottom: 15%;">{{ .Params.oneSentenceIntro }}</p>
-        </div>
+    <!-- Navigation-->
+    {{ partial "navbar.html" . }}
+    <!-- Header-->
+    <header class="masthead text-white" id="header1">
+        <div class="container-xl px-3 px-lg-4 h-100">
+            <div class="row h-100">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="fw-bolder align-self-end">{{ .Params.greeting }}</h1>
+                    <p class="lead" style="margin-bottom: 15%;">{{ .Params.oneSentenceIntro }}</p>
+                </div>
 
-        <div class="col-lg-8 align-self-baseline">
-          <h4>{{ .Params.emailname }}:</h4>
-          <p class="lead" style="margin-bottom: 5%;">{{ .Site.Params.email}}</p>
-          <h4>{{ .Params.addressname }}:</h4>
-          <p>
-            {{ .Params.address1 }}<br>
-            {{ .Params.address2 }}</p>
-          <div class="d-flex">
-            <span class="fa-stack fa-1x" style="flex-shrink: 0;">
-              <a href="https://github.com/henrysky" target="_blank">
-                <i class="fab fa-github fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy); "
-                  title="My Github profile"></i>
-              </a>
-            </span>
-            <span class="fa-stack fa-1x" style="flex-shrink: 0;">
-              <a href="https://www.linkedin.com/in/henry-leung-2664b3259/" target="_blank">
-                <i class="fab fa-linkedin fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);"
-                  title="My Linkedin profile"></i>
-              </a>
-            </span>
-            <span class="fa-stack fa-1x" style="flex-shrink: 0;">
-              <a href={{ "blog/" | absURL }} target="_blank">
-                <i class="fab fa-blogger fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);"
-                  title="My Blog"></i>
-              </a>
-            </span>
-            <span class="fa-stack fa-1x" style="flex-shrink: 0;">
-              <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0002-0036-2752&sort=date+desc"
-                target="_blank">
-                <i class="ai ai-ads-square ai-stack-2x ai-inverse" style="--fa-inverse:var(--fa-navy);"
-                  title="My Publication"></i>
-              </a>
-            </span>
-          </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <h4>{{ .Params.emailname }}:</h4>
+                    <p class="lead" style="margin-bottom: 5%;">{{ .Site.Params.email}}</p>
+                    <h4>{{ .Params.addressname }}:</h4>
+                    <p>
+                        {{ .Params.address1 }}<br>
+                        {{ .Params.address2 }}</p>
+                    <div class="d-flex">
+                        <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+                            <a href="https://github.com/henrysky" target="_blank">
+                                <i class="fab fa-github fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy); "
+                                    title="My Github profile"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+                            <a href="https://www.linkedin.com/in/henry-leung-2664b3259/" target="_blank">
+                                <i class="fab fa-linkedin fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);"
+                                    title="My Linkedin profile"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+                            <a href={{ "blog/" | absURL }} target="_blank">
+                                <i class="fab fa-blogger fa-stack-2x fa-inverse" style="--fa-inverse:var(--fa-navy);"
+                                    title="My Blog"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack fa-1x" style="flex-shrink: 0;">
+                            <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0002-0036-2752&sort=date+desc"
+                                target="_blank">
+                                <i class="ai ai-ads-square ai-stack-2x ai-inverse" style="--fa-inverse:var(--fa-navy);"
+                                    title="My Publication"></i>
+                            </a>
+                        </span>
+                    </div>
 
+                </div>
+                <div class="d-none d-sm-inline-block"
+                    style="margin-bottom:20px; bottom:0px; color: LightGray; font-style: italic; display: flex; align-self: flex-end; font-size: 12px">
+                    <em>
+                        {{ .Params.imageTitleName }}: {{ .Params.imageTitle }} <br> {{ .Params.imageCreditName }}: {{
+                        .Params.imageCredit }}<br>
+                    </em>
+                </div>
+            </div>
         </div>
-        <div class="d-none d-sm-inline-block"
-          style="margin-bottom:20px; bottom:0px; color: LightGray; font-style: italic; display: flex; align-self: flex-end; font-size: 12px">
-          <em>
-            {{ .Params.imageTitleName }}: {{ .Params.imageTitle }} <br> {{ .Params.imageCreditName }}: {{
-            .Params.imageCredit }}<br>
-          </em>
+    </header>
+    <!-- About section-->
+    <section id="about">
+        <div class="container-xl px-3 px-lg-4">
+            <div class="row gx-4 justify-content-center">
+                <div class="col-lg-12">
+                    <div class="lead2">
+                        {{ .Content }}
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
-  <!-- About section-->
-  <section id="about">
-    <div class="container-xl px-3 px-lg-4">
-      <div class="row gx-4 justify-content-center">
-        <div class="col-lg-12">
-          <div class="lead">
-            {{ .Content }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {{ partial "footer.html" . }}
+    </section>
+    {{ partial "footer.html" . }}
 </body>
 
 </html>
