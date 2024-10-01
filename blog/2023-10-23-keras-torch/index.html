@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <head>
+    <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Personal Website of Henry W. Leung" />
@@ -78,17 +78,17 @@
     };
     </script>
 </head>
-  <style>
-    .page-section img {
-      max-width: 1000px;
-      width: 100%
-    }
-  </style>
+    <style>
+        .page-section img {
+            max-width: 1000px;
+            width: 100%
+        }
+    </style>
 </head>
 
 <body id="page-top">
-  
-  
+    
+    
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container-xl">
         <a href=https://henrysky.github.io/en>
@@ -184,33 +184,33 @@
     </div>
 </nav>
 
-  <section class="blog-section py-0 py-md-4", id="header1">
-    <div class="container-xl px-0 px-md-4 text-left">
-      <div class="row">
-        <div class="col-lg-12 col-xl-9" style="overflow-x: hidden;">
-          <div class="card">
-            <div class="card-header">
-              <h1>Converting Keras 1D Convulution to PyTorch</h1>
-              <small>
-                <span class="item" style="padding-right: 10px;">
-                  <i class="far fa-calendar-check"></i> 10 Oct 2023
-                </span>
-                <span class="item" style="padding-right: 10px;">
-                  <i class="fa fa-user"></i> Henry Leung
-                </span>
-                <span class="item">
-                  <i class="fa fa-tag"></i>
-                </span>
-                 
+    <section class="blog-section py-0 py-md-4" , id="header1">
+        <div class="container-xl px-0 px-md-4 text-left">
+            <div class="row">
+                <div class="col-lg-12 col-xl-9" style="overflow-x: hidden;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1>Converting Keras 1D Convulution to PyTorch</h1>
+                            <small>
+                                <span class="item" style="padding-right: 10px;">
+                                    <i class="far fa-calendar-check"></i> 10 Oct 2023
+                                </span>
+                                <span class="item" style="padding-right: 10px;">
+                                    <i class="fa fa-user"></i> Henry Leung
+                                </span>
+                                <span class="item">
+                                    <i class="fa fa-tag"></i>
+                                </span>
+                                 
 
 
  <span class="badge rounded-pill text-bg-primary"><a href="https://henrysky.github.io/tags/deeplearning/" class="text-white text-decoration-none">deeplearning</a></span> <span class="badge rounded-pill text-bg-primary"><a href="https://henrysky.github.io/tags/keras/" class="text-white text-decoration-none">keras</a></span> <span class="badge rounded-pill text-bg-primary"><a href="https://henrysky.github.io/tags/pytorch/" class="text-white text-decoration-none">pytorch</a></span>
-              </small>
-            </div>
-            <div class="card-body p-2 p-md-4">
-              <div class="post-content">
-                
-                <p>Recently I need to convert a model including 1D convolution layers trained with Keras v2 to PyTorch.
+                            </small>
+                        </div>
+                        <div class="card-body p-2 p-md-4">
+                            <div class="post-content">
+                                
+                                <p>Recently I need to convert a model including 1D convolution layers trained with Keras v2 to PyTorch.
 Since Keras uses channels last $(N, L, C)$ and PyTorch uses channels first $(N, C, L)$, the weight matrix needs to be
 transposed in a consistent way such that the output of the two models are the same after flattening.</p>
 <p>We can do a simple test to make sure we know how to transpose the weight matrix. Here we will create a simple model
@@ -299,67 +299,67 @@ we need to make the matrix is in the order of channel last $(N, L, C)$ again bef
 <p><code>tensor([0.4469], grad_fn=&lt;ViewBackward0&gt;)</code></p>
 <p>Now both models share the same weight matrixes and produce the same output.</p>
 
-              </div>
-              <hr>
+                            </div>
+                            <hr>
 
-              <nav aria-label="Page navigation">
-                <div class="row">
-                  <div class="col-12 col-lg-5">
-                    
-                  </div>
-                  <div class="d-none d-md-block col-lg-2">
-                    <span aria-hidden="true">
-                        
-                    </span>
-                  </div>
-                  <div class="col-12 col-lg-5">
-                    
-                    <a href="https://henrysky.github.io/blog/2023-01-19-post/" class="float-end"> Previous: Blogging with Hugo<i class="fa-solid fa-right-long"></i></a>
-                    
-                  </div>
+                            <nav aria-label="Page navigation">
+                                <div class="row">
+                                    <div class="col-12 col-lg-5">
+                                        
+                                    </div>
+                                    <div class="d-none d-md-block col-lg-2">
+                                        <span aria-hidden="true">
+
+                                        </span>
+                                    </div>
+                                    <div class="col-12 col-lg-5">
+                                        
+                                        <a href="https://henrysky.github.io/blog/2023-01-19-post/" class="float-end"> Previous: Blogging with Hugo<i
+                                                class="fa-solid fa-right-long"></i></a>
+                                        
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
-                
-              </nav>
-            </div>
-          </div>
-        </div>
-        <div class="d-none d-xl-block col-lg-1 col-xl-3 affix" style="overflow-x: hidden;">
-          <div class="card" style="margin-bottom: 20px">
-            <div class="card-header">
-              <p><i class="fa-solid fa-magnifying-glass"></i>Search</p>
-            </div>
-            <div class="card-body p-2">
-              <input type="text" id="search_box" class="form-control" placeholder="Search...">
+                <div class="d-none d-xl-block col-lg-1 col-xl-3 affix" style="overflow-x: hidden;">
+                    <div class="card" style="margin-bottom: 20px">
+                        <div class="card-header" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+                            <span><i class="fa-solid fa-magnifying-glass"></i>Search</span>
+                        </div>
+                        <div class="card-body p-2">
+                            <input type="text" id="search_box" class="form-control" placeholder="Search...">
 
-            </div>
-          </div>
-          <div class="card" style="margin-bottom: 20px">
-            <div class="card-header">
-              <p><i class="fa-solid fa-magnifying-glass"></i>Tags</p>
-            </div>
-              <div class="card-body p-2">
-                
-                  
-                      
-                          <li><a href="https://henrysky.github.io/tags/deeplearning/">DeepLearning</a></li>
-                  
-                          <li><a href="https://henrysky.github.io/tags/keras/">Keras</a></li>
-                  
-                          <li><a href="https://henrysky.github.io/tags/pytorch/">PyTorch</a></li>
-                  
-                          <li><a href="https://henrysky.github.io/tags/windows/">Windows</a></li>
-                  
-                          <li><a href="https://henrysky.github.io/tags/general/">General</a></li>
-                  
-                
-              </div>
+                        </div>
+                    </div>
+                    <div class="card" style="margin-bottom: 20px">
+                        <div class="card-header" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+                            <span><i class="fa-solid fa-magnifying-glass"></i>Tags</span>
+                        </div>
+                        <div class="card-body p-2">
+                            
+                            
+                            
+                            <li><a href="https://henrysky.github.io/tags/deeplearning/">DeepLearning</a></li>
+                            
+                            <li><a href="https://henrysky.github.io/tags/keras/">Keras</a></li>
+                            
+                            <li><a href="https://henrysky.github.io/tags/pytorch/">PyTorch</a></li>
+                            
+                            <li><a href="https://henrysky.github.io/tags/windows/">Windows</a></li>
+                            
+                            <li><a href="https://henrysky.github.io/tags/general/">General</a></li>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  
+    </section>
+    
+    
 <footer class="py-4 bg-dark">
     <div class="container px-4 px-lg-5">
         <div class="row">
@@ -368,7 +368,7 @@ we need to make the matrix is in the order of channel last $(N, L, C)$ again bef
             </div>
             <div class="col-lg-6 col-md-12" style="display:flex;flex-direction: column;justify-content: center;">
             <div class="m-0 text-center text-white">Copyrighted &copy; 2018-2024
-                                Henry W. Leung. <br> Last Updated: September 30, 2024</div>
+                                Henry W. Leung. <br> Last Updated: October 1, 2024</div>
             </div>
             <div class="col-lg-3 d-none d-md-none d-lg-flex" style="flex-direction: column;justify-content: center;">
                 <ul class="nav-item text-center" style="margin-bottom: 0px;">
