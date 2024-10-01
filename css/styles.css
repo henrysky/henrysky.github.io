@@ -12238,6 +12238,7 @@ header.masthead2 h1, header.masthead2 .h1 {
   border-color: #222222;
   border-radius: 3px;
   padding: 5px;
+  display: inline-block;
 }
 
 .project-hover p {
