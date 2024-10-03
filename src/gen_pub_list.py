@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 import re
 
@@ -44,7 +45,14 @@ result = requests.get(
 if extra_data:
     df = pandas.read_csv(extra_data, index_col=False)
 
-html_code = """
+# Get today's date
+today = datetime.today()
+# Format the date to include the month in English
+formatted_date = today.strftime("%B %d, %Y")
+
+html_code = f"""
+<p>The list below was last updated on {formatted_date}.</p>
+
 <table id="pub-list" class="table table-striped" style="width:100%">
 """
 
