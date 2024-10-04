@@ -12112,7 +12112,7 @@ h2.widget-title, .widget-title.h2 {
 }
 
 [data-bs-theme=dark] {
-  --img-border-color: #6a6a6a; /* Custom border color for dark theme (orange) */
+  --img-border-color: #525252; /* Custom border color for dark theme (orange) */
 }
 
 header.masthead {
