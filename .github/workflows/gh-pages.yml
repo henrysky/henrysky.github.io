@@ -44,10 +44,16 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.sha }}
+          restore-keys: cache-lychee-
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --base ./public/ --verbose --no-progress './public/**/*.html'
+          args: --base ./public/ --verbose --no-progress --cache --max-cache-age 7d './public/**/*.html'
           format: markdown
           output: /tmp/result.md
           token: ${{ secrets.GH_TOKEN }}
