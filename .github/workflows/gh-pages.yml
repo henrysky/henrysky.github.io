@@ -51,7 +51,7 @@ jobs:
           key: cache-lychee-${{ github.sha }}
           restore-keys: cache-lychee-
       - name: Link Checker
-        uses: lycheeverse/lychee-action@v1
+        uses: lycheeverse/lychee-action@v2
         with:
           args: --base ./public/ --verbose --no-progress --cache --max-cache-age 7d './public/**/*.html'
           format: markdown
