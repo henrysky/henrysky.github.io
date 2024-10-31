@@ -4,7 +4,7 @@ enableGitInfo = true
 
 [params]
   description = 'Personal Website of Henry W. Leung'
-  email = 'henrysky [dot] leung [at] utoronto [dot] ca'
+  email = 'henryskyleung [at] gmail [dot] com'
   startyears = '2018'
   themecolor = '003366'
 
@@ -38,7 +38,7 @@ enableGitInfo = true
     title = '''Henry Leung's Personal Website'''
     [languages.en.params]
       authors = 'Henry W. Leung'
-      navbar_shortdesc = 'Astronomer & Data Scientist'
+      navbar_shortdesc = 'Astronomy & Deep Learning'
       lastupdate = 'Last Updated'
       copyright = 'Copyrighted'
   [languages.zh]
@@ -47,6 +47,6 @@ enableGitInfo = true
     title = 'Henry Leung 嘅個人網站'
     [languages.zh.params]
       authors = '梁瑋軒'
-      navbar_shortdesc = '天文學 & 數據科學家'
+      navbar_shortdesc = '天文學 & 深度學習'
       lastupdate = '最後更新'
       copyright = '版權所有'
