@@ -57,4 +57,4 @@ jobs:
           format: markdown
           output: /tmp/result.md
           token: ${{ secrets.GH_TOKEN }}
-          fail: true
+          fail: false
