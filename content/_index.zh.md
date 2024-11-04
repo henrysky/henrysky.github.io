@@ -32,7 +32,7 @@ address2:
     {{< gallery_imgs preview_path="assets/img/about_me/squash_henry.jpg" source_path="assets/img/about_me/squash_henry.jpg" title="UofT squash" caption="UofT squash">}}
 
     <br>
-    And of course stargazing with groups of people
+    當然仲有同一班人一齊觀星
     <p> </p>
     <br>
 

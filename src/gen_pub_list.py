@@ -51,7 +51,7 @@ today = datetime.today()
 formatted_date = today.strftime("%B %d, %Y")
 
 html_code = f"""
-<p>The list below was last updated on {formatted_date}.</p>
+<p>The list below was generated on {formatted_date}.</p>
 
 <table id="pub-list" class="table table-striped" style="width:100%">
 """
