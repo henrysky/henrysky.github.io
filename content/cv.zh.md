@@ -11,12 +11,12 @@ My LinkedIn profile: [<span class="fab fa-linkedin fa-2xl" title="My Linkedin pr
 <br>
 <br>
 <div id="pdf-container">
-<object class="pdf" data="/assets/cvpdf/CV_HWLeung.pdf" width="100%" height="800">PDF簡歷可以係<a href="/assets/cvpdf/CV_HWLeung.pdf">依到下載</a>
+<object class="pdf" data="/assets/resume_pdf/Resume_HWLeung.pdf" width="100%" height="800">PDF簡歷可以係<a href="/assets/resume_pdf/Resume_HWLeung.pdf">依到下載</a>
 </div>
 
 <!-- Warning text for mobile devices -->
 <div id="mobile-warning" style="display: None">
-PDF簡歷可以係<a href="/assets/cvpdf/CV_HWLeung.pdf">依到下載</a>
+PDF簡歷可以係<a href="/assets/resume_pdf/Resume_HWLeung.pdf">依到下載</a>
 </div>
 
 {{< cv >}}

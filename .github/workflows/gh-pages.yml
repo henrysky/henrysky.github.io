@@ -36,8 +36,8 @@ jobs:
         run: |
           python ./src/download_CV.py --token ${{ secrets.GH_TOKEN }}
           unzip -qq CV_PDFs.zip -d CV_PDFs
-          mkdir ./public/assets/cvpdf/
-          cp CV_PDFs/CV_HWLeung.pdf ./public/assets/cvpdf/
+          mkdir ./public/assets/resume_pdf/
+          cp CV_PDFs/Resume_HWLeung.pdf ./public/assets/resume_pdf/
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/master'

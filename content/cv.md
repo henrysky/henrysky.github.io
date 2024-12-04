@@ -1,6 +1,6 @@
 ---
 title: CV
-longtitle: My Curriculum Vitae
+longtitle: My Résumé
 faIcon: "fa-solid fa-timeline"
 type: page
 layout: single
@@ -11,13 +11,13 @@ My LinkedIn profile: [<span class="fab fa-linkedin fa-2xl" title="My Linkedin pr
 <br>
 <br>
 <div id="pdf-container">
-<object class="pdf" data="/assets/cvpdf/CV_HWLeung.pdf" width="100%" height="800">Curriculum Vitae in PDF format is available <a href="/assets/cvpdf/CV_HWLeung.pdf">here</a>
+<object class="pdf" data="/assets/resume_pdf/Resume_HWLeung.pdf" width="100%" height="800">Résumé in PDF format is available <a href="/assets/resume_pdf/Resume_HWLeung.pdf">here</a>
 </object>
 </div>
 
 <!-- Warning text for mobile devices -->
 <div id="mobile-warning" style="display: None">
-Curriculum Vitae in PDF format is available <a href="/assets/cvpdf/CV_HWLeung.pdf">here</a>
+Résumé in PDF format is available <a href="/assets/resume_pdf/Resume_HWLeung.pdf">here</a>
 </div>
 
 
