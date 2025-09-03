@@ -22,14 +22,14 @@
                 {{ $aboutpage := site.GetPage "index" }}
                 <li class="nav-item">
                     <a href="{{ "" | relLangURL }}" class="nav-link" id="{{ $aboutpage.Title }}">
-                        <i class="{{ $aboutpage.Params.faIcon }} d-lg-flex" title="{{ $aboutpage.Params.longtitle }}"></i>
+                        <i class="{{ $aboutpage.Params.faIcon }}" title="{{ $aboutpage.Params.longtitle }}"></i>
                         <span>{{ $aboutpage.Title }}</span>
                     </a>
                 </li>
                 {{ range ( where .Site.RegularPages "Type" "page" ) }}
                 <li class="nav-item">
                     <a href="{{ .Permalink }}" class="nav-link" id="{{ .Params.title }}">
-                        <i class="{{ .Params.faIcon }} d-lg-flex" title="{{ .Params.longtitle }}"></i>
+                        <i class="{{ .Params.faIcon }}" title="{{ .Params.longtitle }}"></i>
                         <span>{{ .Params.title }}</span>
                     </a>
                 </li>
@@ -37,7 +37,8 @@
                 {{ $blogpage := site.GetPage "blog" }}
                 <li class="nav-item">
                     <a href="{{ "/blog" | relLangURL}}" class="nav-link" id="{{ $blogpage.Title }}">
-                        <i class="fab {{ $blogpage.Params.faIcon }} d-lg-flex" title="{{ $blogpage.Params.longtitle }}"></i>
+                        <i class="fab {{ $blogpage.Params.faIcon }}
+                        " title="{{ $blogpage.Params.longtitle }}"></i>
                         <span>{{ $blogpage.Title }}</span>
                     </a>
                 </li>
@@ -60,7 +61,7 @@
             <ul class="navbar-nav" id="thememenu">
                 <li class="nav-item ">
                     <a href="javascript:void(0);" onclick="setDarkTheme()" class="nav-link" style="min-width: 30px; /* make it shorter */">
-                        <i class="fa-solid fa-circle-half-stroke d-lg-flex justify-content-center"
+                        <i class="fa-solid fa-circle-half-stroke justify-content-center"
                             title="Toggle Light/Dark theme" id="themebutton"></i>
                     </a>
                 </li>
