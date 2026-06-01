@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -6,104 +7,104 @@
     <lastmod>2026-03-18T21:57:51-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-yue"
-                href="https://henrysky.github.io/zh/"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-CA"
-                href="https://henrysky.github.io/"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/blog/</loc>
     <lastmod>2026-03-18T21:57:51-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-yue"
-                href="https://henrysky.github.io/zh/blog/"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/blog/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-CA"
-                href="https://henrysky.github.io/blog/"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/blog/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/photography/</loc>
     <lastmod>2026-03-18T21:57:51-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-yue"
-                href="https://henrysky.github.io/zh/photography/"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/photography/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-CA"
-                href="https://henrysky.github.io/photography/"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/photography/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/codes/</loc>
     <lastmod>2026-03-18T21:57:51-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-yue"
-                href="https://henrysky.github.io/zh/codes/"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/codes/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-CA"
-                href="https://henrysky.github.io/codes/"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/codes/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/research/</loc>
     <lastmod>2026-03-18T21:57:51-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-yue"
-                href="https://henrysky.github.io/zh/research/"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/research/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-CA"
-                href="https://henrysky.github.io/research/"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/research/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/publication/</loc>
     <lastmod>2026-03-18T21:57:51-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-yue"
-                href="https://henrysky.github.io/zh/publication/"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/publication/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-CA"
-                href="https://henrysky.github.io/publication/"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/publication/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/cv/</loc>
     <lastmod>2026-03-18T21:57:51-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-yue"
-                href="https://henrysky.github.io/zh/cv/"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/cv/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-CA"
-                href="https://henrysky.github.io/cv/"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/cv/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/categories/</loc>
     <lastmod>2026-03-18T21:57:51-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-yue"
-                href="https://henrysky.github.io/zh/categories/"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-CA"
-                href="https://henrysky.github.io/categories/"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/categories/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/blog/2023-10-23-keras-torch/</loc>
@@ -122,13 +123,13 @@
     <lastmod>2026-03-18T21:57:51-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-yue"
-                href="https://henrysky.github.io/zh/tags/"
+                hreflang="en-CA"
+                href="https://henrysky.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-CA"
-                href="https://henrysky.github.io/tags/"
+                hreflang="zh-yue"
+                href="https://henrysky.github.io/zh/tags/"
                 />
   </url><url>
     <loc>https://henrysky.github.io/categories/tech/</loc>
