@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Converting Keras 1D Convulution to PyTorch
+title:  Converting Keras 1D Convolution to PyTorch
 categories: ["Tech"]
 tags: ["DeepLearning", "Keras", "PyTorch"]
 author: Henry Leung
