@@ -122,9 +122,9 @@ for paper in result["response"]["docs"]:
     buttons_code = """
     <div class="row">
         <div class="col-12 col-lg-3">
-            <a target="_blank" href="https://ui.adsabs.harvard.edu/abs/{bibcode}/abstract" class="btn btn-sm btn-primary mt-1">{bibcode}</a>
+            <a target="_blank" href="https://scixplorer.org/abs/{bibcode}/abstract" class="btn btn-sm btn-primary mt-1">{bibcode}</a>
             <br class="d-none d-lg-block">
-            <a target="_blank" href="https://ui.adsabs.harvard.edu/abs/{bibcode}/citations" class="btn btn-sm btn-secondary mt-1">{citation} Citations</a>
+            <a target="_blank" href="https://scixplorer.org/abs/{bibcode}/citations" class="btn btn-sm btn-secondary mt-1">{citation} Citations</a>
     """.format(bibcode=paper["bibcode"], citation=paper["citation_count"])
 
     if extra_data:
