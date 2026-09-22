@@ -2,54 +2,77 @@ name: build and deploy to github pages
 
 on:
   push:
-    branches: [ master ]  # Set a branch that will trigger a deployment
+    branches: [ master ]
   schedule:
-    # Runs at 12:42 UTC (08:42/09:42 Toronto time) on every Monday because ADS update on every weekend
+    # Runs at 12:42 UTC (08:42/09:42 Toronto time) every Monday
     - cron: '42 12 * * 1'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - uses: actions/checkout@v7
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
+
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
           python-version: "3.x"
+
       - name: Install dependencies
         run: |
           pip install numpy pandas requests
+
       - name: Build Bootstrap CSS
-        run: | 
-          npm i bootstrap autoprefixer upath sass shelljs 
+        run: |
+          npm i bootstrap autoprefixer upath sass shelljs
           node src/build-scss.js
           node src/build-scripts.js
           node src/build-assets.js
+
       - name: Build list of publication
-        run: ADS_TOKEN=${{ secrets.ADS_TOKEN }} python ./src/gen_pub_list.py 
+        run: ADS_TOKEN=${{ secrets.ADS_TOKEN }} python ./src/gen_pub_list.py
+
       - name: Build Hugo site
         run: hugo
+
       - name: Download my CV artifact
         run: |
           python ./src/download_CV.py --token ${{ secrets.GH_TOKEN }}
           unzip -qq CV_PDFs.zip -d CV_PDFs
-          mkdir ./public/assets/resume_pdf/
+          mkdir -p ./public/assets/resume_pdf/
           cp CV_PDFs/Resume_HWLeung.pdf ./public/assets/resume_pdf/
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/master'
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          path: ./public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
       - name: Restore lychee cache
         uses: actions/cache@v6
         with:
           path: .lycheecache
           key: cache-lychee-${{ github.sha }}
           restore-keys: cache-lychee-
+
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2
         with:
